@@ -95,6 +95,10 @@ button {
   background-color: var(--secondary);
 }
 
+.font-marcellus{
+  font-family: var(--font-marcellus);
+}
+
 @media (max-width: 1200px) {
   h3 {
     font-size: 18px !important;
