@@ -20,11 +20,11 @@ import { FaFacebookSquare, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className='secondary-backColor max-w-[2000] mx-auto'>
-      <div className="container mx-auto sm:px-10 px-2 pt-16 flex flex-col gap-10 ">
+      <div className="container mx-auto sm:px-10 px-2 pt-16 flex flex-col gap-10 ps-4 sm:ps-0">
         <div className="flex md:flex-row flex-col justify-between gap-5 border-b-2 border-color pb-5">
           <div className="flex flex-col justify-between gap-10">
             <div className="flex flex-col textColor gap-5 max-w-[370px]">
-              <Image src={zuftalogo} />
+              <figure><Image src={zuftalogo} /></figure>
               <span className='flex gap-2 items-center'><FaLocationDot className='text-[#575756]' /><h5>4517 Washington Ave. Manchester, Kentucky 39495</h5></span>
               <span className='flex gap-2 items-center'><MdWatchLater className='text-[#575756]' /><h5>Hours: 8:00 - 17:00, Mon - Sat</h5></span>
               <span className='flex gap-2 items-center'><IoMdMail className='text-[#575756]' /><h5>support@travila.com</h5></span>
@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="flex flex-col justify-between">
             <div className="flex flex-col gap-5">
               <h4 className='font-bold'>Company</h4>
-              <div className="textColor flex flex-wrap xl:gap-20 gap-5">
+              <div className="textColor flex flex-wrap xl:gap-20 md:gap-10 gap-5">
                 <ul className='flex flex-col gap-5'>
                   <li><Link href="#"><h5>About  us</h5></Link></li>
                   <li><Link href="#"><h5>By Air</h5></Link></li>
@@ -71,14 +71,14 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2 mt-6">
               <h4 className='font-bold'>We are registered</h4>
-              <p className='text-[#8E8E8E]'>Exploring new destinations can be one of life's greatest joys.</p>
+              <p className='text-[#8E8E8E] text-[14px]'>Exploring new destinations can be one of life's greatest joys.</p>
             </div>
           </div>
 
           <div className="flex flex-col justify-between ">
-            <div className="flex flex-col gap-2 md:gap-5 w-[370px]">
+            <div className="flex flex-col gap-2 md:gap-5 lg:w-[370px] md:w-[250px]">
               <h4 className='font-bold'>Subscribe For Newsletter</h4>
               <div className="relative w-full max-w-md mt-1">
                 <input
@@ -91,20 +91,20 @@ const Footer = () => {
                 </button>
               </div>
               <span className='text-[12px] textColor'>No ads. No trails. No commitments</span>
-              <span className='flex flex-col gap-3'>
+              <span className='flex flex-col gap-3 mt-6'>
                 <h4 className='font-bold flex gap-2 items-center'><MdLocalPhone />Need help? Call us</h4>
                 <h3 className='font-bold text-[#1A2B48]'>1-800-222-8888</h3>
               </span>
 
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 mt-6">
               <h4 className='font-bold'>Payments</h4>
               <ul className='flex gap-5'>
-                <li><Image src={pato} /></li>
-                <li><Image src={chamber} /></li>
-                <li><Image src={eman} /></li>
-                <li><Image src={pakProp} /></li>
-                <li><Image src={secp} /></li>
+                <li><figure><Image src={pato} /></figure></li>
+                <li><figure><Image src={chamber} /></figure></li>
+                <li><figure><Image src={eman} /></figure></li>
+                <li><figure><Image src={pakProp} /></figure></li>
+                <li><figure><Image src={secp} /></figure></li>
               </ul>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Footer = () => {
           </ul>
         </div>
         <Image src={footerImg} />
-      </div> 
+      </div>
 
     </div>
   )
