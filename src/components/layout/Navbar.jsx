@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Off-Canvas Drawer */}
       <div
-        className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-white w-80 transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`bg-[#F8F8F8] fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto w-80 transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <div className="flex justify-between items-center">
