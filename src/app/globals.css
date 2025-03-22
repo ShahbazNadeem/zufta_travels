@@ -87,6 +87,10 @@ button {
   color: var(--text);
 }
 
+.textColor2 {
+  color: var(--backgorund);
+}
+
 .border-color {
   border-color: var(--border);
 }
@@ -97,6 +101,9 @@ button {
 
 .font-marcellus{
   font-family: var(--font-marcellus);
+}
+.font-manrope{
+  font-family: var(--font-manrope);
 }
 
 @media (max-width: 1200px) {
