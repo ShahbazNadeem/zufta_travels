@@ -1,5 +1,8 @@
-import { withNextVideo } from "next-video/process";
+// @ts-check
+ 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default withNextVideo(nextConfig);
+const nextConfig = {
+    /* config options here */
+  }
+   
+  export default nextConfig;

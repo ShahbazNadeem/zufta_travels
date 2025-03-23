@@ -7,7 +7,6 @@ import eman from "@/images/footer/eman.png"
 import pakProp from "@/images/footer/pakProp.png"
 import secp from "@/images/footer/secp.png"
 import zuftalogo from "@/images/zufta-logo.png"
-import "./layout.css"
 import Link from 'next/link'
 import { FaLocationDot } from "react-icons/fa6";
 import { MdWatchLater, MdLocalPhone } from "react-icons/md";

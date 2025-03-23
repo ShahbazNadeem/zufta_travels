@@ -1,33 +1,19 @@
 "use client";
 
 import React from "react";
-import "@/globalcss";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
-// import Candy from "./Candy.mp4"
-import Video from 'next-video';
-// import myVideo from '/videos/my-video.mp4';
 
 const Index = () => {
-// console.log('alww',videoBG2)
 
   return (
     <Layout className="container bg-amber-300">
       <section>
         <div className="wrapper-H1">
-          {/* <Image
-              className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-              src={zuftalogo} /> */}
+
           <div className="container relative">
-            {/* Background Video */}
-            {/* <Video
-              className="absolute top-0 left-0 w-full h-full object-cover -z-10 border"
-              src="/public/video/Candy.mp4"
-              autoPlay
-              muted
-              loop
-           /> */}
-             {/* <Video src={myVideo} /> */}
+            
+
 
 
             <div className="flex flex-row relative z-10">

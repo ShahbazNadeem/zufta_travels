@@ -99,10 +99,11 @@ button {
   background-color: var(--secondary);
 }
 
-.font-marcellus{
+.font-marcellus {
   font-family: var(--font-marcellus);
 }
-.font-manrope{
+
+.font-manrope {
   font-family: var(--font-manrope);
 }
 
