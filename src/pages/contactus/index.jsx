@@ -1,6 +1,10 @@
+import Accordian from '@/components/Accordian'
 import Banner from '@/components/Banner'
 import Layout from '@/components/layout/Layout'
+import Image from 'next/image'
 import React from 'react'
+import hands from '@/images/hands.png'
+import happyFace from '@/images/happyFace.png'
 
 const index = () => {
   return (
@@ -14,33 +18,37 @@ const index = () => {
       <section>
         <div className="wrapper-C2">
           <div className="container">
-            <div className="flex flex-row">
-              <div className="basis-1/2 border ">
-                <span className='font-marcellus'>Helo!</span> <span className='text-2xl'>😀</span> ✋🏻🤚🏻
-                <p>You need to come at least once in your life</p>
-                <form className='flex flex-col gap-4'>
-                  <div className="flex flex-row gap-4">
-                    <div class="relative">
+            <div className="flex lg:flex-row flex-col py-10 lg:py-16">
+              <div className="basis-1/2 px-5 lg:px-10">
+                <span className='flex items-center'>
+                  <h1 className='font-marcellus me-3 lg:me-6'>Helo!</h1>
+                  <figure><Image src={happyFace} /></figure>
+                  <figure><Image src={hands} /></figure>
+                </span>
+                <p className='mt-2 lg:mt-5'>You need to come at least once in your life</p>
+                <form className='flex flex-col gap-2 lg:gap-4 mt-8 lg:mt-14'>
+                  <div className="flex gap-2 lg:gap-4">
+                    <div class="relative basis-1/2">
                       <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="firstName" name="firstName" required />
                       <label for="firstName" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                         First Name *
                       </label>
                     </div>
-                    <div class="relative">
+                    <div class="relative basis-1/2">
                       <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="lastName" name="lastName" required />
                       <label for="lastName" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                         Last Name *
                       </label>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5">
-                    <div class="relative">
+                  <div className="flex gap-2 lg:gap-4">
+                    <div class="relative basis-1/2">
                       <input type="email" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="email" name="email" required />
                       <label for="email" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                         Email address *
                       </label>
                     </div>
-                    <div class="relative">
+                    <div class="relative basis-1/2">
                       <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="subject" name="subject" required />
                       <label for="subject" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                         Subject *
@@ -62,7 +70,10 @@ const index = () => {
 
                 </form>
               </div>
-              <div className="basis-1/2">form</div>
+
+              <div className="basis-1/2 px-10 mt-10 lg:mt-0">
+                <Accordian />
+              </div>
             </div>
           </div>
         </div>

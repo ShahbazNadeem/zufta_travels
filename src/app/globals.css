@@ -78,6 +78,12 @@ h5 {
   font-family: var(--font-manrope);
 }
 
+p {
+  font-size: 16px;
+  font-family: var(--font-manrope);
+  color: var(--text);
+}
+
 button {
   font-family: var(--font-inter);
   background-color: var(--backgorund);
