@@ -82,6 +82,7 @@ p {
   font-size: 16px;
   font-family: var(--font-manrope);
   color: var(--text);
+  line-height: 26px;
 }
 
 button {
@@ -118,6 +119,9 @@ button {
     font-size: 18px !important;
     line-height: 28px !important;
   }
+  /* p{
+    font-size: ;
+  } */
 }
 
 @media (max-width: 992px) {
