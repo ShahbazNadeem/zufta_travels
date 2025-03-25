@@ -38,7 +38,7 @@ const Navbar = () => {
             <li><Link href="/login">Login</Link></li>
           </ul>
           <span>
-            <button className="text-white rounded-full px-5 py-2 transition-all duration-300 hidden sm:block">
+            <button className="hidden sm:block">
               Plan My Trip
             </button>
           </span>

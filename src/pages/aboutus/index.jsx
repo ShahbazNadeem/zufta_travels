@@ -11,6 +11,9 @@ import Image from 'next/image'
 import CountUp from 'react-countup';
 import './aboutus.css'
 import { GoShieldCheck } from "react-icons/go";
+import Slider from '@/components/Slider'
+import { sliderData1 } from '../../jsonData/Data'
+import NewsAndTips from '@/components/NewsAndTips'
 
 const index = () => {
   return (
@@ -24,7 +27,7 @@ const index = () => {
       <section>
         <div className="wrapper-A2 mt-20">
           <div className="container">
-            <div className="flex flex-col text-center gap-12">
+            <div className="flex flex-col text-center gap-12 px-3 md:px-0">
               <h1>About Zufta Travel & Tours</h1>
               <p>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.</p>
             </div>
@@ -96,8 +99,8 @@ const index = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-5">
-              <div className="basis-1/2 flex justify-center items-center px-12 md:px-16 lg:px-20 py-18 md:py-22  lg:py-28 premiumGroup text-[20px] md:text-[28px] lg:text-[32px] font-marcellus textColor2">Explore Premium Group Tours</div>
-              <div className="basis-1/2 flex justify-center items-center px-12 md:px-16 lg:px-20 py-18 md:py-22  lg:py-28 privateDroup text-[20px] md:text-[28px] lg:text-[32px] font-marcellus textColor2">Explore Private Group Tours</div>
+              <div className="basis-1/2 flex justify-center items-center px-10 md:px-16 lg:px-20 py-18 md:py-22  lg:py-28 premiumGroup text-[20px] md:text-[28px] lg:text-[32px] font-marcellus textColor2">Explore Premium Group Tours</div>
+              <div className="basis-1/2 flex justify-center items-center px-10 md:px-16 lg:px-20 py-18 md:py-22  lg:py-28 privateDroup text-[20px] md:text-[28px] lg:text-[32px] font-marcellus textColor2">Explore Private Group Tours</div>
             </div>
           </div>
         </div>
@@ -166,6 +169,24 @@ const index = () => {
           </div>
         </div>
       </section>
+
+      <section>
+        <div className="wrapper-A5 mt-20">
+          <div className="container">
+            <h1 className='text-center pb-12 textColor2'>What Our Clients Say</h1>
+            <Slider data={sliderData1} />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrapper-A6 my-20">
+          <div className="container">
+            <NewsAndTips/>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   )
 }

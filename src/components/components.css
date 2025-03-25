@@ -1,7 +1,49 @@
-.Banner{
+.Banner {
     background-image: url('../../public/images/bannerimg1.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: aqua; */
+}
+
+/* /////////////slider component/////////// */
+/* Change navigation arrow color */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #1A2B48 !important;
+}
+
+/* Optionally, increase size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 28px !important;
+}
+
+@media (max-width: 640px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+/* /////////////about us page////////////// */
+.about_culture {
+    background-image: url('../../public/images/aboutus/news1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about_travel {
+    background-image: url('../../public/images/aboutus/news2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about_discover {
+    background-image: url('../../public/images/aboutus/news3.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
