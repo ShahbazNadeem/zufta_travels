@@ -7,6 +7,7 @@ import payment3 from '@/images/aboutus/payment3.png'
 import payment4 from '@/images/aboutus/payment4.png'
 import payment5 from '@/images/aboutus/payment5.png'
 import aboutParisimg from '@/images/aboutus/aboutParisimg.png'
+import arrow from '@/images/aboutus/arrow.png'
 import Image from 'next/image'
 import CountUp from 'react-countup';
 import './aboutus.css'
@@ -14,6 +15,7 @@ import { GoShieldCheck } from "react-icons/go";
 import Slider from '@/components/Slider'
 import { sliderData1 } from '../../jsonData/Data'
 import NewsAndTips from '@/components/NewsAndTips'
+import Video from '@/components/Video'
 
 const index = () => {
   return (
@@ -46,7 +48,7 @@ const index = () => {
                     <div className="lg:basis-1/2 flex justify-center items-center p-5 md:p-10">
                       <div className="flex justify-center items-center flex-col">
                         <span className="text-[28px] md:text-[48px] lg:text-[64px] font-marcellus textColor2">
-                          <CountUp start={0} end={168} duration={3.5} enableScrollSpy={true} scrollSpyOnce={true} />k
+                          <CountUp start={0} end={168} duration={4.5} enableScrollSpy={true} scrollSpyOnce={true} />k
                         </span>
                         <span className="text-[16px] md:text-[18px] lg:text-[20px] font-manrope textColor2">Happy Clients</span>
                       </div>
@@ -54,7 +56,7 @@ const index = () => {
                     <div className="lg:basis-1/2 flex justify-center items-center p-5 md:p-10">
                       <div className="flex justify-center items-center flex-col">
                         <span className="text-[28px] md:text-[48px] lg:text-[64px] font-marcellus textColor2">+
-                          <CountUp start={0} end={45} duration={3.5} enableScrollSpy={true} scrollSpyOnce={true} />k
+                          <CountUp start={0} end={45} duration={4.5} enableScrollSpy={true} scrollSpyOnce={true} />k
                         </span>
                         <span className="text-[16px] md:text-[18px] lg:text-[20px] font-manrope textColor2">Destinations</span>
                       </div>
@@ -64,7 +66,7 @@ const index = () => {
                     <div className="lg:basis-1/2 flex justify-center items-center p-5 md:p-10">
                       <div className="flex justify-center items-center flex-col">
                         <span className="text-[28px] md:text-[48px] lg:text-[64px] font-marcellus textColor2">+
-                          <CountUp start={0} end={49} duration={3.5} enableScrollSpy={true} scrollSpyOnce={true} />
+                          <CountUp start={0} end={49} duration={4.5} enableScrollSpy={true} scrollSpyOnce={true} />
                         </span>
                         <span className="text-[16px] md:text-[18px] lg:text-[20px] font-manrope textColor2">Global Search</span>
                       </div>
@@ -72,7 +74,7 @@ const index = () => {
                     <div className="lg:basis-1/2 flex justify-center items-center p-5 md:p-10">
                       <div className="flex justify-center items-center flex-col">
                         <span className="text-[28px] md:text-[48px] lg:text-[64px] font-marcellus textColor2">+
-                          <CountUp start={0} end={26} duration={3.5} enableScrollSpy={true} scrollSpyOnce={true} />k
+                          <CountUp start={0} end={26} duration={4.5} enableScrollSpy={true} scrollSpyOnce={true} />k
                         </span>
                         <span className="text-[16px] md:text-[18px] lg:text-[20px] font-manrope textColor2">Destinations</span>
                       </div>
@@ -84,17 +86,30 @@ const index = () => {
               <div className="basis-1/2 flex justify-center items-center gap-5 py-7 px-5">
                 <div className="flex gap-5">
                   <div className="flex items-center">
-                    <figure><Image src={payment1} /></figure>
+                    <figure><Image src={payment1} alt='img' /></figure>
                   </div>
                   <div className="flex flex-col gap-5">
-                    <figure><Image src={payment2} /></figure>
-                    <figure><Image src={payment3} /></figure>
+                    <figure><Image src={payment2} alt='img' /></figure>
+                    <figure><Image src={payment3} alt='img' /></figure>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <figure><Image src={payment4} /></figure>
-                    <figure><Image src={payment5} /></figure>
+                    <figure><Image src={payment4} alt='img' /></figure>
+                    <figure><Image src={payment5} alt='img' /></figure>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="basis-1/2">
+                <Video src='/images/Candy.mp4' />
+              </div>
+              <div className="basis-1/2 flex flex-col justify-between gap-42 planMyTrip p-10">
+                <div className="flex flex-col gap-5">
+                  <div className="">Let’s Travel</div>
+                  <h1 className="">Explore, Book, Soar: Your Journey Awaits!</h1>
+                </div>
+                <div className="flex items-center gap-5">Plan My Trip <figure><Image src={arrow} alt='img' /></figure></div>
               </div>
             </div>
 
@@ -137,7 +152,7 @@ const index = () => {
                 </div>
               </div>
               <div className="basis-1/3 flex justify-center items-center">
-                <figure><Image src={aboutParisimg} /></figure>
+                <figure><Image src={aboutParisimg} alt='img' /></figure>
               </div>
               <div className="basis-1/2 lg:basis-1/3 flex justify-center items-center">
                 <div className="flex flex-col gap-4 lg:gap-20">
@@ -182,7 +197,7 @@ const index = () => {
       <section>
         <div className="wrapper-A6 my-20">
           <div className="container">
-            <NewsAndTips/>
+            <NewsAndTips />
           </div>
         </div>
       </section>

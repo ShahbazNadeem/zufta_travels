@@ -3,6 +3,7 @@
 import React from "react";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
+import Video from "@/components/Video";
 
 const Index = () => {
 
@@ -12,6 +13,7 @@ const Index = () => {
         <div className="wrapper-H1">
 
           <div className="container relative">
+            <Video src='/images/Candy.mp4'/>
             
 
 

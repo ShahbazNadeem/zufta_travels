@@ -99,11 +99,11 @@ const Footer = () => {
             <div className="flex flex-col gap-5 mt-6">
               <h4 className='font-bold'>Payments</h4>
               <ul className='flex gap-5'>
-                <li><figure><Image src={pato} /></figure></li>
-                <li><figure><Image src={chamber} /></figure></li>
-                <li><figure><Image src={eman} /></figure></li>
-                <li><figure><Image src={pakProp} /></figure></li>
-                <li><figure><Image src={secp} /></figure></li>
+                <li><figure><Image src={pato} alt='img' /></figure></li>
+                <li><figure><Image src={chamber} alt='img' /></figure></li>
+                <li><figure><Image src={eman} alt='img' /></figure></li>
+                <li><figure><Image src={pakProp} alt='img' /></figure></li>
+                <li><figure><Image src={secp} alt='img' /></figure></li>
               </ul>
             </div>
           </div>

@@ -17,7 +17,7 @@ const Slider = ({ data }) => {
     };
 
     return (
-        <div className="relative w-full  mx-auto">
+        <div className="relative w-full mx-auto overflow-hidden">
             <Swiper
                 ref={swiperRef}
                 navigation={true}
@@ -35,20 +35,20 @@ const Slider = ({ data }) => {
                     <SwiperSlide key={index} className="">
                         <div className='relative  w-full py-10 px-5 md:px-14 lg:px-38 xl:px-68 flex flex-col items-center'>
 
-                        {/* Center Image (Main) */}
-                        <motion.figure
-                            key={index}
-                            initial={{ scale: 1.2, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.8, opacity: 0 }}
-                            transition={{ duration: 0.8 }}
+                            {/* Center Image (Main) */}
+                            <motion.figure
+                                key={index}
+                                initial={{ scale: 1.2, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.8, opacity: 0 }}
+                                transition={{ duration: 0.8 }}
                             >
-                            <Image src={items.image} width={80} height={80} alt="Main Image" />
-                        </motion.figure>
-                        <h4>{items.title}</h4>
-                                <span>{items.rating}</span>
-                                <p className='text-black text-center'>{items.para}</p>
-                            </div>
+                                <Image src={items.image} width={80} height={80} alt="Main Image" />
+                            </motion.figure>
+                            <h4>{items.title}</h4>
+                            <span>{items.rating}</span>
+                            <p className='text-black text-center'>{items.para}</p>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
