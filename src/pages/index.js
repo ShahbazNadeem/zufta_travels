@@ -6,6 +6,7 @@ import Video from "@/components/Video";
 import Image from "next/image";
 import { homePartners, homeTourPickup } from '../jsonData/Data'
 import apostofy from '@/images/home/apostofy.png'
+import img from '@/images/home/img.png'
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,10 +20,9 @@ const Index = () => {
 
   return (
     <Layout>
-      <section>
+      {/* <section>
         <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
 
-          {/* Video Background */}
           <div className="absolute inset-0 -z-10 w-full h-full">
             <Video src="/images/Candy.mp4" />
           </div>
@@ -36,7 +36,7 @@ const Index = () => {
               <div className="basis-1/2 border px-[70px]">
                 <div className="shadow-[0px_10px_20px_0px_#0000000D] backdrop-blur-[16px] w-auto h-auto rounded-[16px] border border-gray-300 p-[29px_28px]">
                   <div className="w-full max-w-md mx-auto">
-                    {/* Tabs Navigation */}
+
                     <div className="flex border-b border-gray-300">
                       {tabs.map((tab, index) => (
                         <button
@@ -52,7 +52,6 @@ const Index = () => {
                       ))}
                     </div>
 
-                    {/* Tabs Content */}
                     <div className="p-4 text-gray-700">{content[activeTab]}</div>
                   </div>
                 </div>
@@ -62,21 +61,21 @@ const Index = () => {
 
 
         </div>
-      </section>
+      </section> */}
 
       <section>
-        <div className="wrapper-H2 bg-white">
+        <div className="wrapper-H2 bg-white py-20">
           <div className="container">
-            <div className="flex flex-col items-center border">
+            <div className="flex flex-col items-center gap-12 px-5 sm:px-0">
               <span className="font-marcellus text-[24px]">Trusted by beloved partner and customer</span>
-              <div className="flex justify-evenly flex-wrap border w-full">
+              <div className="flex justify-evenly flex-wrap w-full gap-5">
                 {homePartners.map((partner) => {
                   return (
                     <figure key={partner.id}>
                       <Image
                         src={partner.image}
                         alt={`Partner ${partner.id}`}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain "
                       />
                     </figure>
                   );
@@ -115,9 +114,23 @@ const Index = () => {
       </section> */}
 
       <section>
-        <div className="wrapper ">
+        <div className="wrapper bg-[#F0F0E5] max-w-[1440px] mx-auto py-12 md:py-28">
           <div className="container">
-            <figure><Image src={apostofy} alt="img"/></figure>
+            <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-5 sm:px-0">
+              <div className="md:basis-1/2 flex flex-col gap-8 md:gap-26">
+                <div className="flex flex-col gap-4 md:gap-8">
+                  <figure className="w-[50px] md:w-[100px]"><Image src={apostofy} alt="img" className="w-full h-full" /></figure>
+                  <span className="text-[16px]/6 md:text-[20px]/6 font-marcellus textColor">
+                    Exploring new destinations can be one of life's greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you're savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!
+                  </span>
+                </div>
+                <h3>- A local from Azad Kashmir.</h3>
+              </div>
+
+              <div className="md:basis-1/2 flex justify-center items-center ">
+                <figure className="w-full lg:w-[80%]"><Image src={img} alt="img" className="w-full h-full" /></figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>
