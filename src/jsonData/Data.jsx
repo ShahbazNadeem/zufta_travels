@@ -22,14 +22,14 @@ export const sliderData1 = [
     {
         id: 2,
         title: 'Sara Mohamed',
-        rating: '⭐⭐⭐⭐⭐',
+        rating: '⭐⭐⭐',
         para: "I've been using the hotel booking system for several years now, and it's become my go-to platform for planning my trips. The interface is user-friendly, and I appreciate the detailed information and real-time availability of hotels.",
         image: author,
     },
     {
         id: 3,
         title: 'Sara Mohamed',
-        rating: '⭐⭐⭐⭐⭐',
+        rating: '⭐⭐',
         para: "I've been using the hotel booking system for several years now, and it's become my go-to platform for planning my trips. The interface is user-friendly, and I appreciate the detailed information and real-time availability of hotels.",
         image: payment2,
     },
@@ -43,7 +43,7 @@ export const sliderData1 = [
     {
         id: 5,
         title: 'Sara Mohamed',
-        rating: '⭐⭐⭐⭐⭐',
+        rating: '⭐⭐⭐⭐',
         para: "I've been using the hotel booking system for several years now, and it's become my go-to platform for planning my trips. The interface is user-friendly, and I appreciate the detailed information and real-time availability of hotels.",
         image: author,
     },

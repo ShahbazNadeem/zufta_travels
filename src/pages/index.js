@@ -4,9 +4,13 @@ import Layout from '@/components/layout/Layout';
 import "./index.css"
 import Video from "@/components/Video";
 import Image from "next/image";
-import { homePartners, homeTourPickup } from '../jsonData/Data'
+import { homePartners, homeTourPickup, sliderData1 } from '../jsonData/Data'
 import apostofy from '@/images/home/apostofy.png'
 import img from '@/images/home/img.png'
+import tourist from '@/images/home/tourist.png'
+import Frame9 from '@/images/home/Frame9.png'
+import Slider from "@/components/Slider";
+import NewsAndTips from "@/components/NewsAndTips";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -64,7 +68,7 @@ const Index = () => {
       </section> */}
 
       <section>
-        <div className="wrapper-H2 bg-white py-20">
+        <div className="wrapper-H2 bg-white py-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col items-center gap-12 px-5 sm:px-0">
               <span className="font-marcellus text-[24px]">Trusted by beloved partner and customer</span>
@@ -114,14 +118,14 @@ const Index = () => {
       </section> */}
 
       <section>
-        <div className="wrapper bg-[#F0F0E5] max-w-[1440px] mx-auto py-12 md:py-28">
+        <div className="wrapper-H4 bg-[#F0F0E5] max-w-[1440px] mx-auto py-12 md:py-28">
           <div className="container">
             <div className="flex flex-col md:flex-row gap-10 md:gap-0 px-5 sm:px-0">
               <div className="md:basis-1/2 flex flex-col gap-8 md:gap-26">
                 <div className="flex flex-col gap-4 md:gap-8">
                   <figure className="w-[50px] md:w-[100px]"><Image src={apostofy} alt="img" className="w-full h-full" /></figure>
                   <span className="text-[16px]/6 md:text-[20px]/6 font-marcellus textColor">
-                    Exploring new destinations can be one of life's greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you're savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!
+                    Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!
                   </span>
                 </div>
                 <h3>- A local from Azad Kashmir.</h3>
@@ -133,6 +137,67 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <div className="wrapper-H5 pt-20 bg-white max-w-[1440px] mx-auto">
+          <div className="container">
+            <div className="flex flex-col gap-10 px-5 md:px-0">
+              <h1 className="text-center">Exploring the Wonders of Global Travel: A Journey Through Cultures and Landscapes</h1>
+
+              <div className="flex flex-col md:flex-row gap-5 justify-center ">
+                <div className=" group overflow-hidden ">
+                  <figure className="transition-transform duration-900 ease-in-out group-hover:scale-120">
+                    <Image src={tourist} alt="tourist" />
+                  </figure>
+                </div>
+
+                <div className="group overflow-hidden ">
+                  <figure className="transition-transform duration-900 ease-in-out group-hover:scale-120">
+                    <Image src={Frame9} alt="Frame9" />
+                  </figure>
+                </div>
+              </div>
+
+
+              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
+
+              <div className="flex flex-col md:flex-row gap-5 justify-center">
+
+                <div className="group overflow-hidden">
+                  <figure className="transition-transform duration-900 ease-in-out group-hover:scale-120">
+                    <Image src={Frame9} alt="Frame9" />
+                  </figure>
+                </div>
+                <div className="group overflow-hidden">
+                  <figure className="transition-transform duration-900 ease-in-out group-hover:scale-120">
+                    <Image src={tourist} alt="tourist" />
+                  </figure>
+                </div>
+              </div>
+
+              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrapper-H8 pt-20 bg-white max-w-[1440px] mx-auto">
+          <div className="container">
+            <h1 className='text-center pb-12 textColor2'>What Our Clients Say</h1>
+            <Slider data={sliderData1} />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrapper-H9 pt-20 bg-white max-w-[1440px] mx-auto">
+          <div className="container">
+            <NewsAndTips />
+          </div>
+        </div>
+
       </section>
     </Layout>
   );

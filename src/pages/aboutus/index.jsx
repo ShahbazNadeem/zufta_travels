@@ -186,7 +186,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A5 mt-20">
+        <div className="wrapper-A5 pt-20">
           <div className="container">
             <h1 className='text-center pb-12 textColor2'>What Our Clients Say</h1>
             <Slider data={sliderData1} />

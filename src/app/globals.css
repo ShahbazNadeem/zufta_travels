@@ -142,13 +142,13 @@ button {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 24px !important;
+  }
+
   h3 {
     font-size: 13px !important;
     line-height: 23px !important;
-  }
-
-  h1 {
-    font-size: 24px !important;
   }
 
   p {
