@@ -23,7 +23,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-B2 pt-20">
+        <div className="wrapper-B2 pt-10 lg:pt-20">
           <div className="container">
             <div className="flex flex-col gap-10 md:gap-14 lg:gap-20 px-5">
               <div className="max-w-[900px] flex flex-col gap-10 mx-auto ">
@@ -66,9 +66,9 @@ const index = () => {
                               Culture
                             </span>
                           </div>
-                          <div className="flex flex-col gap-6">
+                          <div className="flex flex-col gap-3 md:gap-6">
                             <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                            <span className='flex flex-wrap gap-3 justify-between'>
+                            <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                               <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                               <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                               <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
@@ -87,7 +87,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-B3 py-20">
+        <div className="wrapper-B3 py-10 lg:py-20">
           <div className="container">
             <div className="flex  flex-col gap-10 lg:gap-20 mx-5">
               <div className="flex md:flex-row flex-col gap-10 lg:gap-20 md:h-[600px] lg:h-[900px] ">
@@ -98,9 +98,9 @@ const index = () => {
                         Culture
                       </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                       <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                      <span className='flex flex-wrap gap-3'>
+                      <span className='flex flex-wrap gap-3 text-[13px] md:text-[14px] lg:text-[16px]'>
                         <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                         <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       </span>
@@ -115,9 +115,9 @@ const index = () => {
                         Culture
                       </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                       <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                      <span className='flex flex-wrap gap-3'>
+                      <span className='flex flex-wrap gap-3 text-[13px] md:text-[14px] lg:text-[16px]'>
                         <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                         <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       </span>
@@ -134,9 +134,9 @@ const index = () => {
                       Culture
                     </span>
                   </div>
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-3 md:gap-6">
                     <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                    <span className='flex flex-wrap gap-3 justify-between'>
+                    <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                       <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                       <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
@@ -154,9 +154,9 @@ const index = () => {
                         Culture
                       </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                       <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                      <span className='flex flex-wrap gap-3'>
+                      <span className='flex flex-wrap gap-3 text-[13px] md:text-[14px] lg:text-[16px]'>
                         <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                         <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       </span>
@@ -171,9 +171,9 @@ const index = () => {
                         Culture
                       </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                       <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                      <span className='flex flex-wrap gap-3'>
+                      <span className='flex flex-wrap gap-3 text-[13px] md:text-[14px] lg:text-[16px]'>
                         <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                         <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       </span>
@@ -189,9 +189,9 @@ const index = () => {
                       Culture
                     </span>
                   </div>
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-3 md:gap-6">
                     <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                    <span className='flex flex-wrap gap-3 justify-between'>
+                    <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                       <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                       <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                       <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
