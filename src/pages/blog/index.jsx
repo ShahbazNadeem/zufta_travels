@@ -9,61 +9,11 @@ import { FaRegClock } from "react-icons/fa";
 import Banner from '@/components/Banner'
 import Layout from '@/components/layout/Layout'
 import Image from "next/image";
-import img from '@/images/home/designYurTrip.jpeg'
 import './blog.css'
+import { blogSlides } from "@/jsonData/Data";
 
 const index = () => {
-  const slides = [
-    {
-      image: img,
-      category: "Discovery",
-      title: "Ultimate Travel Planning Guide: 10 Tips For A Seamless Journey",
-      date: "18 Sep 2024",
-      duration: "6 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "Exploring Hidden Nature Spots: A Guide for Adventurers",
-      date: "20 Sep 2024",
-      duration: "5 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "The Most Scenic Landscapes to Visit This Year",
-      date: "22 Sep 2024",
-      duration: "7 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "The Most Scenic Landscapes to Visit This Year",
-      date: "22 Sep 2024",
-      duration: "7 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "The Most Scenic Landscapes to Visit This Year",
-      date: "22 Sep 2024",
-      duration: "7 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "The Most Scenic Landscapes to Visit This Year",
-      date: "22 Sep 2024",
-      duration: "7 mins",
-    },
-    {
-      image: img,
-      category: "Discovery",
-      title: "The Most Scenic Landscapes to Visit This Year",
-      date: "22 Sep 2024",
-      duration: "7 mins",
-    },
-  ];
+
   return (
     <Layout>
       <section>
@@ -105,7 +55,7 @@ const index = () => {
                   className="w-full max-w-[1400px] h-[400px] pt-40"
                 >
 
-                  {slides.map((slide, index) => (
+                  {blogSlides.map((slide, index) => (
                     <SwiperSlide key={index} className="relative overflow-hidden w-full">
 
                       <Image src={slide.image} alt={slide.title} layout="fill" className="object-cover" />
@@ -132,6 +82,125 @@ const index = () => {
                 </Swiper>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrapper-B3 py-20">
+          <div className="container">
+            <div className="flex  flex-col gap-10 lg:gap-20 mx-5">
+              <div className="flex md:flex-row flex-col gap-10 lg:gap-20 md:h-[600px] lg:h-[900px] ">
+                <div className="">
+                  <div className="p-5 flex flex-col gap-20 sm:gap-40 md:gap-64 lg:gap-96 blog1rdimg">
+                    <div>
+                      <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                        Culture
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-6">
+                      <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                      <span className='flex flex-wrap gap-3'>
+                        <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                        <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="md:flex items-end">
+                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                    <div>
+                      <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                        Culture
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-6">
+                      <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                      <span className='flex flex-wrap gap-3'>
+                        <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                        <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="max-w-[1200px] h-auto blog3rdimg">
+                <div className="p-5 flex flex-col justify-between gap-48">
+                  <div>
+                    <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                      Culture
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-6">
+                    <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                    <span className='flex flex-wrap gap-3 justify-between'>
+                      <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                      <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="flex md:flex-row flex-col gap-10 lg:gap-20 md:h-[600px] lg:h-[900px] ">
+                <div className="md:flex items-end">
+                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                    <div>
+                      <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                        Culture
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-6">
+                      <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                      <span className='flex flex-wrap gap-3'>
+                        <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                        <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="">
+                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                    <div>
+                      <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                        Culture
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-6">
+                      <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                      <span className='flex flex-wrap gap-3'>
+                        <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                        <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="h-auto flex justify-end max-w-[1200px]">
+                <div className="p-5 flex flex-col justify-between gap-48 blog3rdimg">
+                  <div>
+                    <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
+                      Culture
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-6">
+                    <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                    <span className='flex flex-wrap gap-3 justify-between'>
+                      <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
+                      <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
+                      <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

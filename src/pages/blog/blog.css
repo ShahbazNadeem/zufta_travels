@@ -33,3 +33,23 @@
         display: none !important;
     }
 }
+
+/* //////////wrappper-B3/////////// */
+.blog1rdimg{
+    background-image: url('../../../public/images/blog/img1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog2rdimg{
+    background-image: url('../../../public/images/blog/img2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog3rdimg{
+    background-image: url('../../../public/images/blog/img3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

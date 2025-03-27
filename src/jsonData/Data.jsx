@@ -10,6 +10,7 @@ import Vector2 from '@/images/home/Vector2.png'
 import Vector3 from '@/images/home/Vector3.png'
 import Vector4 from '@/images/home/Vector4.png'
 import Vector5 from '@/images/home/Vector5.png'
+import img from '@/images/home/designYurTrip.jpeg'
 
 export const sliderData1 = [
     {
@@ -153,3 +154,55 @@ export const accordianData = [
         content: "Yes! Tailwind provides responsive classNamees out of the box.",
     },
 ];
+
+export const blogSlides = [
+    {
+      image: img,
+      category: "Discovery",
+      title: "Ultimate Travel Planning Guide: 10 Tips For A Seamless Journey",
+      date: "18 Sep 2024",
+      duration: "6 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "Exploring Hidden Nature Spots: A Guide for Adventurers",
+      date: "20 Sep 2024",
+      duration: "5 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "The Most Scenic Landscapes to Visit This Year",
+      date: "22 Sep 2024",
+      duration: "7 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "The Most Scenic Landscapes to Visit This Year",
+      date: "22 Sep 2024",
+      duration: "7 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "The Most Scenic Landscapes to Visit This Year",
+      date: "22 Sep 2024",
+      duration: "7 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "The Most Scenic Landscapes to Visit This Year",
+      date: "22 Sep 2024",
+      duration: "7 mins",
+    },
+    {
+      image: img,
+      category: "Discovery",
+      title: "The Most Scenic Landscapes to Visit This Year",
+      date: "22 Sep 2024",
+      duration: "7 mins",
+    },
+  ];
