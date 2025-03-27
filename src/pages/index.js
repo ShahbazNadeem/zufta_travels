@@ -80,7 +80,7 @@ const Index = () => {
                       <Image
                         src={partner.image}
                         alt={`Partner ${partner.id}`}
-                        className="w-full h-full object-contain "
+                        className="w-full h-full object-contain"
                       />
                     </figure>
                   );

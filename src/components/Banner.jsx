@@ -12,7 +12,7 @@ const Banner = ({ title, link }) => {
           <h1 className='text-white'>{title}</h1>
           <div className="mt-5 rounded-[33px] px-[20px] py-[10px] gap-[20px] bg-white/70 backdrop-blur-[16px] flex justify-between items-center">
             <Link href='/'>Home</Link>
-            <FaChevronRight size={12}/>
+            <FaChevronRight size={12} />
             {link}
           </div>
 

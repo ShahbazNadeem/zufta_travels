@@ -5,13 +5,14 @@ import Image from 'next/image'
 import React from 'react'
 import hands from '@/images/hands.png'
 import happyFace from '@/images/happyFace.png'
+import { accordianData } from '@/jsonData/Data'
 
 const index = () => {
   return (
     <Layout>
       <section>
         <div className="wrapper-C1">
-          <Banner title='Contact' link='contact/cj' />
+          <Banner title='Contact' link='contact' />
         </div>
       </section>
 
@@ -21,7 +22,7 @@ const index = () => {
             <div className="flex lg:flex-row flex-col py-10 lg:py-16">
               <div className="basis-1/2 px-5 lg:px-10">
                 <span className='flex items-center'>
-                  <h1 className='font-marcellus me-3 lg:me-6'>Helo!</h1>
+                  <h1 className='font-marcellus me-3 lg:me-6'>Hello!</h1>
                   <figure><Image src={happyFace} /></figure>
                   <figure><Image src={hands} /></figure>
                 </span>
@@ -58,12 +59,12 @@ const index = () => {
 
                   <div class="relative">
                     <textarea
-                      class="block px-2.5 pb-2.5 pt-4 w-full h-[150px] text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]" placeholder=" " id="plan" name="plan" required>
+                      class="block px-2.5 pb-2.5 pt-4 w-full h-[150px] text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48] placeholder-[#1A2B48]" placeholder="Tell us more about what you’re planning*" id="plan" name="plan" required>
                     </textarea>
-                    <label
+                    {/* <label
                       for="plan" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                       Tell us more about what you’re planning*
-                    </label>
+                    </label> */}
                   </div>
 
                   <button className='font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Login</button>
@@ -71,8 +72,8 @@ const index = () => {
                 </form>
               </div>
 
-              <div className="basis-1/2 px-10 mt-10 lg:mt-0">
-                <Accordian />
+              <div className="basis-1/2 px-10 mt-10 lg:mt-0 flex justify-center items-center">
+                <Accordian data={accordianData}/>
               </div>
             </div>
           </div>

@@ -130,3 +130,26 @@ export const homeTourPickup = [
         price: '95,000'
     },
 ]
+
+export const accordianData = [
+    {
+        title: "How do I make a reservation on your website",
+        content: "Provide a step-by-step guide on how users can browse and book travel services on your platform. Include information on searching for destinations, selecting dates, choosing accommodation, and completing the booking process. Mention any special features or tools that can help users find the best deals.",
+    },
+    {
+        title: "How do I make a reservation on your website",
+        content: "It applies classNamees to elements for styling instead of writing custom CSS.",
+    },
+    {
+        title: "How do I make a reservation on your website",
+        content: "Yes! Tailwind provides responsive classNamees out of the box.",
+    },
+    {
+        title: "How do I make a reservation on your website",
+        content: "Yes! Tailwind provides responsive classNamees out of the box.",
+    },
+    {
+        title: "How do I make a reservation on your website",
+        content: "Yes! Tailwind provides responsive classNamees out of the box.",
+    },
+];
