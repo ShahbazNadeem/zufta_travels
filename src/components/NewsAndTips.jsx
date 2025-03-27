@@ -24,9 +24,9 @@ const NewsAndTips = () => {
                             Culture
                         </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                         <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                        <span className='flex flex-wrap gap-3 justify-between'>
+                        <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                             <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                             <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                             <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
@@ -39,9 +39,9 @@ const NewsAndTips = () => {
                             Culture
                         </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                         <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                        <span className='flex flex-wrap gap-3 justify-between'>
+                        <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                             <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                             <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                             <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
@@ -54,9 +54,9 @@ const NewsAndTips = () => {
                             Culture
                         </span>
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3 md:gap-6">
                         <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
-                        <span className='flex flex-wrap gap-3 justify-between'>
+                        <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
                             <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
                             <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
                             <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>

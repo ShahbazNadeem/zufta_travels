@@ -1,0 +1,13 @@
+.premiumGroup{
+    background-image: url('../../../public/images/aboutus/img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.privateDroup{
+    background-image: url('../../../public/images/aboutus/img1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
