@@ -16,8 +16,31 @@ import NewsAndTips from "@/components/NewsAndTips";
 
 const Index = () => {
 
-  const itemRefs = homeTourPickup.map(() => useRef(null));
-  const inViewArray = itemRefs.map((ref) => useInView(ref, { once: false, margin: "-50px" }));
+  const itemRefs = useRef([]); // ✅ Store multiple refs correctly
+  const [inViewStates, setInViewStates] = useState([]);
+
+  useEffect(() => {
+    setInViewStates(
+      itemRefs.current.map((ref) => {
+        if (!ref) return false;
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setInViewStates((prev) => {
+                const newState = [...prev];
+                newState[itemRefs.current.indexOf(ref)] = true;
+                return newState;
+              });
+              observer.disconnect();
+            }
+          },
+          { rootMargin: "-50px" }
+        );
+        observer.observe(ref);
+        return false;
+      })
+    );
+  }, []);
 
   const [activeTab, setActiveTab] = useState(0);
   const tabs = ["Tab 1", "Tab 2", "Tab 3"];
@@ -142,18 +165,15 @@ const Index = () => {
               <h1 className="text-center">Tours Handpicked for you</h1>
               <div className="flex flex-wrap justify-center mt-16">
                 {homeTourPickup.map((items, index) => {
-                  const ref = itemRefs[index];
-                  const isInView = inViewArray[index];
-
                   return (
                     <motion.div
-                      ref={ref}
+                      ref={(el) => (itemRefs.current[index] = el)} // ✅ Store ref safely
                       key={items.id}
                       className="w-[45%] lg:w-[24%] relative m-1 border h-[300px]"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{
-                        opacity: isInView ? 1 : 0,
-                        y: isInView ? (index % 2 === 0 ? -40 : 20) : 20,
+                        opacity: inViewStates[index] ? 1 : 0,
+                        y: inViewStates[index] ? (index % 2 === 0 ? -40 : 20) : 20,
                       }}
                       transition={{ duration: 0.5 }}
                     >
