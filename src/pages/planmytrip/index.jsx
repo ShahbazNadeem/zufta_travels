@@ -10,7 +10,6 @@ import payment4 from '@/images/aboutus/payment4.png'
 import payment5 from '@/images/aboutus/payment5.png'
 import './planmytrip.css'
 import NewsAndTips from '@/components/NewsAndTips';
-import Accordian from '@/components/Accordian';
 import { accordianData } from '@/jsonData/Data';
 import img from '@/images/planMyTrip/img.png'
 import Frame68 from '@/images/Frame68.png'
