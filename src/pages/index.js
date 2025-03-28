@@ -15,11 +15,13 @@ import Slider from "@/components/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
 
 const Index = () => {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, { once: false, margin: "-50px" });
 
+  
+  // Create an array of refs
+  const refs = useRef(homeTourPickup.map(() => React.createRef()));
+  
+  
   const [activeTab, setActiveTab] = useState(0);
-
   const tabs = ["Tab 1", "Tab 2", "Tab 3"];
   const content = [
     "This is content for Tab 1.",
@@ -95,7 +97,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div className="wrapper-H3 bg- py-10 md:pt-20 px-5">
           <div className="container">
             <div className="flex flex-col">
@@ -113,6 +115,47 @@ const Index = () => {
                       animate={{
                         opacity: isInView ? 1 : 0,
                         y: isInView ? (index % 2 == 0 ? -40 : 20) : 20
+                      }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <div className="absolute inset-0 -z-10">
+                        <Image src={items.image} className="w-full h-full object-cover" alt={items.title} />
+                      </div>
+                      <div className="relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
+                        <h3 className="text-white">{items.title}</h3>
+                        <div className="flex flex-wrap gap-1 md:gap-2 text-[#B8B8B8] text-[13px] md:text-[16px] w-full">
+                          <span>{items.duration}</span>
+                          <span>From Rs{items.price}</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+<section>
+        <div className="wrapper-H3 py-10 md:pt-20 px-5">
+          <div className="container">
+            <div className="flex flex-col">
+              <h1 className="text-center">Tours Handpicked for you</h1>
+              <div className="flex flex-wrap justify-center mt-16">
+                {homeTourPickup.map((items, index) => {
+                  const ref = refs.current[index]; // Get ref for current item
+                  const isInView = useInView(ref, { once: false, margin: "-50px" });
+
+                  return (
+                    <motion.div
+                      ref={ref}
+                      key={items.id}
+                      className="w-[45%] lg:w-[24%] relative m-1 border h-[300px]"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{
+                        opacity: isInView ? 1 : 0,
+                        y: isInView ? (index % 2 === 0 ? -40 : 20) : 20, // Move odd up, even down
                       }}
                       transition={{ duration: 0.5 }}
                     >
