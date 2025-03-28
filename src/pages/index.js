@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
@@ -16,11 +16,8 @@ import NewsAndTips from "@/components/NewsAndTips";
 
 const Index = () => {
 
-  
-  // Create an array of refs
-  const refs = useRef(homeTourPickup.map(() => React.createRef()));
-  
-  
+  const refs = useRef([]); // Store refs in an array
+
   const [activeTab, setActiveTab] = useState(0);
   const tabs = ["Tab 1", "Tab 2", "Tab 3"];
   const content = [
@@ -137,14 +134,15 @@ const Index = () => {
         </div>
       </section> */}
 
-<section>
+      <section>
         <div className="wrapper-H3 py-10 md:pt-20 px-5">
           <div className="container">
             <div className="flex flex-col">
               <h1 className="text-center">Tours Handpicked for you</h1>
               <div className="flex flex-wrap justify-center mt-16">
                 {homeTourPickup.map((items, index) => {
-                  const ref = refs.current[index]; // Get ref for current item
+                  const ref = useRef(null);
+                  refs.current[index] = ref;
                   const isInView = useInView(ref, { once: false, margin: "-50px" });
 
                   return (
