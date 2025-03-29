@@ -16,7 +16,7 @@ import NewsAndTips from "@/components/NewsAndTips";
 
 const Index = () => {
 
-  const itemRefs = useRef([]); // ✅ Store multiple refs correctly
+  const itemRefs = useRef([]);
   const [inViewStates, setInViewStates] = useState([]);
 
   useEffect(() => {
@@ -167,13 +167,13 @@ const Index = () => {
                 {homeTourPickup.map((items, index) => {
                   return (
                     <motion.div
-                      ref={(el) => (itemRefs.current[index] = el)} // ✅ Store ref safely
+                      ref={(el) => (itemRefs.current[index] = el)}
                       key={items.id}
-                      className="w-[45%] lg:w-[24%] relative m-1 border h-[300px]"
-                      initial={{ opacity: 0, y: 20 }}
+                      className="w-[45%] lg:w-[24%] relative m-1 border h-[250px] md:h-[300px] lg:h-[440px]"
+                      initial={{ opacity: 0, y: 10 }}
                       animate={{
                         opacity: inViewStates[index] ? 1 : 0,
-                        y: inViewStates[index] ? (index % 2 === 0 ? -40 : 20) : 20,
+                        y: inViewStates[index] ? (index % 2 === 0 ? -40 : -10) : 20,
                       }}
                       transition={{ duration: 0.5 }}
                     >
