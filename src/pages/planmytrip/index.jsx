@@ -21,6 +21,11 @@ import Head from "next/head";
 const index = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const images = [img, Frame68, naran];
+    const handleForm = (e) => {
+        e.preventDefault();
+        console.log(selectedTour)
+
+    }
     return (
         <Layout>
             <Head>
@@ -35,12 +40,109 @@ const index = () => {
             <section>
                 <div className='wrapper-P2 mt-10 lg:mt-20'>
                     <div className='container'>
-                        <div className='flex flex-col md:flex-row'>
-                            <div className='basis-1/2 flex justify-center items-center border'>
-                                <figure><Image src={adventureImg} /></figure>
+                        <div className='flex flex-col gap-10 md:gap-0 md:flex-row mx-5 md:mx-0'>
+                            <div className='basis-1/2 flex justify-center items-center'>
+                                <figure className='w-[50%] md:w-[90%] h-auto'><Image src={adventureImg} alt='img' className="w-full h-full" /></figure>
                             </div>
-                            <div className='basis-1/2 flex justify-center items-center border'> 
-                                <figure><Image src={adventureImg} /></figure>
+                            <div className='basis-1/2 flex flex-col'>
+                                <h1>Let's Plan Your Adventure</h1>
+                                <p>You need to come at least once in your life</p>
+                                <form onSubmit={handleForm} className='flex flex-col gap-2 lg:gap-4 mt-8 lg:mt-14'>
+                                    <div className="flex gap-2 lg:gap-4">
+                                        <div class="relative basis-1/2">
+                                            <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="firstName" name="firstName" required />
+                                            <label for="firstName" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                First Name *
+                                            </label>
+                                        </div>
+                                        <div class="relative basis-1/2">
+                                            <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="lastName" name="lastName" required />
+                                            <label for="lastName" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Last Name *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-2 lg:gap-4">
+                                        <div class="relative basis-1/2">
+                                            <input type="email" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="email" name="email" required />
+                                            <label for="email" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Email address *
+                                            </label>
+                                        </div>
+                                        <div class="relative basis-1/2">
+                                            <input type="number" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="phoneNumber" name="phoneNumber" required />
+                                            <label for="phoneNumber" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Phone number *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-2 lg:gap-4">
+                                        <div class="relative basis-1/2">
+                                            <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="nationality" name="nationality" required />
+                                            <label for="nationality" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Nationality *
+                                            </label>
+                                        </div>
+                                        <div className="basis-1/2">
+                                            <select className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]">
+                                                <option value="">Select type of tour</option>
+                                                <option value="option1">Option 1</option>
+                                                <option value="option2">Option 2</option>
+                                                <option value="option3">Option 3</option>
+                                            </select>
+                                            <label for="nationality" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Nationality *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-2 lg:gap-4">
+                                        <div class="relative basis-1/2">
+                                            <input type="number" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="numberOfParticipants" name="numberOfParticipants" required />
+                                            <label for="numberOfParticipants" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Number of participants *
+                                            </label>
+                                        </div>
+                                        <div class="relative basis-1/2">
+                                            <input type="number" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="numberOfDays" name="numberOfDays" required />
+                                            <label for="numberOfDays" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Number of days *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-2 lg:gap-4">
+                                        <div class="relative basis-1/2">
+                                            <input type="number" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="numberOfRooms" name="numberOfRooms" required />
+                                            <label for="numberOfRooms" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Number of rooms *
+                                            </label>
+                                        </div>
+                                        <div class="relative basis-1/2">
+                                            <input type="email" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder="departureDate" id="departureDate" name="departureDate" required />
+                                            {/* <label for="email" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Email address *
+                                            </label> */}
+                                        </div>
+                                    </div>
+
+                                    <div className="">
+                                        <div class="relative basis-1/2">
+                                            <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="preferredDestination" name="preferredDestination" required />
+                                            <label for="preferredDestination" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                                                Preferred destination *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <textarea class="block px-2.5 pb-2.5 pt-4 w-full h-[150px] text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48] placeholder-[#1A2B48]" placeholder="Tell us more about what you’re planning*" id="plan" name="plan" required>
+                                    </textarea>
+
+                                    <button className='font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Send a request</button>
+
+                                </form>
                             </div>
                         </div>
                     </div>
