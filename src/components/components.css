@@ -27,7 +27,7 @@
 }
 
 /* /////////////about us page////////////// */
-/* .about_culture {
+.about_culture {
     background-image: url('../../public/images/aboutus/news1.png');
     background-position: center;
     background-size: cover;
@@ -46,7 +46,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-} */
+}
 
 /* /////////////CardsSwipper////////////// */
 .custom-swiper {

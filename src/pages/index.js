@@ -6,11 +6,11 @@ import "./index.css"
 import Video from "@/components/Video";
 import Image from "next/image";
 import { homePartners, homeTourPickup, sliderData1 } from '../jsonData/Data'
-import arrow from '@/images/arrow.png'
 import apostofy from '@/images/home/apostofy.png'
 import img from '@/images/home/img.png'
 import tourist from '@/images/home/tourist.png'
 import Frame9 from '@/images/home/Frame9.png'
+import arrow from '@/images/arrow.png'
 import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
 import CardsSwipper from "@/components/swippers/CardsSwipper";
@@ -53,20 +53,20 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* <section>
+      <section>
         <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
-
           <div className="absolute inset-0 -z-10 w-full h-full">
             <Video src="/images/Candy.mp4" />
           </div>
-          <div className="container">
 
-            <div className="flex flex-row relative z-10 pt-10">
-              <div className="basis-1/2 border flex flex-col gap-20 py-20">
-                <span className="mainHead">Hero Heading Should Appear After A While</span>
-                <span>Explore More</span>
+          <div className="container">
+            <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
+              <div className="md:basis-1/2 flex items-center md:items-start flex-col gap-5 md:gap-10 lg:gap-12">
+                <span className="mainHead text-center md:text-left text-white">Hero Heading Should Appear After A While</span>
+                <span className='text-white flex items-center gap-3'>Explore More <figure><Image src={arrow} /></figure></span>
               </div>
-              <div className="basis-1/2 border px-[70px]">
+
+              <div className="md:basis-1/2 px-[70px]">
                 <div className="shadow-[0px_10px_20px_0px_#0000000D] backdrop-blur-[16px] w-auto h-auto rounded-[16px] border border-gray-300 p-[29px_28px]">
                   <div className="w-full max-w-md mx-auto">
 
@@ -86,6 +86,7 @@ const Index = () => {
                     </div>
 
                     <div className="p-4 text-gray-700">{content[activeTab]}</div>
+                    
                   </div>
                 </div>
               </div>
@@ -94,7 +95,7 @@ const Index = () => {
 
 
         </div>
-      </section> */}
+      </section>
 
       <section>
         <div className="wrapper-H2 bg-white py-20 max-w-[1440px] mx-auto">
@@ -120,11 +121,11 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H3 py-10 md:pt-20 px-5">
+        <div className="wrapper-H3 py-10 md:py-20 mx-auto max-w-[1440px] bg-white">
           <div className="container">
-            <div className="flex flex-col">
+            <div className="flex flex-col px-5">
               <h1 className="text-center">Tours Handpicked for you</h1>
-              <div className="flex flex-wrap justify-center mt-16">
+              <div className="flex flex-wrap justify-center mt-20 md:mt-32">
                 {homeTourPickup.map((items, index) => {
                   return (
                     <motion.div
@@ -223,8 +224,8 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H6 pt-10 md:pt-20 bg-white">
-          <div className="container">
+        <div className="wrapper-H6 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto">
+          <div className="container ">
             <h1 className='text-center'>Budget Friendly Adventures!</h1>
             <div className='flex justify-center mt-10 md:mt-16'>
               <CardsSwipper />

@@ -125,6 +125,11 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .mainHead {
+    font-size: 48px !important;
+    line-height: 64px !important
+  }
+
   h3 {
     font-size: 18px !important;
     line-height: 28px !important;
@@ -136,6 +141,11 @@ button {
 }
 
 @media (max-width: 992px) {
+  .mainHead {
+    font-size: 36px !important;
+    line-height: 52px !important
+  }
+
   h3 {
     font-size: 15px !important;
     line-height: 23px !important;
@@ -143,6 +153,11 @@ button {
 }
 
 @media (max-width: 768px) {
+  .mainHead {
+    font-size: 32px !important;
+    line-height: 42px !important
+  }
+
   h1 {
     font-size: 24px !important;
     line-height: 32px !important;
@@ -159,4 +174,9 @@ button {
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  .mainHead {
+    font-size: 28px !important;
+    line-height: 32px !important
+  }
+}
