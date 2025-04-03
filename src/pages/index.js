@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
 import Video from "@/components/Video";
@@ -11,8 +11,9 @@ import apostofy from '@/images/home/apostofy.png'
 import img from '@/images/home/img.png'
 import tourist from '@/images/home/tourist.png'
 import Frame9 from '@/images/home/Frame9.png'
-import Slider from "@/components/Slider";
+import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
+import CardsSwipper from "@/components/swippers/CardsSwipper";
 
 const Index = () => {
 
@@ -118,46 +119,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* <section>
-        <div className="wrapper-H3 bg- py-10 md:pt-20 px-5">
-          <div className="container">
-            <div className="flex flex-col">
-              <h1 className="text-center">Tours Handpicked for you</h1>
-              <div className="flex flex-wrap justify-center mt-16">
-                {homeTourPickup.map((items, index) => {
-                  const ref = useRef(null);
-                  const isInView = useInView(ref, { once: false, margin: "-50px" });
-                  return (
-                    <motion.div
-                      ref={ref}
-                      key={items.id}
-                      className="w-[45%] lg:w-[24%] relative m-1 border h-[300px]"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{
-                        opacity: isInView ? 1 : 0,
-                        y: isInView ? (index % 2 == 0 ? -40 : 20) : 20
-                      }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <div className="absolute inset-0 -z-10">
-                        <Image src={items.image} className="w-full h-full object-cover" alt={items.title} />
-                      </div>
-                      <div className="relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
-                        <h3 className="text-white">{items.title}</h3>
-                        <div className="flex flex-wrap gap-1 md:gap-2 text-[#B8B8B8] text-[13px] md:text-[16px] w-full">
-                          <span>{items.duration}</span>
-                          <span>From Rs{items.price}</span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section>
         <div className="wrapper-H3 py-10 md:pt-20 px-5">
           <div className="container">
@@ -169,11 +130,11 @@ const Index = () => {
                     <motion.div
                       ref={(el) => (itemRefs.current[index] = el)}
                       key={items.id}
-                      className="w-[45%] lg:w-[24%] relative m-1 border h-[250px] md:h-[300px] lg:h-[440px]"
+                      className="w-[45%] lg:w-[24%] relative m-1 h-[250px] md:h-[300px] lg:h-[440px]"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{
                         opacity: inViewStates[index] ? 1 : 0,
-                        y: inViewStates[index] ? (index % 2 === 0 ? -40 : -10) : 20,
+                        y: inViewStates[index] ? (index % 2 === 0 ? -60 : -10) : 20,
                       }}
                       transition={{ duration: 0.5 }}
                     >
@@ -262,6 +223,17 @@ const Index = () => {
       </section>
 
       <section>
+        <div className="wrapper-H6 pt-10 md:pt-20 bg-white">
+          <div className="container">
+            <h1 className='text-center'>Budget Friendly Adventures!</h1>
+            <div className='flex justify-center mt-10 md:mt-16'>
+              <CardsSwipper />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div className="wrapper-H7 pt-20 bg-white max-w-[1440px] mx-auto">
           <div class="designYurTrip">
             <div className="container">
@@ -276,6 +248,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+
       <section>
         <div className="wrapper-H8 pt-20 bg-white max-w-[1440px] mx-auto">
           <div className="container">

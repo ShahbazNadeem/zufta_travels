@@ -30,9 +30,9 @@ const Navbar = () => {
           </figure>
           <ul className="lg:flex justify-between xl:gap-10 gap-5 font-marcellus lg:text-[14px] xl:text-[16px] hidden">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="#">Premium Group Tours</Link></li>
+            <li><Link href="/detaipage">Premium Group Tours</Link></li>
             <li><Link href="#">Private Tours</Link></li>
-            <li><Link href="#">By Air</Link></li>
+            <li><Link href="/blog">By Air</Link></li>
             <li><Link href="PSY">Pakistan Sikh Yatra</Link></li>
             <li><Link href="/contactus">Contact</Link></li>
             <li><Link href="/login">Login</Link></li>

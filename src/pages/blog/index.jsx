@@ -11,11 +11,16 @@ import Layout from '@/components/layout/Layout'
 import Image from "next/image";
 import './blog.css'
 import { blogSlides } from "@/jsonData/Data";
+import Head from "next/head";
+import Link from "next/link";
 
 const index = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Blogs</title>
+      </Head>
       <section>
         <div className="wrapper-B1">
           <Banner title='Blogs' link='blog' />
@@ -52,8 +57,7 @@ const index = () => {
                     modifier: 2.5,
                     slideShadows: false,
                   }}
-                  className="w-full max-w-[1400px] h-[400px] pt-40"
-                >
+                  className="w-full max-w-[1400px] h-[400px] pt-40">
 
                   {blogSlides.map((slide, index) => (
                     <SwiperSlide key={index} className="relative overflow-hidden w-full">
@@ -67,17 +71,21 @@ const index = () => {
                             </span>
                           </div>
                           <div className="flex flex-col gap-3 md:gap-6">
-                            <h3 className='text-white'>Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey</h3>
+                            <h3 className='text-white'>{slide.title}</h3>
                             <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
-                              <span className='flex gap-2 items-center text-white'><SlCalender />18 Sep 2024</span>
-                              <span className='flex gap-2 items-center text-white'><FaRegClock />6 mins</span>
-                              <span className='rounded-[50px] border border-white text-white px-3 py-2'>Keep Reading</span>
+                              <span className='flex gap-2 items-center text-white'><SlCalender />{slide.date}</span>
+                              <span className='flex gap-2 items-center text-white'><FaRegClock />{slide.duration}</span>
+                              <Link href={slide.link}>
+                                <span className="rounded-[50px] border border-white text-white px-3 py-2">
+                                  Keep Reading
+                                </span>
+                              </Link>
+
                             </span>
                           </div>
                         </div>
                       </div>
                     </SwiperSlide>
-
                   ))}
                 </Swiper>
               </div>

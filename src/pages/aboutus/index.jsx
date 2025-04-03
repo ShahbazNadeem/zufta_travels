@@ -12,7 +12,7 @@ import Image from 'next/image'
 import CountUp from 'react-countup';
 import './aboutus.css'
 import { GoShieldCheck } from "react-icons/go";
-import Slider from '@/components/Slider'
+import Slider from '@/components/swippers/Slider'
 import { sliderData1 } from '../../jsonData/Data'
 import NewsAndTips from '@/components/NewsAndTips'
 import Video from '@/components/Video'

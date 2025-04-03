@@ -27,7 +27,7 @@
 }
 
 /* /////////////about us page////////////// */
-.about_culture {
+/* .about_culture {
     background-image: url('../../public/images/aboutus/news1.png');
     background-position: center;
     background-size: cover;
@@ -46,4 +46,51 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+} */
+
+/* /////////////CardsSwipper////////////// */
+.custom-swiper {
+    padding-bottom: 40px !important;
+    /* Creates space between slides and scrollbar */
+}
+
+.swiper-scrollbar {
+    bottom: 5px !important;
+    /* Adjusts scrollbar position */
+    height: 5px !important;
+    /* Custom scrollbar height */
+    background: rgba(0, 0, 0, 0.2) !important;
+    /* Slightly visible background */
+}
+
+/* /////////////SwiperNavButtons////////////////// */
+.swiper-nav-btns {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.swiper-nav-btns span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4E4E4;
+    margin-top: 68px;
+    transition: all 0.5s;
+    padding: 15px;
+    color: #1A2B48;
+}
+
+@media (max-width: 1024px) {
+    .swiper-nav-btns span {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-nav-btns {
+        display: none;
+    }
+
 }
