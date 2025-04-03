@@ -14,6 +14,7 @@ import arrow from '@/images/arrow.png'
 import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
 import CardsSwipper from "@/components/swippers/CardsSwipper";
+import Head from "next/head";
 
 const Index = () => {
 
@@ -53,6 +54,9 @@ const Index = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Home</title>
+      </Head>
       <section>
         <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
           <div className="absolute inset-0 -z-10 w-full h-full">

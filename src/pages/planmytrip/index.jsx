@@ -8,6 +8,7 @@ import payment2 from '@/images/aboutus/payment2.png'
 import payment3 from '@/images/aboutus/payment3.png'
 import payment4 from '@/images/aboutus/payment4.png'
 import payment5 from '@/images/aboutus/payment5.png'
+import adventureImg from '@/images/planMyTrip/adventureImg.png'
 import './planmytrip.css'
 import NewsAndTips from '@/components/NewsAndTips';
 import { accordianData } from '@/jsonData/Data';
@@ -15,12 +16,16 @@ import img from '@/images/planMyTrip/img.png'
 import Frame68 from '@/images/Frame68.png'
 import naran from '@/images/naran.jpeg'
 import AccordianWithSelection from "@/components/AccordianWithSelection";
+import Head from "next/head";
 
 const index = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const images = [img, Frame68, naran];
     return (
         <Layout>
+            <Head>
+                <title>Plan My Trip</title>
+            </Head>
             <section>
                 <div className="wrapper-P1">
                     <Banner title='Plan My Trip' link='Plan my trip' />
@@ -28,7 +33,22 @@ const index = () => {
             </section>
 
             <section>
-                <div className="warpper-P2 mt-10 lg:mt-20">
+                <div className='wrapper-P2 mt-10 lg:mt-20'>
+                    <div className='container'>
+                        <div className='flex flex-col md:flex-row'>
+                            <div className='basis-1/2 flex justify-center items-center border'>
+                                <figure><Image src={adventureImg} /></figure>
+                            </div>
+                            <div className='basis-1/2 flex justify-center items-center border'> 
+                                <figure><Image src={adventureImg} /></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="warpper-P3 mt-10 lg:mt-20">
                     <div className="container flex flex-col gap-5 px-5">
                         <div className="flex flex-col lg:flex-row bg-[#f0f0e5]">
 
@@ -99,40 +119,40 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-P3 mt-10 lg:mt-20">
+                <div className="wrapper-P4 mt-10 lg:mt-20">
                     <div className="container">
                         <div className="flex flex-col gap-3 sm:gap-8 px-5">
-                        <h1>Frequently Asked Questions</h1>
-                        <p>You need to come at least once in your life</p>
-                        <div className="flex flex-col md:flex-row pt-6">
-                            {/* Image Section */}
-                            <div className="md:basis-1/2 flex justify-center items-center">
-                                <figure className="w-[200px] sm:w-[300px] md:w-[330px] lg:w-full">
-                                    <Image
-                                        src={images[selectedIndex] || images[0]}
-                                        width={500}
-                                        height={300}
-                                        alt="Carousel Image"
-                                        className="w-full h-full"
-                                    />
-                                </figure>
-                            </div>
+                            <h1>Frequently Asked Questions</h1>
+                            <p>You need to come at least once in your life</p>
+                            <div className="flex flex-col md:flex-row pt-6">
+                                {/* Image Section */}
+                                <div className="md:basis-1/2 flex justify-center items-center">
+                                    <figure className="w-[200px] sm:w-[300px] md:w-[330px] lg:w-full">
+                                        <Image
+                                            src={images[selectedIndex] || images[0]}
+                                            width={500}
+                                            height={300}
+                                            alt="Carousel Image"
+                                            className="w-full h-full"
+                                        />
+                                    </figure>
+                                </div>
 
-                            {/* Accordion Section */}
-                            <div className="md:basis-1/2 px-10 mt-10 lg:mt-0 flex justify-center items-center">
-                                <AccordianWithSelection
-                                    data={accordianData}
-                                    onSelect={(index) => setSelectedIndex(index ?? 0)}
-                                />
+                                {/* Accordion Section */}
+                                <div className="md:basis-1/2 px-10 mt-10 lg:mt-0 flex justify-center items-center">
+                                    <AccordianWithSelection
+                                        data={accordianData}
+                                        onSelect={(index) => setSelectedIndex(index ?? 0)}
+                                    />
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <div className="wrapper-P4 my-10 lg:my-20">
+                <div className="wrapper-P5 my-10 lg:my-20">
                     <div className="container">
                         <NewsAndTips />
                     </div>
