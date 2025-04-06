@@ -6,13 +6,18 @@ import React from 'react'
 import hands from '@/images/hands.png'
 import happyFace from '@/images/happyFace.png'
 import { accordianData } from '@/jsonData/Data'
+import Head from "next/head";
 
 const index = () => {
   return (
     <Layout>
+      <Head>
+        <title>Contact Us</title>
+      </Head>
+
       <section>
         <div className="wrapper-C1">
-          <Banner title='Contact' link='contact' />
+          <Banner title='Contact' />
         </div>
       </section>
 

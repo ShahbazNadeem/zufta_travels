@@ -31,9 +31,10 @@ const index = () => {
             <Head>
                 <title>Plan My Trip</title>
             </Head>
+
             <section>
                 <div className="wrapper-P1">
-                    <Banner title='Plan My Trip' link='Plan my trip' />
+                    <Banner title='Plan My Trip' />
                 </div>
             </section>
 

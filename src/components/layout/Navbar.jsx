@@ -31,7 +31,7 @@ const Navbar = () => {
           <ul className="lg:flex justify-between xl:gap-10 gap-5 font-marcellus lg:text-[14px] xl:text-[16px] hidden">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/premiumgrouptours">Premium Group Tours</Link></li>
-            <li><Link href="/privatetiurs">Private Tours</Link></li>
+            <li><Link href="/privatetours">Private Tours</Link></li>
             <li><Link href="/byair">By Air</Link></li>
             <li><Link href="/psy">Pakistan Sikh Yatra</Link></li>
             <li><Link href="/contactus">Contact</Link></li>
@@ -76,7 +76,7 @@ const Navbar = () => {
           <ul className="flex flex-col gap-5 font-marcellus text-[16] ">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/premiumgrouptours">Premium Group Tours</Link></li>
-            <li><Link href="/privatetiurs">Private Tours</Link></li>
+            <li><Link href="/privatetours">Private Tours</Link></li>
             <li><Link href="/byair">By Air</Link></li>
             <li><Link href="/psy">Pakistan Sikh Yatra</Link></li>
             <li><Link href="/contact">Contact</Link></li>

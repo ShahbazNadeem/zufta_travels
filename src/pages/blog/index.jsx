@@ -21,9 +21,10 @@ const index = () => {
       <Head>
         <title>Blogs</title>
       </Head>
+
       <section>
         <div className="wrapper-B1">
-          <Banner title='Blogs' link='blog' />
+          <Banner title='Blogs' />
         </div>
       </section>
 

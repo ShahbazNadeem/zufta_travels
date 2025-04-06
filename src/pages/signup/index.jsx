@@ -9,6 +9,7 @@ import Frame70 from "@/images/Frame70.png"
 import Frame71 from "@/images/Frame71.png"
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const index = () => {
     const [users, setUsers] = useState({ email: "", password: "", rememberMe: false });
@@ -24,6 +25,10 @@ const index = () => {
     }
     return (
         <>
+            <Head>
+                <title>Pakistan Sikh Yatra</title>
+            </Head>
+
             <section>
                 <div className="wrapper-S1 h-screen">
                     {/* Background Images */}

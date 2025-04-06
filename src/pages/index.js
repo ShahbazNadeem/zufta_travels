@@ -57,6 +57,7 @@ const Index = () => {
       <Head>
         <title>Home</title>
       </Head>
+      
       <section>
         <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
           <div className="absolute inset-0 -z-10 w-full h-full">
@@ -249,7 +250,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>

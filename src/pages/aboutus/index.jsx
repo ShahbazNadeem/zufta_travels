@@ -16,13 +16,18 @@ import Slider from '@/components/swippers/Slider'
 import { sliderData1 } from '../../jsonData/Data'
 import NewsAndTips from '@/components/NewsAndTips'
 import Video from '@/components/Video'
+import Head from 'next/head'
 
 const index = () => {
   return (
     <Layout>
+       <Head>
+        <title>About us</title>
+      </Head>
+     
       <section>
         <div className="wrapper-A1">
-          <Banner title='About us' link='About us' />
+          <Banner title='About us' />
         </div>
       </section>
 

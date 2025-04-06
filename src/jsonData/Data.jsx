@@ -247,3 +247,90 @@ export const blogSlides = [
         link: "/blog/blog10",
     },
 ];
+
+export const byAirTourPickup = [
+    {
+        id: 1,
+        title: 'Naran Kaghan',
+        image: naran,
+        duration: '5 days trip',
+        price: '105,000'
+    },
+    {
+        id: 2,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+    {
+        id: 3,
+        title: 'Swat Kalam',
+        image: sawat,
+        duration: '5 days trip',
+        price: '125,000'
+    },
+    {
+        id: 4,
+        title: 'Neelam Valley',
+        image: neelam,
+        duration: '5 days trip',
+        price: '85,000'
+    },
+    {
+        id: 5,
+        title: 'Swat Kalam',
+        image: sawat,
+        duration: '5 days trip',
+        price: '125,000'
+    },
+    {
+        id: 6,
+        title: 'Neelam Valley',
+        image: neelam,
+        duration: '5 days trip',
+        price: '85,000'
+    },
+    {
+        id: 7,
+        title: 'Naran Kaghan',
+        image: naran,
+        duration: '5 days trip',
+        price: '105,000'
+    },
+    {
+        id: 8,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+    {
+        id: 9,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+    {
+        id: 10,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+    {
+        id: 11,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+    {
+        id: 12,
+        title: 'Hunza',
+        image: hunza,
+        duration: '4 days trip',
+        price: '95,000'
+    },
+]
