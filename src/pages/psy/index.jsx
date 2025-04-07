@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/Layout'
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Banner from '@/components/Banner'
 import Image from "next/image";
@@ -11,6 +11,11 @@ import arrow from '@/images/arrow.png'
 import './psy.css'
 
 const index = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+  const fullText = `Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.`;
+
+  const shortText = fullText.slice(0, 300) + '...';
     return (
         <Layout>
             <Head>
@@ -25,15 +30,15 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS2 mt-10 md:mt-20">
+                <div className="wrapper-PS2 mt-10 md:mt-20 px-5 md:px-0">
                     <div className="container">
-                        <div className='flex flex-col md:flex-row'>
-                            <div className='md:basis-1/2 text-center md:text-left'>
-                                <h1>Tours Type Name</h1>
+                        <div className='flex flex-col md:flex-row gap-8 md:gap-0'>
+                            <div className='w-[100%] md:w-[40%] text-center md:text-left'>
+                                <h1>Heading</h1>
                             </div>
-                            <div className='md:basis-1/2 flex flex-col'>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, obcaecati possimus. Eligendi veritatis ex culpa, error, soluta odit modi asperiores voluptate laudantium itaque repellendus, dolore porro iste reprehenderit? Ipsa, totam.</p>
-                                <div className="">
+                            <div className='w-[100%] md:w-[60%] flex flex-col items-center md:items-start gap-6 md:gap-10 lg:gap-12'>
+                                <p className='text-center md:text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, obcaecati possimus. Eligendi veritatis ex culpa, error, soluta odit modi asperiores voluptate laudantium itaque repellendus, dolore porro iste reprehenderit? Ipsa, totam.</p>
+                                <div className="w-fit cursor-pointer">
                                     <Link href='/contactus'>
                                         <button className='flex gap-4 items-center w-fit'>
                                             Contact Us <FiArrowRight size={20} />
@@ -47,19 +52,25 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS3 mt-10 md:mt-20">
+                <div className="wrapper-PS3 mt-10 md:mt-20 px-5 md:px-0">
                     <div className="container">
-                        <div className="flex flex-col gap-4">
-                            <div className="flex gap-4">
+                        <div className="flex flex-col gap-8 md:gap-12">
+                            <div className="flex gap-3 md:gap-6">
                                 <div className="basis-1/2"><figure><Image src={contentImg1} /></figure></div>
                                 <div className="basis-1/2"><figure><Image src={contentImg2} /></figure></div>
                             </div>
 
-                            <div className="">
-                                Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.
+                            <div className="text-gray-800">
+                                <p>{isExpanded ? fullText : shortText}<span
+                                    onClick={() => setIsExpanded(!isExpanded)}
+                                    className="text-blue-600 mt-2 underline"
+                                >
+                                    {isExpanded ? "Read Less" : "Read More"}
+                                </span></p>
+                                
                             </div>
 
-                            <div className="flex gap-4">
+                            <div className="flex gap-3 md:gap-6">
                                 <div className="basis-1/3"><figure><Image src={contentImg1} /></figure></div>
                                 <div className="basis-1/3"><figure><Image src={contentImg2} /></figure></div>
                                 <div className="basis-1/3"><figure><Image src={contentImg1} /></figure></div>
@@ -70,14 +81,14 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS4 mt-10 md:mt-20">
+                <div className="wrapper-PS4 mt-10 md:mt-20 px-5 md:px-0">
                     <div className="container">
-                        <div className="flex">
+                        <div className="flex flex-col md:flex-row gap-8 md:gap-18 lg:gap-36">
                             <div className="basis-1/2">
-                                <h1>If we can find the right way to teach people about wildlife, they will be touched.</h1>
+                                <h1 className='text-center md:text-left'>If we can find the right way to teach people about wildlife, they will be touched.</h1>
                             </div>
                             <div className="basis-1/2">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quia iusto iure doloremque natus. Quae, obcaecati repudiandae magni a repellendus dicta cum ullam porro corrupti nobis, libero officia dolore accusamus.
+                                <p className='text-center md:text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quia iusto iure doloremque natus. Quae, obcaecati repudiandae magni a repellendus dicta cum ullam porro corrupti nobis, libero officia dolore accusamus.</p>
                             </div>
                         </div>
                     </div>
@@ -85,9 +96,9 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS5 mt-10 md:mt-20">
+                <div className="wrapper-PS5 mt-10 md:mt-20 px-5 md:px-0">
                     <div className="container">
-                        <div className="">
+                        <div className="border">
                             parallex
                         </div>
                     </div>
@@ -95,15 +106,15 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS6 mt-10 md:mt-20">
+                <div className="wrapper-PS6 mt-10 md:mt-20 px-5 ">
                     <div className="container">
-                        <div className="flex">
+                        <div className="flex flex-col md:flex-row gap-8">
                             <div className="md:basis-1/2">
                                 <figure><Image src={contentImg1} /></figure>
                             </div>
-                            <div className="md:basis-1/2">
-                                <h1>A comprehensive suite of payment products fully integrated.</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque delectus dignissimos at enim! Corporis aspernatur, doloribus necessitatibus numquam quam repudiandae officiis! Temporibus nulla pariatur laborum tenetur quibusdam amet magnam aperiam.</p>
+                            <div className="md:basis-1/2 flex flex-col gap-8 md:gap-8">
+                                <h1 className='text-center md:text-left'>A comprehensive suite of payment products fully integrated.</h1>
+                                <p className='text-center md:text-left'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque delectus dignissimos at enim! Corporis aspernatur, doloribus necessitatibus numquam quam repudiandae officiis! Temporibus nulla pariatur laborum tenetur quibusdam amet magnam aperiam.</p>
 
                             </div>
                         </div>
@@ -112,7 +123,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS6 mt-10 md:mt-20 max-w-[1440px] mx-auto">
+                <div className="wrapper-PS6 mt-10 md:mt-20 max-w-[1440px] mx-auto px-5 md:px-0">
                     <div class="designYurTrip">
                         <div className="container">
                             <div class="content py-24 md:py-48 lg:py-72">
@@ -127,7 +138,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS7 my-10 md:my-20">
+                <div className="wrapper-PS7 my-10 md:my-20 px-5 md:px-0">
                     <div className="container">
                         <div className="flex flex-col gap-4">
                             <div className="">
