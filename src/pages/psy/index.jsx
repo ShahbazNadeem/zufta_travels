@@ -30,7 +30,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS2 mt-10 md:mt-20 px-5 md:px-0">
+                <div className="wrapper-PS2 mt-10 md:mt-20 px-5 max-w-[1440px] mx-auto">
                     <div className="container">
                         <div className='flex flex-col md:flex-row gap-8 md:gap-0'>
                             <div className='w-[100%] md:w-[40%] text-center md:text-left'>
@@ -52,7 +52,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS3 mt-10 md:mt-20 px-5 md:px-0">
+                <div className="wrapper-PS3 mt-10 md:mt-20 px-5 max-w-[1440px] mx-auto">
                     <div className="container">
                         <div className="flex flex-col gap-8 md:gap-12">
                             <div className="flex gap-3 md:gap-6">
@@ -81,7 +81,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS4 mt-10 md:mt-20 px-5 md:px-0">
+                <div className="wrapper-PS4 mt-10 md:mt-20 px-5 max-w-[1440px] mx-auto">
                     <div className="container">
                         <div className="flex flex-col md:flex-row gap-8 md:gap-18 lg:gap-36">
                             <div className="basis-1/2">
@@ -96,7 +96,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS5 mt-10 md:mt-20 px-5 md:px-0">
+                <div className="wrapper-PS5 mt-10 md:mt-20 px-5 ">
                     <div className="container">
                         <div className="border">
                             parallex
@@ -106,13 +106,13 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS6 mt-10 md:mt-20 px-5 ">
+                <div className="wrapper-PS6 mt-10 md:mt-20 px-5 max-w-[1440px] mx-auto">
                     <div className="container">
                         <div className="flex flex-col md:flex-row gap-8">
                             <div className="md:basis-1/2">
                                 <figure><Image src={contentImg1} /></figure>
                             </div>
-                            <div className="md:basis-1/2 flex flex-col gap-8 md:gap-8">
+                            <div className="md:basis-1/2 flex flex-col gap-8">
                                 <h1 className='text-center md:text-left'>A comprehensive suite of payment products fully integrated.</h1>
                                 <p className='text-center md:text-left'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque delectus dignissimos at enim! Corporis aspernatur, doloribus necessitatibus numquam quam repudiandae officiis! Temporibus nulla pariatur laborum tenetur quibusdam amet magnam aperiam.</p>
 
@@ -123,7 +123,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS6 mt-10 md:mt-20 max-w-[1440px] mx-auto px-5 md:px-0">
+                <div className="wrapper-PS6 mt-10 md:mt-20 max-w-[1440px] mx-auto">
                     <div class="designYurTrip">
                         <div className="container">
                             <div class="content py-24 md:py-48 lg:py-72">
@@ -138,21 +138,23 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS7 my-10 md:my-20 px-5 md:px-0">
+                <div className="wrapper-PS7 my-10 md:my-20 px-5 max-w-[1440px] mx-auto">
                     <div className="container">
-                        <div className="flex flex-col gap-4">
-                            <div className="">
-                                <h1>Transforming Dreams into Reality</h1>
-                                <p>This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs. It encompasses a range of services and features designed to streamline payment processes and enhance efficiency.</p>
+                        <div className="flex flex-col gap-8 md:gap-12">
+                            <div className="flex flex-col gap-8">
+                                <h1 className='text-center'>Transforming Dreams into Reality</h1>
+                                <p className='text-center max-w-[656] mx-auto'>This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs. It encompasses a range of services and features designed to streamline payment processes and enhance efficiency.</p>
                             </div>
 
-                            <div className="flex gap-4">
+                            <div className="flex gap-3 md:gap-6">
                                 <div className="basis-1/2"><figure><Image src={contentImg1} /></figure></div>
                                 <div className="basis-1/2"><figure><Image src={contentImg2} /></figure></div>
                             </div>
 
                             <div className="text-center">
+                                <p className='text-center max-w-[956px] mx-auto'>
                                 This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs. It encompasses a range of services and features designed to streamline payment processes and enhance efficiency.
+                                </p>
                             </div>
 
                         </div>
