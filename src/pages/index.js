@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '@/redux/counterSlice/counterSlice'
 import { motion } from "framer-motion";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
@@ -17,6 +19,10 @@ import CardsSwipper from "@/components/swippers/CardsSwipper";
 import Head from "next/head";
 
 const Index = () => {
+
+
+  const count = useSelector(state => state.counter.value)
+  const dispatch = useDispatch()
 
   const itemRefs = useRef([]);
   const [inViewStates, setInViewStates] = useState([]);
@@ -57,6 +63,19 @@ const Index = () => {
       <Head>
         <title>Home</title>
       </Head>
+      <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
       
       <section>
         <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
