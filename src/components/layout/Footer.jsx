@@ -65,7 +65,7 @@ const Footer = () => {
                 <ul className='flex flex-col gap-5'>
                   <li><Link href="/contactus"><h5>Contact us</h5></Link></li>
                   <li><Link href="/planmytrip"><h5>Plan My Trip</h5></Link></li>
-                  <li><Link href="/travelplane"><h5>Travel plane</h5></Link></li>
+                  <li><Link href="/alltours"><h5>Travel plane</h5></Link></li>
                 </ul>
               </div>
             </div>

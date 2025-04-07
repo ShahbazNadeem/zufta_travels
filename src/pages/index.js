@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '@/redux/counterSlice/counterSlice'
 import { motion } from "framer-motion";
 import Layout from '@/components/layout/Layout';
 import "./index.css"
@@ -19,11 +17,6 @@ import CardsSwipper from "@/components/swippers/CardsSwipper";
 import Head from "next/head";
 
 const Index = () => {
-
-
-  const count = useSelector(state => state.counter.value)
-  const dispatch = useDispatch()
-
   const itemRefs = useRef([]);
   const [inViewStates, setInViewStates] = useState([]);
 
@@ -63,27 +56,14 @@ const Index = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
       
       <section>
-        <div className="wrapper-H1 py-20 relative max-w-[1440px] mx-auto">
+        <div className="wrapper-H1 py-20 relative max-w-[1920px] mx-auto">
           <div className="absolute inset-0 -z-10 w-full h-full">
             <Video src="/images/Candy.mp4" />
           </div>
 
-          <div className="container">
+          <div className="container max-w-[1440px] mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
               <div className="md:basis-1/2 flex items-center md:items-start flex-col gap-5 md:gap-10 lg:gap-12">
                 <span className="mainHead text-center md:text-left text-white">Hero Heading Should Appear After A While</span>

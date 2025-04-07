@@ -254,83 +254,95 @@ export const byAirTourPickup = [
         title: 'Naran Kaghan',
         image: naran,
         duration: '5 days trip',
-        price: '105,000'
+        price: '105,000',
+        link: '/byair/naran-kaghan',
     },
     {
         id: 2,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza',
     },
     {
         id: 3,
         title: 'Swat Kalam',
         image: sawat,
         duration: '5 days trip',
-        price: '125,000'
+        price: '125,000',
+        link: '/byair/swat-kalam',
     },
     {
         id: 4,
         title: 'Neelam Valley',
         image: neelam,
         duration: '5 days trip',
-        price: '85,000'
+        price: '85,000',
+        link: '/byair/neelam-valley',
     },
     {
         id: 5,
         title: 'Swat Kalam',
         image: sawat,
         duration: '5 days trip',
-        price: '125,000'
+        price: '125,000',
+        link: '/byair/swat-kalam-2',
     },
     {
         id: 6,
         title: 'Neelam Valley',
         image: neelam,
         duration: '5 days trip',
-        price: '85,000'
+        price: '85,000',
+        link: '/byair/neelam-valley-2',
     },
     {
         id: 7,
         title: 'Naran Kaghan',
         image: naran,
         duration: '5 days trip',
-        price: '105,000'
+        price: '105,000',
+        link: '/byair/naran-kaghan-2',
     },
     {
         id: 8,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza-2',
     },
     {
         id: 9,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza-3',
     },
     {
         id: 10,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza-4',
     },
     {
         id: 11,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza-5',
     },
     {
         id: 12,
         title: 'Hunza',
         image: hunza,
         duration: '4 days trip',
-        price: '95,000'
+        price: '95,000',
+        link: '/byair/hunza-6',
     },
-]
+];

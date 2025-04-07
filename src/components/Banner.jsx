@@ -8,7 +8,7 @@ const Banner = ({ title, backgroundImg }) => {
 
   return (
     <div
-      className="max-w-[1600px] mx-auto bg-center bg-no-repeat bg-cover"
+      className="max-w-[1920px] mx-auto bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="flex flex-col items-center pt-28 pb-18 sm:py-28 lg:py-38 xl:py-56">

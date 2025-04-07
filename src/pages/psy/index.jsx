@@ -9,6 +9,7 @@ import contentImg1 from '@/images/psy/contentImg1.jpeg'
 import contentImg2 from '@/images/psy/contentImg2.jpeg'
 import arrow from '@/images/arrow.png'
 import './psy.css'
+import Parallax from '@/components/Parallax';
 
 const index = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -99,7 +100,7 @@ const index = () => {
                 <div className="wrapper-PS5 mt-10 md:mt-20 px-5 ">
                     <div className="container">
                         <div className="border">
-                            parallex
+                            <Parallax/>
                         </div>
                     </div>
                 </div>
