@@ -1,0 +1,19 @@
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: "prev";
+    background-color: rgb(219, 219, 219);
+    color: #000;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-next:after {
+    content: "next";
+    background-color: rgb(219, 219, 219);
+    color: #000;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+.swiper-pagination-bullet-active{
+    background-color: white;
+}

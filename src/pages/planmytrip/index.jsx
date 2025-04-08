@@ -220,7 +220,6 @@ const index = () => {
                     </div>
                 </div>
             </section>
-
             <section>
                 <div className="wrapper-P4 mt-10 lg:mt-20">
                     <div className="container">
