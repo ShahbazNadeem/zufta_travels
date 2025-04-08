@@ -60,11 +60,7 @@ h2 {
   line-height: 52.8px !important;
   font-family: var(--font-marcellus);
 }
-/* h2 {
-  font-family: var(--font-marcellus);
-  font-weight: 400;
-  font-size: 32px;
-} */
+
 h3 {
   font-size: 24px !important;
   line-height: 24.8px !important;
@@ -137,7 +133,7 @@ button {
     font-size: 38px !important;
     line-height: 42.8px !important;
   }
-  
+
   h3 {
     font-size: 18px !important;
     line-height: 28px !important;
@@ -149,11 +145,12 @@ button {
 }
 
 @media (max-width: 992px) {
-  
+
   h1 {
     font-size: 36px !important;
     line-height: 52px !important;
   }
+
   h2 {
     font-size: 33px !important;
     line-height: 38.8px !important;

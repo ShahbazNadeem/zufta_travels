@@ -105,11 +105,11 @@ const index = () => {
               </div>
             </div>
 
-            <div className="flex gap-5">
-              <div className="basis-1/2">
+            <div className="flex flex-col md:flex-row gap-5">
+              <div className="md:basis-1/2">
                 <Video src='/images/Candy.mp4' />
               </div>
-              <div className="basis-1/2 flex flex-col justify-between gap-42 planMyTrip p-10">
+              <div className="md:basis-1/2 flex flex-col justify-between gap-20 lg:gap-42 planMyTrip p-10">
                 <div className="flex flex-col gap-5">
                   <div className="">Let’s Travel</div>
                   <h2 className="">Explore, Book, Soar: Your Journey Awaits!</h2>
