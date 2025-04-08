@@ -53,22 +53,22 @@ const CatchAllDetailPage = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <figure className=''><Image src={bannerimg1} className='w-full h-auto'/></figure>
+          <figure className='w-full h-auto'><Image src={bannerimg1} className='w-full h-auto'/></figure>
         </SwiperSlide>
         <SwiperSlide>
-          <figure className=''><Image src={naran} className='w-full h-auto'/></figure>
+          <figure className='w-full h-auto'><Image src={naran} className='w-full h-auto'/></figure>
           {/* <img src="https://swiperjs.com/demos/images/nature-2.jpg" /> */}
         </SwiperSlide>
         <SwiperSlide>
-        <figure className=''><Image src={Frame68} className='w-full h-auto'/></figure>
+        <figure className='w-full h-auto'><Image src={Frame68} className='w-full h-auto'/></figure>
         </SwiperSlide>
         <SwiperSlide>
-        <figure className=''><Image src={img} className='w-full h-auto'/></figure>
+        <figure className='w-full h-auto'><Image src={img} className='w-full h-auto'/></figure>
         </SwiperSlide>
       </Swiper>
 
       <section>
-        <div className="wrapper mt-10 md:mt-30 px-5">
+        <div className="wrapper mt-5 md:mt-10 px-5">
           <div className="container">
             <div className="">
               <ul className=" flex items-center gap-5">

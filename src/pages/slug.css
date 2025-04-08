@@ -17,11 +17,22 @@
 .swiper-pagination-bullet-active{
     background-color: white;
 }
+@media (min-width: 1200px) {
+  .swiper-wrapper{
+    height: 80vh !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-wrapper{
+    height: 70vh !important;
+  }
+}
 
 @media (max-width: 576px) {
    
   .swiper-wrapper{
-    height: 40vh !important;
+    height: 50vh !important;
   }
   
   }
