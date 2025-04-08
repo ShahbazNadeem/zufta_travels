@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Marcellus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Marcellus&display=swap");
 @import "tailwindcss";
 
 @utility container {
-  margin: auto
+  margin: auto;
 }
 
 * {
@@ -12,21 +12,21 @@
 }
 
 :root {
-  --background: #F8F8F8;
+  --background: #f8f8f8;
   --foreground: #171717;
   --primary: #989898;
   --body: #090b0c;
-  --secondary: #FFFFFF;
+  --secondary: #ffffff;
   --whitecolor: #ffffff;
   --text: #737373;
   /* #B8B8B8 */
-  --backgorund: #1A2B48;
+  --backgorund: #1a2b48;
   --accent: #000000;
-  --border: #E4E6E8;
+  --border: #e4e6e8;
   /* global font  */
-  --font-inter: 'Inter', 'sans-serif';
-  --font-manrope: 'Manrope', 'sans-serif';
-  --font-marcellus: 'Marcellus', 'serif';
+  --font-inter: "Inter", "sans-serif";
+  --font-manrope: "Manrope", "sans-serif";
+  --font-marcellus: "Marcellus", "serif";
 }
 
 @theme inline {
@@ -44,7 +44,7 @@
 }
 
 body {
-  background: #F8F8F8;
+  background: #f8f8f8;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden !important;
 }
@@ -60,7 +60,14 @@ h1 {
   line-height: 52.8px !important;
   font-family: var(--font-marcellus);
 }
-
+h2 {
+  /* font-family: Marcellus; */
+  font-family: var(--font-marcellus);
+  font-weight: 400;
+  font-size: 32px;
+  /* line-height: 100%; */
+  /* letter-spacing: 0%; */
+}
 h3 {
   font-size: 24px !important;
   line-height: 24.8px !important;
@@ -93,7 +100,6 @@ button {
   border-radius: 9999px;
   padding: 8px 20px;
   transition: all 0.3s ease-in-out;
-
 }
 
 .textColor {
@@ -127,14 +133,17 @@ button {
 @media (max-width: 1200px) {
   .mainHead {
     font-size: 48px !important;
-    line-height: 64px !important
+    line-height: 64px !important;
   }
 
-  h1{
+  h1 {
     font-size: 38px !important;
     line-height: 42.8px !important;
   }
+  h2 {
+    font-size: 32px;
 
+  }
   h3 {
     font-size: 18px !important;
     line-height: 28px !important;
@@ -146,14 +155,14 @@ button {
 }
 
 @media (max-width: 992px) {
-  h1{
+  h1 {
     font-size: 33px !important;
     line-height: 38.8px !important;
   }
 
   .mainHead {
     font-size: 36px !important;
-    line-height: 52px !important
+    line-height: 52px !important;
   }
 
   h3 {
@@ -165,7 +174,7 @@ button {
 @media (max-width: 768px) {
   .mainHead {
     font-size: 32px !important;
-    line-height: 42px !important
+    line-height: 42px !important;
   }
 
   h1 {
@@ -187,6 +196,10 @@ button {
 @media (max-width: 576px) {
   .mainHead {
     font-size: 28px !important;
-    line-height: 32px !important
+    line-height: 32px !important;
   }
+.swiper-wrapper{
+  height: 40vh !important;
+}
+
 }
