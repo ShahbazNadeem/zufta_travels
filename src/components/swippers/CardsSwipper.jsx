@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar } from "swiper/modules";
 import { homeTourPickup } from "@/jsonData/Data";
+import { Autoplay } from 'swiper/modules';
 import { SwiperNavButtons } from "./SwiperNavButtons";
 
 const CardsSwipper = () => {
@@ -48,7 +49,12 @@ const CardsSwipper = () => {
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
-        modules={[Scrollbar]}
+        modules={[Scrollbar, Autoplay]}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         className="py-16 md:h-[500px] lg:h-[600px] sm:h-[400px] h-[320px]"
       >
         {homeTourPickup.map((tour, index) => (
