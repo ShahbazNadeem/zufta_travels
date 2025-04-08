@@ -252,114 +252,6 @@ export const blogSlides = [
 ];
 
 export const byAirTourPickup = [
-<<<<<<< HEAD
-  {
-    id: 1,
-    title: "Naran Kaghan",
-    image: naran,
-    duration: "5 days trip",
-    price: "105,000",
-  },
-  {
-    id: 2,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-  {
-    id: 3,
-    title: "Swat Kalam",
-    image: sawat,
-    duration: "5 days trip",
-    price: "125,000",
-  },
-  {
-    id: 4,
-    title: "Neelam Valley",
-    image: neelam,
-    duration: "5 days trip",
-    price: "85,000",
-  },
-  {
-    id: 5,
-    title: "Swat Kalam",
-    image: sawat,
-    duration: "5 days trip",
-    price: "125,000",
-  },
-  {
-    id: 6,
-    title: "Neelam Valley",
-    image: neelam,
-    duration: "5 days trip",
-    price: "85,000",
-  },
-  {
-    id: 7,
-    title: "Naran Kaghan",
-    image: naran,
-    duration: "5 days trip",
-    price: "105,000",
-  },
-  {
-    id: 8,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-  {
-    id: 9,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-  {
-    id: 10,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-  {
-    id: 11,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-  {
-    id: 12,
-    title: "Hunza",
-    image: hunza,
-    duration: "4 days trip",
-    price: "95,000",
-  },
-];
-export const tourDetails = [
-  {
-    title: "Destination",
-    data: "Tour Name",
-    img: tourimg,
-  },
-  {
-    title: "Departure",
-    data: "Islamabad",
-    img: tourimg,
-  },
-  {
-    title: "Included",
-    data: "Complete Guidance, Accommodation, Hygienic Breakfast, Expert & Native Driver",
-    img: tourimg,
-  },
-  {
-    title: "Not Included",
-    data: "Air Tickets, Mattress Charges, Candle Light Dinner (on demand)",
-    img: tourimg,
-  },
-=======
     {
         id: 1,
         title: 'Naran Kaghan',
@@ -456,5 +348,27 @@ export const tourDetails = [
         price: '95,000',
         link: '/byair/hunza-6',
     },
->>>>>>> c53c07c49339a92b7740b1b7a4b389df9cf57548
+];
+export const tourDetails = [
+  {
+    title: "Destination",
+    data: "Tour Name",
+    img: tourimg,
+  },
+  {
+    title: "Departure",
+    data: "Islamabad",
+    img: tourimg,
+  },
+  {
+    title: "Included",
+    data: "Complete Guidance, Accommodation, Hygienic Breakfast, Expert & Native Driver",
+    img: tourimg,
+  },
+  {
+    title: "Not Included",
+    data: "Air Tickets, Mattress Charges, Candle Light Dinner (on demand)",
+    img: tourimg,
+  },
+  
 ];
