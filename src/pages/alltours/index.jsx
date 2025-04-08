@@ -33,16 +33,16 @@ const index = () => {
                 <div className="wrapper-All2 px-5">
                     <div className="container">
 
-                <div className="flex justify-between items-center py-3 border">
+                        <div className="flex justify-between items-center py-3 border">
 
-                        <ul className='flex gap-8 flex-wrap'>
-                            <li className='flex gap-5 items-center'><span>sort by price</span> <FiChevronDown/></li>
-                            <li className='flex gap-5 items-center'><span>sort by categories</span> <FiChevronDown/></li>
-                            <li className='flex gap-5 items-center'><span>sort by reviews</span> <FiChevronDown/></li>
-                            <li className='flex gap-5 items-center'><span>sort by places</span> <FiChevronDown/></li>
-                        </ul>
-                        <figure className='hidden lg:block'><Image src={Vector}/></figure>
-                </div>
+                            <ul className='flex gap-8 flex-wrap'>
+                                <li className='flex gap-5 items-center'><span>sort by price</span> <FiChevronDown /></li>
+                                <li className='flex gap-5 items-center'><span>sort by categories</span> <FiChevronDown /></li>
+                                <li className='flex gap-5 items-center'><span>sort by reviews</span> <FiChevronDown /></li>
+                                <li className='flex gap-5 items-center'><span>sort by places</span> <FiChevronDown /></li>
+                            </ul>
+                            <figure className='hidden lg:block'><Image src={Vector} /></figure>
+                        </div>
                     </div>
 
                 </div>

@@ -17,3 +17,12 @@
 .swiper-pagination-bullet-active{
     background-color: white;
 }
+
+@media (max-width: 576px) {
+   
+  .swiper-wrapper{
+    height: 40vh !important;
+  }
+  
+  }
+  
