@@ -27,7 +27,7 @@ const index = () => {
             <div className="flex lg:flex-row flex-col py-10 lg:py-16">
               <div className="basis-1/2 px-5 lg:px-10">
                 <span className='flex items-center'>
-                  <h1 className='font-marcellus me-3 lg:me-6'>Hello!</h1>
+                  <h2 className='font-marcellus me-3 lg:me-6'>Hello!</h2>
                   <figure><Image src={happyFace} /></figure>
                   <figure><Image src={hands} /></figure>
                 </span>

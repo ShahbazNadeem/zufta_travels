@@ -35,7 +35,7 @@ const index = () => {
         <div className="wrapper-A2 mt-20">
           <div className="container">
             <div className="flex flex-col text-center gap-12 px-3 md:px-0">
-              <h1>About Zufta Travel & Tours</h1>
+              <h2>About Zufta Travel & Tours</h2>
               <p>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.</p>
             </div>
           </div>
@@ -112,7 +112,7 @@ const index = () => {
               <div className="basis-1/2 flex flex-col justify-between gap-42 planMyTrip p-10">
                 <div className="flex flex-col gap-5">
                   <div className="">Let’s Travel</div>
-                  <h1 className="">Explore, Book, Soar: Your Journey Awaits!</h1>
+                  <h2 className="">Explore, Book, Soar: Your Journey Awaits!</h2>
                 </div>
                 <div className="flex items-center gap-5">Plan My Trip <figure><Image src={arrow} alt='img' /></figure></div>
               </div>
@@ -193,7 +193,7 @@ const index = () => {
       <section>
         <div className="wrapper-A5 pt-20">
           <div className="container">
-            <h1 className='text-center pb-12 textColor2'>What Our Clients Say</h1>
+            <h2 className='text-center pb-12 textColor2'>What Our Clients Say</h2>
             <Slider data={sliderData1} />
           </div>
         </div>

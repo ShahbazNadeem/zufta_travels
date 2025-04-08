@@ -46,7 +46,7 @@ const index = () => {
                                 <figure className='w-[50%] md:w-[90%] h-auto'><Image src={adventureImg} alt='img' className="w-full h-full" /></figure>
                             </div>
                             <div className='basis-1/2 flex flex-col'>
-                                <h1>Let's Plan Your Adventure</h1>
+                                <h2>Let's Plan Your Adventure</h2>
                                 <p>You need to come at least once in your life</p>
                                 <form onSubmit={handleForm} className='flex flex-col gap-2 lg:gap-4 mt-8 lg:mt-14'>
                                     <div className="flex gap-2 lg:gap-4">
@@ -224,7 +224,7 @@ const index = () => {
                 <div className="wrapper-P4 mt-10 lg:mt-20">
                     <div className="container">
                         <div className="flex flex-col gap-3 sm:gap-8 px-5">
-                            <h1>Frequently Asked Questions</h1>
+                            <h2>Frequently Asked Questions</h2>
                             <p>You need to come at least once in your life</p>
                             <div className="flex flex-col md:flex-row pt-6">
                                 {/* Image Section */}

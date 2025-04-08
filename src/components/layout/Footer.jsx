@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-[1600] mx-auto pt-9">
+      <div className="max-w-[1920] mx-auto pt-9">
         <div className="flex sm:justify-between flex-col md:flex-row items-center gap-2 md:gap-0 container mx-auto sm:px-10 px-2">
           <span className='md:text-[14px] text-[12px] textColor'>© 2024 Travila Inc. All rights reserved.</span>
           <ul className='flex gap-8 text-[12px] textColor mt- '>

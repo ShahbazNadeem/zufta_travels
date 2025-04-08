@@ -33,7 +33,7 @@ const index = () => {
           <div className="container">
             <div className="flex flex-col gap-10 md:gap-14 lg:gap-20 px-5">
               <div className="max-w-[900px] flex flex-col gap-10 mx-auto ">
-                <h1 className="text-center">Latest News & Articles</h1>
+                <h2 className="text-center">Latest News & Articles</h2>
                 <p className="text-center">Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi.</p>
               </div>
               {/* slider */}

@@ -66,7 +66,7 @@ const Index = () => {
           <div className="container max-w-[1440px] mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
               <div className="md:basis-1/2 flex items-center md:items-start flex-col gap-5 md:gap-10 lg:gap-12">
-                <span className="mainHead text-center md:text-left text-white">Hero Heading Should Appear After A While</span>
+                <h1 className="mainHead text-center md:text-left text-white">Hero Heading Should Appear After A While</h1>
                 <span className='text-white flex items-center gap-3'>Explore More <figure><Image src={arrow} /></figure></span>
               </div>
 
@@ -128,7 +128,7 @@ const Index = () => {
         <div className="wrapper-H3 py-10 md:py-20 mx-auto max-w-[1440px] bg-white">
           <div className="container">
             <div className="flex flex-col px-5">
-              <h1 className="text-center">Tours Handpicked for you</h1>
+              <h2 className="text-center">Tours Handpicked for you</h2>
               <div className="flex flex-wrap justify-center mt-20 md:mt-32">
                 {homeTourPickup.map((items, index) => {
                   return (
@@ -188,7 +188,7 @@ const Index = () => {
         <div className="wrapper-H5 pt-20 bg-white max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col gap-10 px-5 ">
-              <h1 className="text-center">Exploring the Wonders of Global Travel: A Journey Through Cultures and Landscapes</h1>
+              <h2 className="text-center">Exploring the Wonders of Global Travel: A Journey Through Cultures and Landscapes</h2>
 
               <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
                 <div className=" group overflow-hidden ">
@@ -230,7 +230,7 @@ const Index = () => {
       <section>
         <div className="wrapper-H6 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto">
           <div className="container ">
-            <h1 className='text-center'>Budget Friendly Adventures!</h1>
+            <h2 className='text-center'>Budget Friendly Adventures!</h2>
             <div className='flex justify-center mt-10 md:mt-16'>
               <CardsSwipper />
             </div>
@@ -244,7 +244,7 @@ const Index = () => {
             <div className="container">
               <div class="content py-24 md:py-48 lg:py-72">
                 <div className="flex flex-col gap-4 md:gap-8 lg:gap-18">
-                  <h1 className="text-center">Let us design your trip of a lifetime</h1>
+                  <h2 className="text-center">Let us design your trip of a lifetime</h2>
                   <span className="flex justify-center items-center gap-5 cursor-pointer">Plan My Trip <Image src={arrow} alt="arrow" /></span>
                 </div>
               </div>
@@ -256,7 +256,7 @@ const Index = () => {
       <section>
         <div className="wrapper-H8 pt-20 bg-white max-w-[1440px] mx-auto">
           <div className="container">
-            <h1 className='text-center pb-12 textColor2'>What Our Clients Say</h1>
+            <h2 className='text-center pb-12 textColor2'>What Our Clients Say</h2>
             <Slider data={sliderData1} />
           </div>
         </div>

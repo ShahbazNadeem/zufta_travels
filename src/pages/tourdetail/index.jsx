@@ -67,7 +67,7 @@ const TourDetail = () => {
             </div>
             <div className="tourdetail px-2 ">
               <div className="flex items-center justify-between flex-wrap">
-                <h1>Tour Name Appear Here</h1>
+                <h2>Tour Name Appear Here</h2>
                 <div className="flex items-center gap-5">
                   <figure className="flex items-center gap-1">
                     <IoIosStar className="textColor2 text-lg md:text-xl lg:text-2xl" />
@@ -142,7 +142,7 @@ const TourDetail = () => {
       <section className="tourplan">
         <div className="wrapper">
           <div className="container mx-auto px-5">
-            <h1>Tour Plan</h1>
+            <h2>Tour Plan</h2>
             <p>You need to come at least once in your life</p>
             <div className="flex items-center justify-center flex-wrap gap-3 md:gap-0 py-3">
               <div className=" basis-[100%] md:basis-1/2">
@@ -169,7 +169,7 @@ const TourDetail = () => {
             <div className="pricing-content">
               <div className="flex items-center justify-between py-5">
                 <div>
-                  <h1 className="text-2xl font-semibold">Pricing</h1>
+                  <h2 className="text-2xl font-semibold">Pricing</h2>
                   <p className="text-gray-600">
                     You need to come at least once in your life
                   </p>
@@ -198,7 +198,7 @@ const TourDetail = () => {
         <div className="wrapper-P4 mt-10 lg:mt-20">
           <div className="container">
             <div className="flex flex-col gap-3 sm:gap-8 px-5">
-              <h1>Frequently Asked Questions</h1>
+              <h2>Frequently Asked Questions</h2>
               <p>You need to come at least once in your life</p>
               <div className="flex flex-col md:flex-row pt-6">
                 {/* Image Section */}

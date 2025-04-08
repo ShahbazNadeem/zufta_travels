@@ -9,7 +9,7 @@ const NewsAndTips = () => {
         <div>
             <div className="flex flex-col sm:flex-row justify-between gap-3">
                 <div className="flex flex-col gap-3 sm:gap-8 text-center sm:text-left">
-                    <h1 className=''>News, Tips & Guides</h1>
+                    <h2 className=''>News, Tips & Guides</h2>
                     <p>Favorite destinations based on customer reviews</p>
                 </div>
                 <div className="flex items-start justify-center">
