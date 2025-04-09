@@ -15,6 +15,10 @@ import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
 import CardsSwipper from "@/components/swippers/CardsSwipper";
 import Head from "next/head";
+import { FaCalendarAlt, FaUserAlt } from "react-icons/fa"
+import { FiChevronDown } from "react-icons/fi";
+import { IoLocationSharp } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 const Index = () => {
   const itemRefs = useRef([]);
@@ -44,7 +48,7 @@ const Index = () => {
   }, []);
 
   const [activeTab, setActiveTab] = useState(0);
-  const tabs = ["Tab 1", "Tab 2", "Tab 3"];
+  const tabs = ["Tours", "Hotels", "TravelerPayout Flight"];
   const content = [
     "This is content for Tab 1.",
     "This is content for Tab 2.",
@@ -56,9 +60,9 @@ const Index = () => {
       <Head>
         <title>Home</title>
       </Head>
-      
+
       <section>
-        <div className="wrapper-H1 py-20 relative max-w-[1920px] mx-auto">
+        <div className="wrapper-H1 py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
           <div className="absolute inset-0 -z-10 w-full h-full">
             <Video src="/images/Candy.mp4" />
           </div>
@@ -70,27 +74,197 @@ const Index = () => {
                 <span className='text-white flex items-center gap-3'>Explore More <figure><Image src={arrow} /></figure></span>
               </div>
 
-              <div className="md:basis-1/2 px-[70px]">
-                <div className="shadow-[0px_10px_20px_0px_#0000000D] backdrop-blur-[16px] w-auto h-auto rounded-[16px] border border-gray-300 p-[29px_28px]">
-                  <div className="w-full max-w-md mx-auto">
-
-                    <div className="flex border-b border-gray-300">
+              <div className="md:basis-1/2 sm:px-[80px] md:px-[70] lg:px-[10px] xl:px-[70px] text-[14px] max-w-[700px]">
+                <div className="shadow-[0px_10px_20px_0px_#0000000D] backdrop-blur-[16px] w-auto h-auto rounded-[16px] border border-gray-300 p-[10px_10px] lg:p-[18px_18px] xl:p-[29px_28px]">
+                  <div className="w-full mx-auto ">
+                    
+                    <div className="flex flex-wrap justify-start gap-3">
                       {tabs.map((tab, index) => (
-                        <button
+                        <span
                           key={index}
-                          className={`flex-1 py-2 text-center font-semibold ${activeTab === index
-                            ? "border-b-2 border-blue-500 text-blue-500"
-                            : "text-gray-500 hover:text-blue-500"
+                          className={`px-5 py-2 text-center rounded-2xl cursor-pointer ${activeTab === index
+                            ? "bg-[#1a2b48] text-white"
+                            : "text-gray-500"
                             }`}
                           onClick={() => setActiveTab(index)}
                         >
                           {tab}
-                        </button>
+                        </span>
                       ))}
                     </div>
 
-                    <div className="p-4 text-gray-700">{content[activeTab]}</div>
-                    
+                    <div className="p-5 mt-5 bg-white rounded-xl">
+                      {/* Tours */}
+                      {activeTab === 0 && (
+                        <div className="flex flex-col gap-3 md:gap-6">
+                          <div className="flex justify-between flex-wrap gap-3 items-center">
+                            <span>
+                              Location 1
+                              <span className="flex justify-between items-center">
+                                <IoLocationSharp size={30} className="text-[#D6D7D8]" />
+                                <select className="ps-1 pe-18 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
+                                  <option value="option1">Sharaan</option>
+                                  <option value="option2">Option 1</option>
+                                  <option value="option3">Option 2</option>
+                                  <option value="option4">Option 3</option>
+                                </select>
+                                <FiChevronDown size={30} />
+                              </span>
+                            </span>
+                            <div>
+                              From Date :
+                              <div className="relative">
+                                <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                                <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div>
+                            To Date :
+                            <div className="relative">
+                              <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                              <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                            </div>
+                          </div>
+
+                          <div className="flex justify-between flex-wrap gap-3 items-center pe-4">
+                            <span className="flex items-center gap-2">
+                              <FaUserAlt />
+                              need some help?
+                            </span>
+                            <button className="flex items-center gap-2">
+                              <CiSearch size={24} />
+                              search
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Hotels */}
+                      {activeTab === 1 && (
+                        <div className="flex flex-col gap-3 md:gap-6">
+                          <div className="flex justify-between flex-wrap gap-3 items-center">
+                            <span>
+                              Location 2
+                              <span className="flex justify-between items-center">
+                                <IoLocationSharp size={30} className="text-[#D6D7D8]" />
+                                <select className="ps-1 pe-18 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
+                                  <option value="option1">Sharaan</option>
+                                  <option value="option2">Option 1</option>
+                                  <option value="option3">Option 2</option>
+                                  <option value="option4">Option 3</option>
+                                </select>
+                                <FiChevronDown size={30} />
+                              </span>
+                            </span>
+                            <div>
+                              Check In
+                              <div className="relative">
+                                <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                                <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex justify-between flex-wrap gap-3 items-center'>
+                            <div className=''>
+                              Check Out
+                              <div className="relative">
+                                <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                                <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                              </div>
+                            </div>
+                            <span>
+                              Guest (2)
+                              <span className="flex justify-between items-center">
+                                <FaUserAlt size={20} className="text-[#D6D7D8]" />
+                                <select className="ps-1 pe-2 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
+                                  <option value="option1">2 adults, 2 children</option>
+                                  <option value="option2">Option 1</option>
+                                  <option value="option3">Option 2</option>
+                                  <option value="option4">Option 3</option>
+                                </select>
+                                <FiChevronDown size={30} />
+                              </span>
+                            </span>
+                          </div>
+
+                          <div className="flex justify-between flex-wrap gap-3 items-center pe-4">
+                            <span className="flex items-center gap-2">
+                              <FaUserAlt />
+                              need some help?
+                            </span>
+                            <button className="flex items-center gap-2">
+                              <CiSearch size={24} />
+                              search
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Flights */}
+                      {activeTab === 2 && (
+                        <div className="flex flex-col gap-3 md:gap-6">
+                          <div className="flex justify-between flex-wrap gap-3 items-center">
+                            <span>
+                              Origin
+                              <span className="flex justify-between items-center">
+                                <IoLocationSharp size={30} className="text-[#D6D7D8]" />
+                                <select className="ps-1 pe-18 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
+                                  <option value="option1">Sharaan</option>
+                                  <option value="option2">Option 1</option>
+                                  <option value="option3">Option 2</option>
+                                  <option value="option4">Option 3</option>
+                                </select>
+                                <FiChevronDown size={30} />
+                              </span>
+                            </span>
+                            <div>
+                              Depart
+                              <div className="relative">
+                                <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                                <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex justify-between flex-wrap gap-3 items-center'>
+                            <div className=''>
+                              Return
+                              <div className="relative">
+                                <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
+                                <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
+                              </div>
+                            </div>
+                            <span>
+                             Passenger/Class
+                              <span className="flex justify-between items-center">
+                                <FaUserAlt size={20} className="text-[#D6D7D8]" />
+                                <select className="ps-1 pe-2 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
+                                  <option value="option1">1 pessenger, economy</option>
+                                  <option value="option2">Option 1</option>
+                                  <option value="option3">Option 2</option>
+                                  <option value="option4">Option 3</option>
+                                </select>
+                                <FiChevronDown size={30} />
+                              </span>
+                            </span>
+                          </div>
+
+                          <div className="flex justify-between flex-wrap gap-3 items-center pe-4">
+                            <span className="flex items-center gap-2">
+                              <FaUserAlt />
+                              need some help?
+                            </span>
+                            <button className="flex items-center gap-2">
+                              <CiSearch size={24} />
+                              search
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

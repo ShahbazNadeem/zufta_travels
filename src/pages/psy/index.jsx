@@ -9,14 +9,13 @@ import contentImg1 from '@/images/psy/contentImg1.jpeg'
 import contentImg2 from '@/images/psy/contentImg2.jpeg'
 import arrow from '@/images/arrow.png'
 import './psy.css'
-import Parallax from '@/components/Parallax';
 
 const index = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
-  const fullText = `Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.`;
+    const fullText = `Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.`;
 
-  const shortText = fullText.slice(0, 300) + '...';
+    const shortText = fullText.slice(0, 300) + '...';
     return (
         <Layout>
             <Head>
@@ -68,7 +67,7 @@ const index = () => {
                                 >
                                     {isExpanded ? "Read Less" : "Read More"}
                                 </span></p>
-                                
+
                             </div>
 
                             <div className="flex gap-3 md:gap-6">
@@ -99,8 +98,11 @@ const index = () => {
             <section>
                 <div className="wrapper-PS5 mt-10 md:mt-20 px-5 ">
                     <div className="container">
-                        <div className="border">
-                            <Parallax/>
+                        <div className="Parallax">
+                            <div className='content'>
+                                <h2 className='text-center'>heading</h2>
+                                <p>scroll down to see the effect</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +156,7 @@ const index = () => {
 
                             <div className="text-center">
                                 <p className='text-center max-w-[956px] mx-auto'>
-                                This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs. It encompasses a range of services and features designed to streamline payment processes and enhance efficiency.
+                                    This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs. It encompasses a range of services and features designed to streamline payment processes and enhance efficiency.
                                 </p>
                             </div>
 
