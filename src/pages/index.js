@@ -49,11 +49,6 @@ const Index = () => {
 
   const [activeTab, setActiveTab] = useState(0);
   const tabs = ["Tours", "Hotels", "TravelerPayout Flight"];
-  const content = [
-    "This is content for Tab 1.",
-    "This is content for Tab 2.",
-    "This is content for Tab 3.",
-  ];
 
   return (
     <Layout>
@@ -68,7 +63,7 @@ const Index = () => {
           </div>
 
           <div className="container max-w-[1440px] mx-auto">
-            <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
+            <div className="flex flex-col lg:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
               <div className="md:basis-1/2 flex items-center md:items-start flex-col gap-5 md:gap-10 lg:gap-12">
                 <h1 className="mainHead text-center md:text-left text-white">Hero Heading Should Appear After A While</h1>
                 <span className='text-white flex items-center gap-3'>Explore More <figure><Image src={arrow} /></figure></span>
@@ -98,7 +93,7 @@ const Index = () => {
                       {activeTab === 0 && (
                         <div className="flex flex-col gap-3 md:gap-6">
                           <div className="flex justify-between flex-wrap gap-3 items-center">
-                            <span>
+                            <span className="basis-[48%]">
                               Location 1
                               <span className="flex justify-between items-center">
                                 <IoLocationSharp size={30} className="text-[#D6D7D8]" />
@@ -111,7 +106,7 @@ const Index = () => {
                                 <FiChevronDown size={30} />
                               </span>
                             </span>
-                            <div>
+                            <div className="basis-[48%]">
                               From Date :
                               <div className="relative">
                                 <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
@@ -120,7 +115,7 @@ const Index = () => {
                             </div>
                           </div>
 
-                          <div>
+                          <div className="basis-[100%]">
                             To Date :
                             <div className="relative">
                               <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
@@ -145,7 +140,7 @@ const Index = () => {
                       {activeTab === 1 && (
                         <div className="flex flex-col gap-3 md:gap-6">
                           <div className="flex justify-between flex-wrap gap-3 items-center">
-                            <span>
+                            <span className="basis-[48%]">
                               Location 2
                               <span className="flex justify-between items-center">
                                 <IoLocationSharp size={30} className="text-[#D6D7D8]" />
@@ -158,7 +153,7 @@ const Index = () => {
                                 <FiChevronDown size={30} />
                               </span>
                             </span>
-                            <div>
+                            <div className="basis-[48%]">
                               Check In
                               <div className="relative">
                                 <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
@@ -168,7 +163,7 @@ const Index = () => {
                           </div>
 
                           <div className='flex justify-between flex-wrap gap-3 items-center'>
-                            <div className=''>
+                            <div className="basis-[48%]">
                               Check Out
                               <div className="relative">
                                 <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
@@ -207,7 +202,7 @@ const Index = () => {
                       {activeTab === 2 && (
                         <div className="flex flex-col gap-3 md:gap-6">
                           <div className="flex justify-between flex-wrap gap-3 items-center">
-                            <span>
+                            <span className="basis-[48%]">
                               Origin
                               <span className="flex justify-between items-center">
                                 <IoLocationSharp size={30} className="text-[#D6D7D8]" />
@@ -220,7 +215,7 @@ const Index = () => {
                                 <FiChevronDown size={30} />
                               </span>
                             </span>
-                            <div>
+                            <div className="basis-[48%]">
                               Depart
                               <div className="relative">
                                 <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
@@ -230,14 +225,14 @@ const Index = () => {
                           </div>
 
                           <div className='flex justify-between flex-wrap gap-3 items-center'>
-                            <div className=''>
+                            <div className="basis-[48%]">
                               Return
                               <div className="relative">
                                 <input type="date" className="rounded-lg px-8 py-2 focus:outline-none" />
                                 <FaCalendarAlt className="absolute left-0 top-3 text-[#D6D7D8]" />
                               </div>
                             </div>
-                            <span>
+                            <span className="basis-[48%]">
                              Passenger/Class
                               <span className="flex justify-between items-center">
                                 <FaUserAlt size={20} className="text-[#D6D7D8]" />
