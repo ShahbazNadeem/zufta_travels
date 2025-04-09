@@ -21,7 +21,7 @@ const TourCards = ({ data = [] }) => {
                         <div className="absolute inset-0 -z-10">
                             <Image src={items.image} fill className="object-cover" alt={items.title} />
                         </div>
-                        <div className="relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
+                        <div className="forShadow relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
                             <h3 className="text-white">{items.title}</h3>
                             <div className="flex flex-wrap gap-1 md:gap-2 text-[#B8B8B8] text-[13px] md:text-[16px] w-full">
                                 <span>{items.duration}</span>

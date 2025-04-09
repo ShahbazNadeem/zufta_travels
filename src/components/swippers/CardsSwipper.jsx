@@ -9,6 +9,7 @@ import { Scrollbar } from "swiper/modules";
 import { homeTourPickup } from "@/jsonData/Data";
 import { Autoplay } from 'swiper/modules';
 import { SwiperNavButtons } from "./SwiperNavButtons";
+import '../components.css'
 
 const CardsSwipper = () => {
   const itemRefs = useRef([]);
@@ -72,9 +73,9 @@ const CardsSwipper = () => {
               <div className="absolute inset-0 -z-10">
                 <Image src={tour.image} alt={tour.title} fill className=" object-cover" />
               </div>
-              <div className="relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3 w-full">
+              <div className="forShadow relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3 w-full">
                 <h3 className="mt-4 text-lg  text-white">{tour.title}</h3>
-                <p className="text-sm text-gray-600">{tour.duration}</p>
+                <p className="">{tour.duration}</p>
                 <p className="text-lg font-bold mt-2">PKR {tour.price}</p>
               </div>
             </motion.div>

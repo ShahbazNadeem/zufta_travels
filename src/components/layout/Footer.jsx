@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div className='secondary-backColor max-w-[2000] mx-auto'>
       <div className="container mx-auto sm:px-10 px-2 pt-16 flex flex-col gap-10 ps-4 sm:ps-0">
-        <div className="flex md:flex-row flex-col justify-between gap-5 border-b-2 border-color pb-5">
+        <div className="flex md:flex-row flex-col justify-between gap-5 border-b-2 border-color pb-5 px-5">
           <div className="flex flex-col justify-between gap-10">
             <div className="flex flex-col textColor gap-5 max-w-[370px]">
               <figure><Image src={zuftalogo} /></figure>

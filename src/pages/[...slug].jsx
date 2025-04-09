@@ -251,7 +251,7 @@ const CatchAllDetailPage = () => {
                       <p>(2 to 4 persons)</p></span>
                     <span
                       onClick={handleToggle}
-                      className={`w-16 h-8 flex items-center px-1 rounded-full transition-colors duration-300 ${isToggled ? "bg-blue-600" : "bg-gray-300"
+                      className={`w-16 h-8 flex items-center px-1 rounded-full transition-colors duration-300 ${isToggled ? "bg-gray-300" : "bg-gray-300"
                         }`}
                     >
                       <div
@@ -279,8 +279,8 @@ const CatchAllDetailPage = () => {
                           <FaRegCheckCircle className="text-lg md:text-xl lg:text-2xl" />
                           <h3 className="">{item.title}</h3>
                         </div>
-                        <p className="text-blue-600 font-semibold mb-3 mt-6 md:mt-10">Rs {item.price}</p>
-                        <p className="text-gray-700 text-sm border-t border-b border-color py-2">{item.hotel}</p>
+                        <p className="font-semibold mb-3 mt-6 md:mt-10">Rs {item.price}</p>
+                        <p className="text-sm border-y border-color py-2">{item.hotel}</p>
                       </div>
                     );
                   })}

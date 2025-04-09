@@ -10,6 +10,7 @@ import apostofy from '@/images/home/apostofy.png'
 import img from '@/images/home/img.png'
 import tourist from '@/images/home/tourist.png'
 import Frame9 from '@/images/home/Frame9.png'
+import hunza from '@/images/hunza.jpeg'
 import arrow from '@/images/arrow.png'
 import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
@@ -59,7 +60,8 @@ const Index = () => {
       <section>
         <div className="wrapper-H1 py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
           <div className="absolute inset-0 -z-10 w-full h-full">
-            <Video src="/images/Candy.mp4" />
+            {/* <Video src="/images/Candy.mp4" /> */}
+            <figure><Image src={hunza}/></figure>
           </div>
 
           <div className="container max-w-[1440px] mx-auto">
@@ -315,7 +317,7 @@ const Index = () => {
                       <div className="absolute inset-0 -z-10">
                         <Image src={items.image} className="w-full h-full object-cover" alt={items.title} />
                       </div>
-                      <div className="relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
+                      <div className="forShadow relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
                         <h3 className="text-white">{items.title}</h3>
                         <div className="flex flex-wrap gap-1 md:gap-2 text-[#B8B8B8] text-[13px] md:text-[16px] w-full">
                           <span>{items.duration}</span>
