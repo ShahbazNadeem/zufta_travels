@@ -60,8 +60,8 @@ const Index = () => {
       <section>
         <div className="wrapper-H1 py-10 md:py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
           <div className="absolute inset-0 -z-10 w-full h-full">
-            {/* <Video src="/images/Candy.mp4" /> */}
-            <figure><Image src={hunza}/></figure>
+            <Video src="/images/daily.mp4" />
+            {/* <figure><Image src={hunza}/></figure> */}
           </div>
 
           <div className="container max-w-[1440px] mx-auto">
