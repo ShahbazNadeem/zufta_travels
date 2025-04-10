@@ -98,7 +98,7 @@ const index = () => {
             <section>
                 <div className="wrapper-PS5 mt-10 md:mt-20 px-5 ">
                     <div className="container">
-                        <div className="Parallax">
+                        <div className="Parallax relative">
                             <div className='content'>
                                 <h2 className='text-center'>heading</h2>
                                 <p>scroll down to see the effect</p>

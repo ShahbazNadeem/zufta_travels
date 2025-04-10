@@ -24,8 +24,8 @@ const Footer = () => {
           <div className="flex flex-col justify-between gap-10">
             <div className="flex flex-col textColor gap-5 max-w-[370px]">
               <figure><Image src={zuftalogo} /></figure>
-              <span className='flex gap-2 items-center'><FaLocationDot className='text-[#575756]' /><h5>4517 Washington Ave. Manchester, Kentucky 39495</h5></span>
-              <span className='flex gap-2 items-center'><MdWatchLater className='text-[#575756]' /><h5>Hours: 8:00 - 17:00, Mon - Sat</h5></span>
+              <span className='flex gap-2 items-center'> <figure className='w-[20px] md:w-[35px] lg:w-[25px] xl:w-[20px] h-auto'><FaLocationDot className='text-[#575756] w-full h-auto'  /></figure><h5>4517 Washington Ave. Manchester, Kentucky 39495</h5></span>
+              <span className='flex gap-2 items-center'><figure className='w-[20px] md:w-[23px] lg:w-[19px] xl:w-[20px] h-auto'><MdWatchLater className='text-[#575756]  w-full h-auto' /></figure><h5>Hours: 8:00 - 17:00, Mon - Sat</h5></span>
               <span className='flex gap-2 items-center'><IoMdMail className='text-[#575756]' /><h5>support@travila.com</h5></span>
             </div>
 
