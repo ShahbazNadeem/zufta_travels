@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
+import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
@@ -39,11 +39,16 @@ const index = () => {
               {/* slider */}
               <div className="w-full flex justify-center overflow-hidden">
                 <Swiper
-                  modules={[Navigation, EffectCoverflow]}
+                  modules={[Navigation, EffectCoverflow, Autoplay]}
                   effect="coverflow"
                   spaceBetween={50}
                   centeredSlides={true}
                   loop={true}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                speed={1000}
                   navigation
                   // pagination={{ clickable: true }}
                   breakpoints={{
@@ -101,7 +106,7 @@ const index = () => {
             <div className="flex  flex-col gap-10 lg:gap-20 mx-5">
               <div className="flex md:flex-row flex-col gap-10 lg:gap-20 md:h-[600px] lg:h-[900px] ">
                 <div className="">
-                  <div className="p-5 flex flex-col gap-20 sm:gap-40 md:gap-64 lg:gap-96 blog1rdimg">
+                  <div className="forShadow p-5 flex flex-col gap-20 sm:gap-40 md:gap-64 lg:gap-96 blog1rdimg">
                     <div>
                       <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                         Culture
@@ -118,7 +123,7 @@ const index = () => {
                 </div>
 
                 <div className="md:flex items-end">
-                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                  <div className="forShadow p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
                     <div>
                       <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                         Culture
@@ -137,7 +142,7 @@ const index = () => {
 
 
               <div className="max-w-[1200px] h-auto blog3rdimg">
-                <div className="p-5 flex flex-col justify-between gap-48">
+                <div className="forShadow p-5 flex flex-col justify-between gap-48">
                   <div>
                     <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                       Culture
@@ -157,7 +162,7 @@ const index = () => {
 
               <div className="flex md:flex-row flex-col gap-10 lg:gap-20 md:h-[600px] lg:h-[900px] ">
                 <div className="md:flex items-end">
-                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                  <div className="forShadow p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
                     <div>
                       <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                         Culture
@@ -174,7 +179,7 @@ const index = () => {
                 </div>
 
                 <div className="">
-                  <div className="p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
+                  <div className="forShadow p-5 flex flex-col justify-between blog2rdimg gap-20 sm:gap-40 md:gap-[300px] lg:gap-[500px]">
                     <div>
                       <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                         Culture
@@ -192,7 +197,7 @@ const index = () => {
               </div>
 
               <div className="h-auto flex justify-end max-w-[1200px]">
-                <div className="p-5 flex flex-col justify-between gap-48 blog3rdimg">
+                <div className="forShadow p-5 flex flex-col justify-between gap-48 blog3rdimg">
                   <div>
                     <span className='bg-[#0000000D] backdrop-blur-md rounded-[50px] px-[15px] py-[8px] text-white font-manrope'>
                       Culture

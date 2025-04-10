@@ -14,7 +14,7 @@ import naran from "@/images/naran.jpeg";
 import AccordianWithSelection from '@/components/AccordianWithSelection';
 import Layout from '@/components/layout/Layout';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -89,7 +89,13 @@ const CatchAllDetailPage = () => {
               pagination={{
                 clickable: true,
               }}
-              modules={[EffectFade, Navigation, Pagination]}
+              loop={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                speed={1000}
+              modules={[EffectFade, Navigation, Pagination, Autoplay]}
               className="mySwiper"
             >
               <SwiperSlide>
@@ -121,7 +127,7 @@ const CatchAllDetailPage = () => {
         </div>
 
         <section ref={sectionRefs.overview} id='overview'>
-          <div className="wrapper mt-5 md:mt-10 px-5">
+          <div className="wrapper mt-10 md:mt-20 px-5">
             <div className="container">
               <div>
                 <div className="mt-10 md:mt-10 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0">
@@ -205,7 +211,7 @@ const CatchAllDetailPage = () => {
               <h2 className='text-center md:text-left'>Tour Plan</h2>
               <p className="mt-3 text-center md:text-left">You need to come at least once in your life</p>
               <div className="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-03 mt-5 lg:mt-0">
-                <div className="md:basis-1/2 px-10 flex justify-center items-center ">
+                <div className="md:basis-1/2 md:px-5 lg:px-10 flex justify-center items-center ">
                   <Accordian data={accordianData} />
                 </div>
                 <div className=" md:basis-1/2 h-[300px]">
@@ -237,9 +243,10 @@ const CatchAllDetailPage = () => {
                   </div>
 
                   {/* Date Picker Input with Icon */}
-                  <div className="relative">
+                  <div className="relative ">
                     <input
                       type="date"
+                      // value={new Date().toISOString().split('T')[0]}
                       className="border rounded-lg px-8 py-2 pl-10 focus:outline-none"
                     />
                     <FaCalendarAlt className="absolute left-3 top-3 text-gray-500" />
@@ -294,9 +301,9 @@ const CatchAllDetailPage = () => {
 
 
       <section ref={sectionRefs.faqs} id="faqs">
-        <div className="wrapper-P4 my-10 lg:my-20">
+        <div className="wrapper-P4 my-10 lg:my-20 px-5">
           <div className="container">
-            <div className="flex flex-col gap-3 sm:gap-8 px-5">
+            <div className="flex flex-col gap-3 sm:gap-8 ">
               <div>
                 <h2 className='text-center md:text-left'>Frequently Asked Questions</h2>
                 <p className='mt-3 text-center md:text-left'>You need to come at least once in your life</p>
@@ -316,7 +323,7 @@ const CatchAllDetailPage = () => {
                 </div>
 
                 {/* Accordion Section */}
-                <div className="md:basis-1/2 px-10 mt-10 lg:mt-0 flex justify-center items-center">
+                <div className="md:basis-1/2 md:px-5 lg:px-10 mt-10 lg:mt-0 flex justify-center items-center">
                   <AccordianWithSelection
                     data={accordianData}
                     onSelect={(index) => setSelectedIndex(index ?? 0)}

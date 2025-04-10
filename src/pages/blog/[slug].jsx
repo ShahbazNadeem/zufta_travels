@@ -86,19 +86,19 @@ export default function BlogPost() {
                             <p className="text-lg">{data.description || ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta culpa eos ipsum ad cupiditate tempora sequi vel maxime exercitationem fugit, ea autem vero consequuntur perspiciatis delectus iste. Beatae doloribus totam inventore! Eligendi laboriosam officia repellendus temporibus quam iste fuga facilis neque dolore incidunt dolorum omnis error quidem numquam odio ipsam, hic, obcaecati debitis voluptatem, architecto necessitatibus harum tempora repellat! Beatae, sunt voluptatem! Minima architecto earum tempore sequi veniam nemo quis non maiores, quisquam quidem dolor quia itaque nostrum soluta nulla ea quae voluptatem iste! Placeat possimus veritatis harum id quod eaque magnam, vel nemo ducimus modi tenetur sequi tempora.'}</p>
                             <ul className='flex flex-col gap-3'>
                                 <li className='flex gap-2'>
-                                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                                    <figure className="w-[40px] md:w-[15px] lg:w-[20px] ">
                                         <Image src={tourimg} alt={data.title} className="w-full h-auto" />
                                     </figure>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim ab repellendus odit obcaecati dolorum, ut temporibus aut quidem veniam minima, eligendi incidunt. At dicta eum vel corrupti quae accusamus.</p>
                                 </li>
                                 <li className='flex gap-2'>
-                                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                                    <figure className="w-[40px] md:w-[15px] lg:w-[20px] ">
                                         <Image src={tourimg} alt={data.title} className="w-full h-auto" />
                                     </figure>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim ab repellendus odit obcaecati dolorum, ut temporibus aut quidem veniam minima, eligendi incidunt. At dicta eum vel corrupti quae accusamus.</p>
                                 </li>
                                 <li className='flex gap-2'>
-                                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                                    <figure className="w-[40px] md:w-[15px] lg:w-[20px] ">
                                         <Image src={tourimg} alt={data.title} className="w-full h-auto" />
                                     </figure>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim ab repellendus odit obcaecati dolorum, ut temporibus aut quidem veniam minima, eligendi incidunt. At dicta eum vel corrupti quae accusamus.</p>
@@ -114,9 +114,9 @@ export default function BlogPost() {
 
                         <div className="flex flex-col md:flex-row md:my-20 my-10 gap-4 md:gap-8">
                             <div className="flex flex-col gap-4 md:gap-8 md:basis-1/2">
-                                <h2>Heading will Appear here</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in condimentum..Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in condimentum..</p>
-                                <div>
+                                <h2 className="text-center md:text-left">Heading will Appear here</h2>
+                                <p className="text-center md:text-left">Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in condimentum..Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in Lorem ipsum dolor sit amet consectetur. Id montes sed rutrum turpis mattis nisi accumsan.. Tempor porttitor cursus aliquet sit lobortis lectus sed sociis a.. Quis sagittis et ultrices aliquet molestie in condimentum..</p>
+                                <div className="flex justify-center md:justify-start gap-4">
                                     <Link href='/contactus'>
                                         <button>Contact Us</button>
                                     </Link>

@@ -32,9 +32,9 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A2 mt-20">
+        <div className="wrapper-A2 mt-10 md:mt-20">
           <div className="container">
-            <div className="flex flex-col text-center gap-12 px-3 md:px-0">
+            <div className="flex flex-col text-center gap-6 md:gap-12 px-3 md:px-0">
               <h2>About Zufta Travel & Tours</h2>
               <p>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.</p>
             </div>
@@ -43,7 +43,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="warpper-A3 mt-20">
+        <div className="warpper-A3 mt-10 md:mt-20">
           <div className="container flex flex-col gap-5">
             <div className="flex flex-col lg:flex-row bg-[#f0f0e5]">
 
@@ -53,7 +53,7 @@ const index = () => {
                     <div className="lg:basis-1/2 flex justify-center items-center p-5 md:p-10">
                       <div className="flex justify-center items-center flex-col">
                         <span className="text-[28px] md:text-[48px] lg:text-[64px] font-marcellus textColor2">
-                          <CountUp start={0} end={168} duration={4.5} enableScrollSpy={true} scrollSpyOnce={true} />k
+                          <CountUp start={0} end={168} duration={2.5} enableScrollSpy={true} scrollSpyOnce={true} />k
                         </span>
                         <span className="text-[16px] md:text-[18px] lg:text-[20px] font-manrope textColor2">Happy Clients</span>
                       </div>
@@ -127,7 +127,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A4 mt-20">
+        <div className="wrapper-A4 mt-10 md:mt-20">
           <div className="container">
             <div className="flex flex-col lg:flex-row px-5">
               <div className="basis-1/2 lg:basis-1/3 flex justify-center items-center">
@@ -191,7 +191,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A5 pt-20">
+        <div className="wrapper-A5 pt-10 md:pt-20">
           <div className="container">
             <h2 className='text-center pb-12 textColor2'>What Our Clients Say</h2>
             <Slider data={sliderData1} />
@@ -200,7 +200,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A6 my-20">
+        <div className="wrapper-A6 my-10 md:my-20">
           <div className="container">
             <NewsAndTips />
           </div>

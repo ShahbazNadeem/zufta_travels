@@ -71,10 +71,15 @@ const index = () => {
                             </div>
 
                             <div className="flex gap-3 md:gap-6">
+                                <div className="basis-1/2"><figure><Image src={contentImg1} /></figure></div>
+                                <div className="basis-1/2"><figure><Image src={contentImg2} /></figure></div>
+                            </div>
+
+                            {/* <div className="flex justify-center gap-3 md:gap-6">
                                 <div className="basis-1/3"><figure><Image src={contentImg1} /></figure></div>
                                 <div className="basis-1/3"><figure><Image src={contentImg2} /></figure></div>
                                 <div className="basis-1/3"><figure><Image src={contentImg1} /></figure></div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -96,12 +101,12 @@ const index = () => {
             </section>
 
             <section>
-                <div className="wrapper-PS5 mt-10 md:mt-20 px-5 ">
+                <div className="wrapper-PS5 mt-10 md:mt-20 px-5 Parallax relative">
                     <div className="container">
-                        <div className="Parallax relative">
+                        <div className="">
                             <div className='content'>
                                 <h2 className='text-center'>heading</h2>
-                                <p>scroll down to see the effect</p>
+                                <p className='text-center'>scroll down to see the effect</p>
                             </div>
                         </div>
                     </div>

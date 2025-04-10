@@ -7,7 +7,7 @@ import './components.css'
 const NewsAndTips = () => {
     return (
         <div>
-            <div className="flex flex-col sm:flex-row justify-between gap-3">
+            <div className="flex flex-col sm:flex-row justify-between gap-5">
                 <div className="flex flex-col gap-3 sm:gap-8 text-center sm:text-left">
                     <h2 className=''>News, Tips & Guides</h2>
                     <p>Favorite destinations based on customer reviews</p>

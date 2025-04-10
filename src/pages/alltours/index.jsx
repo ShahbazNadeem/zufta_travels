@@ -53,7 +53,7 @@ const index = () => {
             </section>
 
             <section>
-                <div className='wrapper-All3 pt-10 md:pt-20 px-5'>
+                <div className='wrapper-All3 pt-10 md:pt-20 '>
                     <div className='container'>
                         <div className="flex flex-col gap-4 md:gap-8 ">
                             <div className='flex flex-col gap-4 md:gap-8 '>

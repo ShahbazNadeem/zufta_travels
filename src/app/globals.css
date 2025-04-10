@@ -182,8 +182,8 @@ button {
   }
 
   h3 {
-    font-size: 13px !important;
-    line-height: 23px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
   }
 
   p {
@@ -196,6 +196,10 @@ button {
   h1 {
     font-size: 28px !important;
     line-height: 32px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+    line-height: 24px !important;
   }
 
 }

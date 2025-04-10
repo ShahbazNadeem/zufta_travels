@@ -58,7 +58,7 @@ const Index = () => {
       </Head>
 
       <section>
-        <div className="wrapper-H1 py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
+        <div className="wrapper-H1 py-10 md:py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
           <div className="absolute inset-0 -z-10 w-full h-full">
             {/* <Video src="/images/Candy.mp4" /> */}
             <figure><Image src={hunza}/></figure>
@@ -273,11 +273,11 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H2 bg-white py-20 max-w-[1440px] mx-auto">
+        <div className="wrapper-H2 bg-white py-10 md:py-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col items-center gap-12 px-5 sm:px-0">
               <span className="font-marcellus text-[24px] text-center">Trusted by beloved partner and customer</span>
-              <div className="flex justify-evenly flex-wrap w-full gap-5">
+              <div className="flex justify-evenly flex-wrap w-full gap-3 md:gap-5">
                 {homePartners.map((partner) => {
                   return (
                     <figure key={partner.id} className='w-[170px]'>
@@ -356,9 +356,9 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H5 pt-20 bg-white max-w-[1440px] mx-auto">
+        <div className="wrapper-H5 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto px-5 ">
           <div className="container">
-            <div className="flex flex-col gap-10 px-5 ">
+            <div className="flex flex-col gap-10 ">
               <h2 className="text-center">Exploring the Wonders of Global Travel: A Journey Through Cultures and Landscapes</h2>
 
               <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
@@ -410,7 +410,7 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H7 pt-20 bg-white max-w-[1440px] mx-auto">
+        <div className="wrapper-H7 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto">
           <div class="designYurTrip">
             <div className="container">
               <div class="content py-24 md:py-48 lg:py-72">
@@ -425,7 +425,7 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H8 pt-20 bg-white max-w-[1440px] mx-auto">
+        <div className="wrapper-H8 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto">
           <div className="container">
             <h2 className='text-center pb-12 textColor2'>What Our Clients Say</h2>
             <Slider data={sliderData1} />
