@@ -61,7 +61,6 @@ const Index = () => {
         <div className="wrapper-H1 py-10 md:py-20 relative max-w-[1920px] mx-auto px-0 md:px-5">
           <div className="absolute inset-0 -z-10 w-full h-full">
             <Video src="/images/daily.mp4" />
-            {/* <figure><Image src={hunza}/></figure> */}
           </div>
 
           <div className="container max-w-[1440px] mx-auto">
@@ -74,7 +73,7 @@ const Index = () => {
               <div className="md:basis-1/2 sm:px-[80px] md:px-[70] lg:px-[10px] xl:px-[70px] text-[14px] max-w-[700px]">
                 <div className="shadow-[0px_10px_20px_0px_#0000000D] backdrop-blur-[16px] w-auto h-auto rounded-[16px] border border-gray-300 p-[10px_10px] lg:p-[18px_18px] xl:p-[29px_28px]">
                   <div className="w-full mx-auto ">
-                    
+
                     <div className="flex flex-wrap justify-start gap-3">
                       {tabs.map((tab, index) => (
                         <span
@@ -235,7 +234,7 @@ const Index = () => {
                               </div>
                             </div>
                             <span className="basis-[48%]">
-                             Passenger/Class
+                              Passenger/Class
                               <span className="flex justify-between items-center">
                                 <FaUserAlt size={20} className="text-[#D6D7D8]" />
                                 <select className="ps-1 pe-2 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
