@@ -17,8 +17,8 @@ const Accordian = ({ data, onSelect }) => {
       {data.map((item, index) => (
         <div key={index} className="border-b border-gray-300">
           <div onClick={() => toggleAccordion(index)}
-            className="cursor-pointer w-full flex justify-between items-center px-4 pt-2 text-left font-semibold hover:bg-gray-200 transition-all">
-            <h3>{item.title}</h3>
+            className="cursor-pointer w-full flex justify-between items-center px-4 pt-2 text-left ">
+            <span className='text-[18px] md:text-[20px] lg:text-[24px] font-marcellus'>{item.title}</span>
           </div>
           
           <div className={`px-4 md:py-2 bg-transparent overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"

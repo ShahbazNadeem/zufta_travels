@@ -45,7 +45,7 @@ const Slider = ({ data }) => {
                             >
                                 <Image src={items.image} width={80} height={80} alt="Main Image" />
                             </motion.figure>
-                            <h4>{items.title}</h4>
+                            <span className='text-[18px]'>{items.title}</span>
                             <span>{items.rating}</span>
                             <p className='text-black text-center'>{items.para}</p>
                         </div>

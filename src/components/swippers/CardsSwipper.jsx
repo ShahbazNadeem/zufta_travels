@@ -74,9 +74,11 @@ const CardsSwipper = () => {
                 <Image src={tour.image} alt={tour.title} fill className=" object-cover" />
               </div>
               <div className="forShadow relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3 w-full">
-                <h3 className="mt-4 text-lg  text-white">{tour.title}</h3>
-                <p className="">{tour.duration}</p>
-                <p className="text-lg font-bold mt-2">PKR {tour.price}</p>
+                <span className="mt-4 text-[18px] md:text-[20px] lg:text-[24px] text-white">{tour.title}</span>
+                <div className='flex flex-wrap gap-1 md:gap-2 text-white text-[13px] md:text-[16px] w-full'>
+                  <span className="text-white">{tour.duration}</span>
+                  <span className=" text-white">PKR {tour.price}</span>
+                </div>
               </div>
             </motion.div>
           </SwiperSlide>

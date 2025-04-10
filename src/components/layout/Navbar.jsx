@@ -38,13 +38,13 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/premiumgrouptours">Premium Group Tours</Link>
+              <Link href="/premium-group-tours">Premium Group Tours</Link>
             </li>
             <li>
-              <Link href="/privatetours">Private Tours</Link>
+              <Link href="/private-tours">Private Tours</Link>
             </li>
             <li>
-              <Link href="/byair">By Air</Link>
+              <Link href="/by-air">By Air</Link>
             </li>
             <li>
               <Link href="/psy">Pakistan Sikh Yatra</Link>

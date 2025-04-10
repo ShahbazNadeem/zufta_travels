@@ -10,6 +10,7 @@ import Frame71 from "@/images/Frame71.png"
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
+import Layout from '@/components/layout/Layout';
 
 const index = () => {
     const [users, setUsers] = useState({ email: "", password: "", rememberMe: false });
@@ -24,14 +25,14 @@ const index = () => {
         console.log(users)
     }
     return (
-        <>
+        <Layout>
             <Head>
-                <title>Contact Us</title>
+                <title>Login</title>
             </Head>
             
             <section>
                 {/* Background Images */}
-                <div className="max-w-[1440] mx-auto absolute inset-0 -z-10">
+                {/* <div className="max-w-[1440] mx-auto absolute inset-0 -z-10">
                     <div className="flex justify-end md:px-48 ">
                         <figure >
                             <Image src={Frame68} alt='image' className='w-[200px] h-auto md:w-[400px] md:h-[100%]' />
@@ -57,9 +58,11 @@ const index = () => {
                             <Image src={Frame71} alt='image' className='w-full h-auto md:w-[180px] md:h-[100%]' />
                         </figure>
                     </div>
-                </div>
+                </div> 
+                relative
+                */}
 
-                <div className='container mx-auto relative'>
+                <div className='container mx-auto'>
                     {/* Foreground Content */}
                     <div className="h-screen w-full flex justify-center items-center relative z-10">
                         <div className="w-auto md:w-[350px] h-auto rounded-[20px] border border-gray-300 p-[19px_18px] md:p-[29px_28px] gap-[8px] backdrop-blur-md">
@@ -110,7 +113,7 @@ const index = () => {
 
                 </div>
             </section>
-        </>
+        </Layout>
     )
 }
 

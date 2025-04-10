@@ -275,7 +275,7 @@ const Index = () => {
         <div className="wrapper-H2 bg-white py-10 md:py-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col items-center gap-12 px-5 sm:px-0">
-              <span className="font-marcellus text-[24px] text-center">Trusted by beloved partner and customer</span>
+              <h2 className="text-center">Trusted by beloved partner and customer</h2>
               <div className="flex justify-evenly flex-wrap w-full gap-3 md:gap-5">
                 {homePartners.map((partner) => {
                   return (
@@ -317,8 +317,8 @@ const Index = () => {
                         <Image src={items.image} className="w-full h-full object-cover" alt={items.title} />
                       </div>
                       <div className="forShadow relative inset-0 -z-10 flex flex-col justify-end h-full px-3 pb-3">
-                        <h3 className="text-white">{items.title}</h3>
-                        <div className="flex flex-wrap gap-1 md:gap-2 text-[#B8B8B8] text-[13px] md:text-[16px] w-full">
+                        <span className="text-white text-[18px] md:text-[20px] lg:text-[24px] font-marcellus">{items.title}</span>
+                        <div className="flex flex-wrap gap-1 md:gap-2 text-white text-[13px] md:text-[16px] w-full">
                           <span>{items.duration}</span>
                           <span>From Rs{items.price}</span>
                         </div>
@@ -343,7 +343,7 @@ const Index = () => {
                     Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!
                   </span>
                 </div>
-                <h3>- A local from Azad Kashmir.</h3>
+                <span className='text-[18px] md:text-[20px] lg:text-[24px] font-marcellus'>- A local from Azad Kashmir.</span>
               </div>
 
               <div className="md:basis-1/2 flex justify-center items-center ">
@@ -391,7 +391,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
+              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6 xl:max-w-[90%] mx-auto">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
             </div>
           </div>
         </div>
@@ -409,15 +409,15 @@ const Index = () => {
       </section>
 
       <section>
-        <div className="wrapper-H7 pt-10 md:pt-20 bg-white max-w-[1440px] mx-auto">
+        <div className="wrapper-H7 pt-10 md:pt-20 bg-white max-w-[1920px] mx-auto">
           <div class="designYurTrip">
-            <div className="container">
+            {/* <div className="container"> */}
               <div class="content py-24 md:py-48 lg:py-72">
                 <div className="flex flex-col gap-4 md:gap-8 lg:gap-18">
                   <h2 className="text-center">Let us design your trip of a lifetime</h2>
                   <span className="flex justify-center items-center gap-5 cursor-pointer">Plan My Trip <Image src={arrow} alt="arrow" /></span>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>

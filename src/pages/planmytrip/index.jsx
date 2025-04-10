@@ -396,7 +396,7 @@ const index = () => {
                 </div>
 
                 {/* Accordion Section */}
-                <div className="md:basis-1/2 md:px-5 lg:px-10 mt-10 lg:mt-0 flex justify-center items-center">
+                <div className="md:basis-1/2 md:px-5 lg:px-10 mt-10 lg:mt-0 flex justify-center items-start">
                   <AccordianWithSelection
                     data={accordianData}
                     onSelect={(index) => setSelectedIndex(index ?? 0)}
