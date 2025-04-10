@@ -280,7 +280,7 @@ const Index = () => {
               <div className="flex justify-evenly flex-wrap w-full gap-5">
                 {homePartners.map((partner) => {
                   return (
-                    <figure key={partner.id}>
+                    <figure key={partner.id} className='w-[170px]'>
                       <Image
                         src={partner.image}
                         alt={`Partner ${partner.id}`}
@@ -376,7 +376,7 @@ const Index = () => {
               </div>
 
 
-              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
+              <div className="text-center font-marcellus text-[16px]/5 md:text-[20px]/6 xl:max-w-[90%] mx-auto">Exploring new destinations can be one of life&apos;s greatest joys. From the bustling streets of Tokyo to the serene beaches of Bali, travel opens up a world of experiences. Whether you&apos;re savoring local cuisines, immersing yourself in different cultures, or simply enjoying breathtaking landscapes, each journey adds a unique chapter to your story. So pack your bags, grab your passport, and let the adventure begin!</div>
 
               <div className="flex flex-col md:flex-row gap-5 justify-center items-center">
 

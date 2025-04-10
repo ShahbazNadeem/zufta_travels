@@ -75,7 +75,7 @@ const index = () => {
                                 <div class="relative">
                                     <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="email" name="email" onChange={getUserData} required />
                                     <label for="email" class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                                        Email or UserName
+                                        Email or Username
                                     </label>
                                 </div>
                                 <div class="relative">
@@ -100,7 +100,7 @@ const index = () => {
                                 </div>
 
 
-                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-between items-center px-[120px] py-[13px]'>Login</button>
+                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Login</button>
                             </form>
 
                             <div className='text-[14px] font-manrope text-center'>or <Link href='#' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
