@@ -1,6 +1,8 @@
 import React from 'react'
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
+import { premiumTourPickup } from '@/jsonData/Data'
+import TourCards from '@/components/TourCards';
 
 const index = () => {
   return (
@@ -9,7 +11,7 @@ const index = () => {
         <Sidebar />
         <div className="flex-1 p-6">
           <DashboardTopBar />
-          Your wishlist content goes here
+          <TourCards data={premiumTourPickup} />
         </div>
       </div>
     </div>
