@@ -4,7 +4,7 @@ import { FaRegBell, FaUser } from "react-icons/fa";
 import dashboardUserImg from "@/images/dashboard/dashboardUserImg.png"
 import Link from 'next/link';
 
-const DashboardHeader = () => {
+const DashboardTopBar = () => {
     return (
         <div className='py-5 md:py-10 flex justify-between items-start flex-wrap'>
             <div className='flex flex-col gap-5'>
@@ -26,4 +26,4 @@ const DashboardHeader = () => {
     )
 }
 
-export default DashboardHeader
+export default DashboardTopBar

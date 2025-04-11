@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from "@/components/dashboard/Sidebar";
-import DashboardHeader from "@/components/dashboard/DashboardHeader";
+import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 
 const index = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -13,7 +13,7 @@ const index = () => {
       <div className="flex">
         <Sidebar />
         <div className="flex-1 ps-10 flex flex-col gap-1">
-          <DashboardHeader />
+          <DashboardTopBar />
           <div className='bg-white p-10'>
             <div className='flex justify-between'>
               <h2>Change Password</h2>
