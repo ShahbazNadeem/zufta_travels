@@ -3,20 +3,33 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
+import axios from "axios"; 
 
 const TourCards = ({ data = [] }) => {
   const [visibleCount, setVisibleCount] = useState(9);
   const [liked, setLiked] = useState({}); // Track liked state per card
 
+  const postToWishlist = async (items) => {
+    try {
+      const response = await axios.post("http://localhost:5000/wishlist", items);
+      console.log("Added to wishlist:", response.data);
+    } catch (error) {
+      console.error("Error adding to wishlist:", error);
+    }
+  };
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + 6);
   };
 
-  const toggleLike = (index) => {
+  const toggleLike = (index, items) => {
     setLiked((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
+    console.log(items, 'items')
+    if (liked) {
+      postToWishlist(items);
+    }
   };
 
   if (!Array.isArray(data) || data.length === 0) {
@@ -47,7 +60,7 @@ const TourCards = ({ data = [] }) => {
                 type="button"
                 onClick={(e) => {
                   e.preventDefault(); // Prevent navigation
-                  toggleLike(index);
+                  toggleLike(index, items);
                 }}
                 className="flex justify-end m-4"
               >
