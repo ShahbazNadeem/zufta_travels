@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [isOpen]);
   return (
     <>
-      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-full z-10">
+      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-full z-10 max-w-[1440px] mx-auto">
         <nav className="container mx-auto  ">
           <div className="flex justify-between items-center flex-row-reverse md:flex-row bg-[#0000000D] backdrop-blur-md rounded-full px-5 ">
           <span
