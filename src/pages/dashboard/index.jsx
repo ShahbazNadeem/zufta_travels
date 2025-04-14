@@ -4,14 +4,17 @@ import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 
 const index = () => {
   return (
-    <div className="container">
+    <>
       <div className="flex">
         <Sidebar />
         <div className="flex-1 ps-6">
-          <DashboardTopBar />
-          Your main content goes here</div>
+          <div className="container">
+            <DashboardTopBar />
+            Your main content goes here
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

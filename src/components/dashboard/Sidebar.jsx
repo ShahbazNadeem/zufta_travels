@@ -1,6 +1,6 @@
 // components/Sidebar.tsx
 import { useState } from "react";
-import logo from "@/images/zufta-logo.png"; 
+import logo from "@/images/zufta-logo.png";
 import Link from "next/link";
 import {
   FaTachometerAlt,
@@ -21,12 +21,14 @@ export default function Sidebar() {
 
   return (
     <div className="h-screen flex flex-col justify-between bg-white border-r transition-all duration-300 group hover:w-48 w-16 overflow-hidden">
-      
+
       {/* Logo */}
       <div className="flex flex-col items-center py-4">
-        <figure className="w-[60px] h-auto">
-          <Image src={logo} alt="Logo" className="w-full h-auto" />
-        </figure>
+        <Link href="/">
+          <figure className="w-[60px] h-auto">
+            <Image src={logo} alt="Logo" className="w-full h-auto" />
+          </figure>
+        </Link>
       </div>
 
       {/* Menu Items */}
