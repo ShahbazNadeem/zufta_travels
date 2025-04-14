@@ -11,18 +11,18 @@ import TourCards from "@/components/TourCards";
 const index = () => {
   return (
     <Layout>
-      <Head> 
+      <Head>
         <title>Private Group Tours</title>
       </Head>
 
       <section>
         <div className="wrapper-BA1">
-          <Banner title='Premiun Group Tours' />
+          <Banner title='Private Group Tours' />
         </div>
       </section>
 
       <section>
-        <div className='wrapper-BA2 py-10 md:py-20'>
+        <div className='wrapper-BA2 py-10 md:py-20 max-w-[1440px] mx-auto'>
           <div className='container'>
             <div className="flex flex-col gap-4 md:gap-8 ">
               <div className='flex flex-col gap-4 md:gap-8 px-5'>
@@ -45,7 +45,7 @@ const index = () => {
       <section>
         <div className="wrapper-BA3 pt-10 md:pt-20 bg-white">
           <div className="container">
-            <div className="">
+            <div className="max-w-[1440px] mx-auto">
               <NewsAndTips />
             </div>
           </div>

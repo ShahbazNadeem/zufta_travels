@@ -12,15 +12,15 @@ const DashboardTopBar = () => {
                 <p>Tue, 07 June 2022</p>
             </div>
             <div className='flex gap-5'>
-                <Link href="/dashboard/setting" className='bg-[#FFFFFF] rounded-lg textColor p-4'>
+                <Link href="/dashboard/setting" className='bg-[#FFFFFF] rounded-lg textColor p-3 cursor-pointer'>
                     <FaRegBell size={25} />
                 </Link>
-                <span className='w-[50px] h-[50px]'>
+                <div className='w-[50px] h-[50px]'>
                     <figure classname=''>
                         {/* <FaUser size={25} /> */}
-                        <Image src={dashboardUserImg} classname='w-full h-auto object-cover rounded' />
+                        <Image src={dashboardUserImg} classname='w-full h-auto rounded-lg' />
                     </figure>
-                </span>
+                </div>
             </div>
         </div>
     )

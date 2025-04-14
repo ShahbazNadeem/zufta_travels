@@ -22,7 +22,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-C2">
+        <div className="wrapper-C2 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex lg:flex-row flex-col py-10 lg:py-16">
               <div className="basis-1/2 px-5 lg:px-10">

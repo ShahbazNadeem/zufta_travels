@@ -21,10 +21,10 @@ import Head from 'next/head'
 const index = () => {
   return (
     <Layout>
-       <Head>
+      <Head>
         <title>About us</title>
       </Head>
-     
+
       <section>
         <div className="wrapper-A1">
           <Banner title='About us' />
@@ -32,7 +32,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A2 mt-10 md:mt-20">
+        <div className="wrapper-A2 mt-10 md:mt-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col text-center gap-6 md:gap-12 px-3 md:px-0">
               <h2>About Zufta Travel & Tours</h2>
@@ -43,7 +43,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="warpper-A3 mt-10 md:mt-20">
+        <div className="warpper-A3 mt-10 md:mt-20 max-w-[1440px] mx-auto">
           <div className="container flex flex-col gap-5">
             <div className="flex flex-col lg:flex-row bg-[#f0f0e5]">
 
@@ -127,7 +127,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A4 mt-10 md:mt-20">
+        <div className="wrapper-A4 mt-10 md:mt-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col lg:flex-row px-5">
               <div className="basis-1/2 lg:basis-1/3 flex justify-center items-center">
@@ -191,7 +191,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-A5 pt-10 md:pt-20">
+        <div className="wrapper-A5 pt-10 md:pt-20 max-w-[1440px] mx-auto">
           <div className="container">
             <h2 className='text-center pb-12 textColor2'>What Our Clients Say</h2>
             <Slider data={sliderData1} />
@@ -202,7 +202,9 @@ const index = () => {
       <section>
         <div className="wrapper-A6 my-10 md:my-20">
           <div className="container">
-            <NewsAndTips />
+            <div className='max-w-[1440px] mx-auto'>
+              <NewsAndTips />
+            </div>
           </div>
         </div>
       </section>

@@ -39,7 +39,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="wrapper-P2 mt-10 lg:mt-20">
+        <div className="wrapper-P2 mt-10 lg:mt-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col gap-10 md:gap-0 md:flex-row mx-5 md:mx-0">
               <div className="basis-1/2 flex justify-center items-center">
@@ -211,9 +211,9 @@ const index = () => {
                       <input
                         type="date"
                         // value={new Date().toISOString().split('T')[0]}
-                        className="border rounded-lg w-full py-3 pl-10 border-2 border-gray-300 focus:outline-none"
+                        className="rounded-lg w-full py-3 pl-10 border-2 border-gray-300 focus:outline-none"
                       />
-                      <FaCalendarAlt className="absolute left-3 top-3 text-gray-500" />
+                      <FaCalendarAlt className="absolute left-3 top-4 text-gray-500" />
                     </div>
                   </div>
 
@@ -255,7 +255,7 @@ const index = () => {
       </section>
 
       <section>
-        <div className="warpper-P3 mt-10 lg:mt-20">
+        <div className="warpper-P3 mt-10 lg:mt-20 max-w-[1440px] mx-auto">
           <div className="container flex flex-col gap-5 px-5">
             <div className="flex flex-col lg:flex-row bg-[#f0f0e5]">
               <div className="basis-1/2 flex justify-center items-center">
@@ -375,8 +375,9 @@ const index = () => {
           </div>
         </div>
       </section>
+
       <section>
-        <div className="wrapper-P4 mt-10 lg:mt-20">
+        <div className="wrapper-P4 mt-10 lg:mt-20 max-w-[1440px] mx-auto">
           <div className="container">
             <div className="flex flex-col gap-3 sm:gap-8 px-5">
               <h2>Frequently Asked Questions</h2>
@@ -411,7 +412,9 @@ const index = () => {
       <section>
         <div className="wrapper-P5 my-10 lg:my-20">
           <div className="container">
-            <NewsAndTips />
+            <div className="max-w-[1440px] mx-auto">
+              <NewsAndTips />
+            </div>
           </div>
         </div>
       </section>

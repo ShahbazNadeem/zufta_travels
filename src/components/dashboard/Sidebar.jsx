@@ -1,26 +1,32 @@
-// components/Sidebar.tsx
+'use client';
+
+import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import logo from "@/images/zufta-logo.png";
 import Link from "next/link";
+import { MdDashboard } from "react-icons/md";
 import {
-  FaTachometerAlt,
   FaHeart,
   FaClock,
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
+import { IoMdHeartEmpty, IoMdTime } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuLayoutDashboard } from "react-icons/lu";
 import Image from "next/image";
 
 export default function Sidebar() {
+  const pathname = usePathname();
   const menuItems = [
-    { icon: <FaTachometerAlt />, label: "Dashboard", link: "/dashboard" },
-    { icon: <FaHeart />, label: "Wishlist", link: "/dashboard/wishlist" },
-    { icon: <FaClock />, label: "Booking History", link: "/dashboard/history" },
-    { icon: <FaCog />, label: "Settings", link: "/dashboard/setting" },
+    { icon1: <MdDashboard />, icon2: <LuLayoutDashboard />, label: "Dashboard", link: "/dashboard" },
+    { icon1: <FaHeart />, icon2: <IoMdHeartEmpty />, label: "Wishlist", link: "/dashboard/wishlist" },
+    { icon1: <FaClock />, icon2: <IoMdTime />, label: "Booking History", link: "/dashboard/history" },
+    { icon1: <FaCog />, icon2: <IoSettingsOutline />, label: "Settings", link: "/dashboard/setting" },
   ];
 
   return (
-    <div className="h-screen flex flex-col justify-between bg-white border-r transition-all duration-300 group hover:w-48 w-16 overflow-hidden">
+    <div className="h-screen flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
 
       {/* Logo */}
       <div className="flex flex-col items-center py-4">
@@ -32,21 +38,27 @@ export default function Sidebar() {
       </div>
 
       {/* Menu Items */}
-      <div className="flex-1 space-y-6 mt-8">
-        {menuItems.map((item, idx) => (
-          <Link href={item.link} key={idx}>
-            <div className="flex items-center space-x-4 px-4 py-2 cursor-pointer text-gray-600 hover:text-blue-600">
-              <span className="text-xl">{item.icon}</span>
-              <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap">
-                {item.label}
-              </span>
-            </div>
-          </Link>
-        ))}
+      <div className="flex-1 flex flex-col ps-2 pt-8 gap-6">
+        {menuItems.map((item, idx) => {
+          const isActive = pathname === item.link;
+
+          return (
+            <Link href={item.link} key={idx}>
+              <div className={`flex items-center space-x-4 px-4 py-2 cursor-pointer text-gray-600 hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}>
+                <span className="text-[20px] md:text-[24px]">
+                  {isActive ? item.icon1 : item.icon2}
+                </span>
+                <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap">
+                  {item.label}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       {/* Logout */}
-      <div className="px-4 py-4 text-gray-600 flex items-center space-x-4 cursor-pointer hover:text-red-600">
+      <div className="p-4 text-gray-600 flex items-center space-x-4 cursor-pointer hover:font-bold">
         <FaSignOutAlt className="text-xl" />
         <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap">
           Logout
