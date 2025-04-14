@@ -640,15 +640,37 @@ export const dashboardhistory = [
       "Aliquam ligula lectus, efficitur non pretium quis, elementum quis sapien. Nunc dapibus mi vitae mi placerat eleifend.",
     time: '5 days',
     price: 'Rs.125,000',
-    room: 'Premium'
+    room: 'Premium',
+    img: naran,
   },
   {
-    id: 1,
+    id: 2,
     tourname: "Swat Kalam",
     content:
       "Aliquam ligula lectus, efficitur non pretium quis, elementum quis sapien. Nunc dapibus mi vitae mi placerat eleifend.",
     time: '5 days',
     price: 'Rs.125,000',
-    room: 'Delux'
+    room: 'Delux',
+    img: naran,
+  },
+  {
+    id: 3,
+    tourname: "Swat Kalam",
+    content:
+      "Aliquam ligula lectus, efficitur non pretium quis, elementum quis sapien. Nunc dapibus mi vitae mi placerat eleifend.",
+    time: '5 days',
+    price: 'Rs.125,000',
+    room: 'Delux',
+    img: naran,
+  },
+  {
+    id: 4,
+    tourname: "Swat Kalam",
+    content:
+      "Aliquam ligula lectus, efficitur non pretium quis, elementum quis sapien. Nunc dapibus mi vitae mi placerat eleifend.",
+    time: '5 days',
+    price: 'Rs.125,000',
+    room: 'Delux',
+    img: naran,
   },
 ];

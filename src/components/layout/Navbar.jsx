@@ -20,8 +20,9 @@ const Navbar = () => {
   }, [isOpen]);
   return (
     <>
-      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-full z-50">
-        <nav className="container mx-auto flex justify-between items-center flex-row-reverse md:flex-row bg-[#0000000D] backdrop-blur-md rounded-full px-5 ">
+      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-full z-10">
+        <nav className="container mx-auto  ">
+          <div className="flex justify-between items-center flex-row-reverse md:flex-row bg-[#0000000D] backdrop-blur-md rounded-full px-5 ">
           <span
             onClick={() => setIsOpen(true)}
             className="lg:hidden bg-transparent"
@@ -61,6 +62,7 @@ const Navbar = () => {
               <button className="hidden sm:block">Plan My Trip</button>
             </Link>
           </span>
+          </div>
         </nav>
       </header>
 
