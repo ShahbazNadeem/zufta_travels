@@ -9,10 +9,10 @@ const index = () => {
     setIsToggled((prev) => !prev);
   };
   return (
-    <div className='container'>
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-1 ps-10 flex flex-col gap-1">
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 ps-10 flex flex-col gap-1">
+        <div className='container'>
           <DashboardTopBar />
           <div className='bg-white p-10'>
             <div className='flex justify-between'>
