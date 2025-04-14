@@ -4,12 +4,13 @@ import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 
 const index = () => {
   return (
-    <div className="container">
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-1 ps-6">
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 ps-6">
+        <div className="container">
           <DashboardTopBar />
-          History Your main content goes here</div>
+          History Your main content goes here
+        </div>
       </div>
     </div>
   )
