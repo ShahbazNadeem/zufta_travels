@@ -28,10 +28,11 @@ const index = () => {
                 >
                   <div className="absolute inset-0 -z-10">
                     <Image
-                      src={items.image}
-                      fill
+                      src={items.image.src}
                       className="object-cover"
                       alt={items.title}
+                      width={items.image.width}
+                      height={items.image.height}
                     />
                   </div>
                   <div className="forShadow inset-0 -z-10 flex flex-col justify-between h-full px-3 pb-3">
