@@ -5,37 +5,55 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
-import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
-// import { loginUser } from "@/redux/authSlice/authSlice";
 
 const index = () => {
-    // const navigate = useNavigate
-    const router = useRouter();
-    const dispatch = useDispatch();
-    const { loading, error } = useSelector((state) => state.auth);
     const [users, setUsers] = useState({ email: "", password: "", rememberMe: false });
-
     const getUserData = (e) => {
         const { name, value, type, checked } = e.target;
         setUsers({ ...users, [name]: type === "checkbox" ? checked : value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(users)
-        // const result = await dispatch(loginUser(users));
-        // if (loginUser.fulfilled.match(result)) {
-        //     router.push('/');            
-        // }
+        console.log(users)
     }
     return (
         <Layout>
             <Head>
                 <title>Login</title>
             </Head>
-
+            
             <section>
+                {/* Background Images */}
+                {/* <div className="max-w-[1440] mx-auto absolute inset-0 -z-10">
+                    <div className="flex justify-end md:px-48 ">
+                        <figure >
+                            <Image src={Frame68} alt='image' className='w-[200px] h-auto md:w-[400px] md:h-[100%]' />
+                        </figure>
+                    </div>
+                    <div className="">
+                        <figure>
+                            <Image src={Frame70} alt='image' className='w-[200px] h-auto md:w-[200px] md:h-[100%]' />
+                        </figure>
+                    </div>
+                    <div className="flex justify-end" alt='image'>
+                        <figure>
+                            <Image src={Frame67} className='w-[200px] h-auto md:w-[200px] md:h-[100%]' />
+                        </figure>
+                    </div>
+                    <div className="md:px-20">
+                        <figure>
+                            <Image src={Frame69} alt='image' className='w-[200px] h-auto md:w-[280px] md:h-[100%]' />
+                        </figure>
+                    </div>
+                    <div className="flex justify-center">
+                        <figure>
+                            <Image src={Frame71} alt='image' className='w-full h-auto md:w-[180px] md:h-[100%]' />
+                        </figure>
+                    </div>
+                </div> 
+                relative
+                */}
 
                 <div className='container mx-auto'>
                     {/* Foreground Content */}
@@ -46,9 +64,7 @@ const index = () => {
                                     <Image src={zuftalogo} />
                                 </figure>
                             </div>
-
                             <div className='text-[20px] md:text-[24px] font-marcellus text-center mt-10 md:mt-16'>Login to begin adventure</div>
-
                             <form onSubmit={handleSubmit} className='flex flex-col gap-4 md:gap-7 my-8 md:my-10'>
                                 <div class="relative">
                                     <input type="text" class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]" placeholder=" " id="email" name="email" onChange={getUserData} required />
@@ -62,7 +78,6 @@ const index = () => {
                                         Password
                                     </label>
                                 </div>
-
                                 <div className="flex items-center">
                                     <input
                                         id="rememberMe"
@@ -78,20 +93,16 @@ const index = () => {
                                 </div>
 
 
-                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>
-                                    <span>{loading ? "Login..." : "Login"}</span>
-                                </button>
+                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Login</button>
                             </form>
 
-                            <div className='text-[14px] font-manrope text-center'>or <Link href='/signup' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
+                            <div className='text-[14px] font-manrope text-center'>or <Link href='#' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
 
                         </div>
                     </div>
-
                 </div>
             </section>
         </Layout>
     )
 }
-
 export default index
