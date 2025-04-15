@@ -5,17 +5,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import { loginUser } from "@/redux/authSlice/AuthSlice";
 
 const index = () => {
+    const router = useRouter();
+    const dispatch = useDispatch();
+    const { loading, error } = useSelector((state) => state.auth);
     const [users, setUsers] = useState({ email: "", password: "", rememberMe: false });
     const getUserData = (e) => {
         const { name, value, type, checked } = e.target;
         setUsers({ ...users, [name]: type === "checkbox" ? checked : value });
     };
-
-    const handleSubmit = (e) => {
+    const handleSubmit =  (e) => {
         e.preventDefault();
         console.log(users)
+        const result =  dispatch(loginUser(users));
+        if (loginUser.fulfilled.match(result)) {
+            router.push('/');
+        }
+        // console.log(users)
+        // const result = await dispatch(loginUser(users));
+        // if (loginUser.fulfilled.match(result)) {
+        //     router.push('/');            
+        // }
     }
     return (
         <Layout>
@@ -95,9 +109,7 @@ const index = () => {
 
                                 <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Login</button>
                             </form>
-
-                            <div className='text-[14px] font-manrope text-center'>or <Link href='#' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
-
+                            <div className='text-[14px] font-manrope text-center'>or <Link href='/signup' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
                         </div>
                     </div>
                 </div>
