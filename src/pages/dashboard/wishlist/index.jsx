@@ -38,13 +38,12 @@ const index = () => {
                     </figure>
                   </div>
                   <div className="forShadow inset-0 -z-10 flex flex-col justify-between h-full px-3 pb-3">
-                    <a
-                      type="button"
-                      className="bg-gray-200 rounded-full p-2 hover:bg-gray-300 transition duration-300 ease-in-out"
+                    <figure
+                      className="bg-gray-200 rounded-full p-2 self-end hover:bg-gray-300 transition duration-300 ease-in-out"
                       onClick={() => toggleLike(index, items)}
                     >
                       <FaHeart color='red' />
-                    </a>
+                    </figure>
 
                     <div>
                       <span className="text-[18px] md:text-[20px] lg:text-[24px] text-white">
