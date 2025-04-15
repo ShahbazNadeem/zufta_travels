@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 import dashboardUserImg from "@/images/dashboard/dashboardUserImg.png"
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
 const index = () => {
+  const router = useRouter();
+  const { user } = useSelector(state => state.auth);
+
+  useEffect(() => {
+    if (!user) router.push('/login');
+  }, [user]);
+
   return (
     <>
       <div className="flex">

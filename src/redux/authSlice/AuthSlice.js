@@ -6,28 +6,29 @@ export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, pass
         const data = await response.json();
         const user = data.find((u) => u.email === email && u.password === password);
         if (!user) return rejectWithValue("Invalid email or password");
-        const userData = { name: user.name, email: user.email, role: user.customRole, companyId: user.companyId, permissions: user.permissions };
+        const userData = { name: user.name, email: user.email, role: user.customRole };
         localStorage.setItem("user", JSON.stringify(userData));
         return userData;
     } catch {
         return rejectWithValue("Failed to connect to the server");
     }
 });
-// Initial state
 const getUserFromLocalStorage = () => {
     if (typeof window !== "undefined") {
-      const user = localStorage.getItem("user");
-      return user ? JSON.parse(user) : null;
+        const user = localStorage.getItem("user");
+        console.log(typeof window, 'alwww')
+        return user ? JSON.parse(user) : null;
     }
     return null;
-  };
-  
-  const initialState = {
-    user: getUserFromLocalStorage(),
+};
+
+// Initial state
+const initialState = {
+    user: null,
     loading: false,
     error: null,
-  };
-  
+};
+
 // Create Slice
 const authSlice = createSlice({
     name: "auth",
