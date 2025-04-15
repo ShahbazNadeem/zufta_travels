@@ -1,18 +1,19 @@
 "use client";
 import React, { useState } from 'react'
-import "@/globalcss";
 import zuftalogo from "@/images/zufta-logo.png"
-import Frame67 from "@/images/Frame67.png"
-import Frame68 from "@/images/Frame68.png"
-import Frame69 from "@/images/Frame69.png"
-import Frame70 from "@/images/Frame70.png"
-import Frame71 from "@/images/Frame71.png"
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+// import { loginUser } from "@/redux/authSlice/authSlice";
 
 const index = () => {
+    // const navigate = useNavigate
+    const router = useRouter();
+    const dispatch = useDispatch();
+    const { loading, error } = useSelector((state) => state.auth);
     const [users, setUsers] = useState({ email: "", password: "", rememberMe: false });
 
     const getUserData = (e) => {
@@ -20,51 +21,25 @@ const index = () => {
         setUsers({ ...users, [name]: type === "checkbox" ? checked : value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(users)
+        // console.log(users)
+        // const result = await dispatch(loginUser(users));
+        // if (loginUser.fulfilled.match(result)) {
+        //     router.push('/');            
+        // }
     }
     return (
         <Layout>
             <Head>
                 <title>Login</title>
             </Head>
-            
+
             <section>
-                {/* Background Images */}
-                {/* <div className="max-w-[1440] mx-auto absolute inset-0 -z-10">
-                    <div className="flex justify-end md:px-48 ">
-                        <figure >
-                            <Image src={Frame68} alt='image' className='w-[200px] h-auto md:w-[400px] md:h-[100%]' />
-                        </figure>
-                    </div>
-                    <div className="">
-                        <figure>
-                            <Image src={Frame70} alt='image' className='w-[200px] h-auto md:w-[200px] md:h-[100%]' />
-                        </figure>
-                    </div>
-                    <div className="flex justify-end" alt='image'>
-                        <figure>
-                            <Image src={Frame67} className='w-[200px] h-auto md:w-[200px] md:h-[100%]' />
-                        </figure>
-                    </div>
-                    <div className="md:px-20">
-                        <figure>
-                            <Image src={Frame69} alt='image' className='w-[200px] h-auto md:w-[280px] md:h-[100%]' />
-                        </figure>
-                    </div>
-                    <div className="flex justify-center">
-                        <figure>
-                            <Image src={Frame71} alt='image' className='w-full h-auto md:w-[180px] md:h-[100%]' />
-                        </figure>
-                    </div>
-                </div> 
-                relative
-                */}
 
                 <div className='container mx-auto'>
                     {/* Foreground Content */}
-                    <div className="h-screen w-full flex justify-center items-center relative z-10">
+                    <div className="h-screen w-full flex justify-center items-center relative">
                         <div className="w-auto md:w-[350px] h-auto rounded-[20px] border border-gray-300 p-[19px_18px] md:p-[29px_28px] gap-[8px] backdrop-blur-md">
                             <div className="flex justify-center">
                                 <figure>
@@ -103,10 +78,12 @@ const index = () => {
                                 </div>
 
 
-                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>Login</button>
+                                <button className='font-marcellus text-[16px] text-white w-[280px] h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]'>
+                                    <span>{loading ? "Login..." : "Login"}</span>
+                                </button>
                             </form>
 
-                            <div className='text-[14px] font-manrope text-center'>or <Link href='#' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
+                            <div className='text-[14px] font-manrope text-center'>or <Link href='/signup' className='text-[#1A2B48] font-bold'>create a free account</Link></div>
 
                         </div>
                     </div>

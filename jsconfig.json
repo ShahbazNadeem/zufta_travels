@@ -6,6 +6,7 @@
       "@components/*": ["./src/components/*"],
       "@/images/*": ["./public/images/*"],
       "@/data/*": ["./src/jsonData/*"],
+      "@/redux/*": ["./src/jsoredux/*"],
       "@/svg/*": ["./public/svg/*"],
     }
   }
