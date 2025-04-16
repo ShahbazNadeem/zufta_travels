@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 import Image from "next/image";
 import { dashboardhistory } from "@/jsonData/Data";
 import naran from "@/images/naran.jpeg";
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import Link from "next/link";
+
 const index = () => {
+  const { user } = useSelector(state => state.auth);
+
+  useEffect(() => {
+    // if (!user) router.push('/login');
+  }, [user]);
+
+  if (!user) {
+    return (
+      <div className="h-screen flex flex-col gap-5 justify-center items-center">
+        <h2 className="text-2xl font-bold text-red-600">Access Denied</h2>
+        <Link href='/login' className="text-xl font-bold text-blue-600">go to login page</Link>
+        <Link href='/' className="text-xl font-bold text-blue-600">go to Home</Link>
+      </div>
+    );
+  }
   return (
     <div className="flex">
       <Sidebar />
@@ -21,7 +40,7 @@ const index = () => {
                   className="bg-cover bg-center bg-no-repeat w-full h-[100%] rounded-md overflow-hidden"
                   style={{
                     backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%),url(${item.img.src})`,
-                  }} 
+                  }}
                 ></figure>
 
                 <div className=" flex flex-col gap-2  md:gap-3 lg:gap-5 py-2 md:py-3 lg:py-3 justify-between absolute bottom-0 px-3">

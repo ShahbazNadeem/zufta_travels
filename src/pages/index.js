@@ -95,7 +95,7 @@ const Index = () => {
                         <div className="flex flex-col gap-3 md:gap-6">
                           <div className="flex justify-between flex-wrap gap-3 items-center">
                             <span className="basis-[48%]">
-                              Location 1
+                              Location
                               <span className="flex justify-between items-center">
                                 <IoLocationSharp size={30} className="text-[#D6D7D8]" />
                                 <select className="ps-1 pe-18 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
@@ -142,7 +142,7 @@ const Index = () => {
                         <div className="flex flex-col gap-3 md:gap-6">
                           <div className="flex justify-between flex-wrap gap-3 items-center">
                             <span className="basis-[48%]">
-                              Location 2
+                              Location
                               <span className="flex justify-between items-center">
                                 <IoLocationSharp size={30} className="text-[#D6D7D8]" />
                                 <select className="ps-1 pe-18 block w-full text-sm bg-transparent rounded-lg border-0 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48]">
@@ -412,11 +412,11 @@ const Index = () => {
         <div className="wrapper-H7 pt-10 md:pt-20 bg-white max-w-[1920px] mx-auto">
           <div class="designYurTrip">
             {/* <div className="container"> */}
-              <div class="content py-24 md:py-48 lg:py-72">
-                <div className="flex flex-col gap-4 md:gap-8 lg:gap-18">
-                  <h2 className="text-center">Let us design your trip of a lifetime</h2>
-                  <span className="flex justify-center items-center gap-5 cursor-pointer">Plan My Trip <Image src={arrow} alt="arrow" /></span>
-                </div>
+            <div class="content py-24 md:py-48 lg:py-72">
+              <div className="flex flex-col gap-4 md:gap-8 lg:gap-18">
+                <h2 className="text-center">Let us design your trip of a lifetime</h2>
+                <span className="flex justify-center items-center gap-5 cursor-pointer">Plan My Trip <Image src={arrow} alt="arrow" /></span>
+              </div>
               {/* </div> */}
             </div>
           </div>

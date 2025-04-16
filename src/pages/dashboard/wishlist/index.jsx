@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react'
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 // import { premiumTourPickup } from '@/jsonData/Data'
@@ -9,8 +9,26 @@ import db from "@/jsonData/db.json"
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaHeart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import Link from "next/link";
 
 const index = () => {
+  const { user } = useSelector(state => state.auth);
+
+  useEffect(() => {
+    // if (!user) router.push('/login');
+  }, [user]);
+
+  if (!user) {
+    return (
+      <div className="h-screen flex flex-col gap-5 justify-center items-center">
+        <h2 className="text-2xl font-bold text-red-600">Access Denied</h2>
+        <Link href='/login' className="text-xl font-bold text-blue-600">go to login page</Link>
+        <Link href='/' className="text-xl font-bold text-blue-600">go to Home</Link>
+      </div>
+    );
+  }
   return (
     <div className="flex">
       <Sidebar />
@@ -28,12 +46,12 @@ const index = () => {
                 >
                   <div className="absolute inset-0 -z-10">
                     <figure className='h-[100%]'>
-                    <Image
-                      src={items.image.src}
-                      fill
-                      className="object-cover w-full h-auto"
-                      alt={items.title}
-                    />
+                      <Image
+                        src={items.image.src}
+                        fill
+                        className="object-cover w-full h-auto"
+                        alt={items.title}
+                      />
 
                     </figure>
                   </div>
