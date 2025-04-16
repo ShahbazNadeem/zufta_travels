@@ -11,7 +11,6 @@ import Image from 'next/image';
 import { FaHeart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import Link from "next/link";
 
 const index = () => {
   const { user } = useSelector(state => state.auth);
