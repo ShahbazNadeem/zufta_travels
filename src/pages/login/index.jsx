@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import zuftalogo from "@/images/zufta-logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,6 +30,21 @@ const index = () => {
         }
     }
 
+    const { user, isLoading } = useSelector(state => state.auth);
+    useEffect(() => {
+        if (!isLoading && user) {
+            router.push('/');
+        }
+    }, [user, isLoading]);
+
+    if (isLoading) {
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <p>Loading...</p>
+            </div>
+        );
+    }
+
     return (
         <Layout>
             <Head>
@@ -40,7 +55,7 @@ const index = () => {
                 <div className='container '>
                     <div className="mt-24 xl:my-32 mb-10 w-full flex justify-center items-center ">
                         <div className="w-auto h-auto rounded-[20px] border border-gray-300 p-[19px_18px] xl:p-[20px_28px] backdrop-blur-md flex flex-col gap-4">
-                        <div className="flex justify-center">
+                            <div className="flex justify-center">
                                 <figure>
                                     <Image src={zuftalogo} />
                                 </figure>

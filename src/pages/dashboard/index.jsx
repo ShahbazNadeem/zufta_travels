@@ -3,30 +3,12 @@ import Image from 'next/image';
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardTopBar from "@/components/dashboard/DashboardTopBar";
 import dashboardUserImg from "@/images/dashboard/dashboardUserImg.png"
-import { useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
-import Link from "next/link";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 const index = () => {
-  const router = useRouter();
-  const { user } = useSelector(state => state.auth);
-
-  useEffect(() => {
-    // if (!user) router.push('/login');
-  }, [user]);
-
-  if (!user) {
-    return (
-      <div className="h-screen flex flex-col gap-5 justify-center items-center">
-        <h2 className="text-2xl font-bold text-red-600">Access Denied</h2>
-        <Link href='/login' className="text-xl font-bold text-blue-600">go to login page</Link>
-        <Link href='/' className="text-xl font-bold text-blue-600">go to Home</Link>
-      </div>
-    );
-  }
 
   return (
-    <>
+    <ProtectedRoute ProtectedRoute >
       <div className="flex">
         <Sidebar />
         <div className="flex-1">
@@ -142,7 +124,7 @@ const index = () => {
           </div>
         </div>
       </div>
-    </>
+    </ProtectedRoute>
   )
 }
 

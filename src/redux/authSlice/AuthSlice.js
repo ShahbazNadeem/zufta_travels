@@ -1,17 +1,29 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
 // Async Thunk for login
 export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, password }, { rejectWithValue }) => {
     try {
-        const response = await fetch("https://678a3b38dd587da7ac294985.mockapi.io/users");
-        const data = await response.json();
+        const response = await axios.get("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup");
+        // const response = await axios.get("https://678a3b38dd587da7ac294985.mockapi.io/users");
+        const data = response.data;
         const user = data.find((u) => u.email === email && u.password === password);
+
         if (!user) return rejectWithValue("Invalid email or password");
-        const userData = { name: user.name, email: user.email, role: user.customRole };
+
+        const userData = {
+            id: user.id,
+            name: user.firstname + " " + user.lastname,
+            email: user.email,
+            role: user.role
+        };
+
         localStorage.setItem("user", JSON.stringify(userData));
         return userData;
-    } catch {
+
+    } catch (error) {
         return rejectWithValue("Failed to connect to the server");
     }
+
 });
 const getUserFromLocalStorage = () => {
     if (typeof window !== "undefined") {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import axios from "axios";
+import { useSelector } from 'react-redux';
 
 const index = () => {
   const [users, setUsers] = useState({
@@ -14,26 +15,44 @@ const index = () => {
     date: "",
     phonenumber: "",
     password: "",
-    rememberMe: false,
   });
 
   const getUserData = (e) => {
     const { name, value, type, checked } = e.target;
     setUsers((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   };
 
-  const handleSubmit =  async  (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await axios.post("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup", users);
-        console.log("Signup successful:", res.data);
-      } catch (err) {
-        console.error("Error:", err.response?.data || err.message);
-      }
+      const res = await axios.post("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup", users);
+      console.log("Signup successful:", res.data);
+
+      setUsers({
+        firstname: "",
+        lastname: "",
+        email: "",
+        date: "",
+        phonenumber: "",
+        password: "",
+      });
+    } catch (err) {
+      console.error("Error:", err.response?.data || err.message);
+    }
   };
+
+  const { user } = useSelector(state => state.auth);
+  if (user) {
+    return (
+      <div className='flex flex-col justify-center items-center h-screen w-full'>
+        <h2>Your are already loged in</h2>
+        <p>if you want to create new account ask admin or logout first</p>
+      </div>
+    )
+  }
   return (
     <Layout>
       <Head>
@@ -63,6 +82,7 @@ const index = () => {
                         id="firstname"
                         onChange={getUserData}
                         required
+                        value={users.firstname}
                       />
                       <label
                         for="firstname"
@@ -80,6 +100,7 @@ const index = () => {
                         id="lastname"
                         onChange={getUserData}
                         required
+                        value={users.lastname}
                       />
                       <label
                         for="lastname"
@@ -99,6 +120,7 @@ const index = () => {
                         name="email"
                         onChange={getUserData}
                         required
+                        value={users.email}
                       />
                       <label
                         for="email"
@@ -112,7 +134,8 @@ const index = () => {
                         type="date"
                         name="date"
                         onChange={getUserData}
-                        className="rounded-lg ps-8 pe-6 py-2 focus:outline-none border-2 border-gray-300 appearance-none focus:ring-0 peer focus:border-[#1A2B48] text-gray-300 [&:not(:placeholder-shown)]:text-gray-800"
+                        className="block ps-2.5 pe-[63px] py-3 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48] [&:not(:placeholder-shown)]:text-gray-800"
+                        value={users.date}
                       />
                     </div>
                   </div>
@@ -126,6 +149,7 @@ const index = () => {
                         name="phonenumber"
                         onChange={getUserData}
                         required
+                        value={users.phonenumber}
                       />
                       <label
                         for="phonenumber"
@@ -143,6 +167,7 @@ const index = () => {
                         id="password"
                         onChange={getUserData}
                         required
+                        value={users.password}
                       />
                       <label
                         for="password"
