@@ -117,7 +117,7 @@ const Index = () => {
           </div>
 
           <div className="container max-w-[1440px] mx-auto">
-            <div className="flex flex-col lg:flex-row md:items-center gap-5 md:gap-0 relative z-10 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
+            <div className="flex flex-col lg:flex-row md:items-center gap-5 md:gap-0 relative z-1 pt-16 md:py-26 lg:py-36 mx-5 sm:mx-0">
               <div className="md:basis-1/2 flex items-center md:items-start flex-col gap-5 md:gap-10 lg:gap-12">
                 <h1 className="mainHead text-center md:text-left text-white">
                   Hero Heading Should Appear After A While

@@ -1,16 +1,21 @@
 'use client';
 
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from "react";
+// import { useSelector } from 'react-redux';
 import Link from 'next/link';
 
 const ProtectedRoute = ({ children }) => {
-  const { user } = useSelector(state => state.auth);
+  // const { user } = useSelector(state => state.auth);
+  const [localUser, setLocalUser] = useState(null);
 
-  // useEffect(() => {
-  //   if (!user) router.push('/login');
-  // }, [user]);
+  useEffect(() => {
+      const userData = localStorage.getItem("user");
+      if (userData) {
+        setLocalUser(JSON.parse(userData));
+      }
+    }, []);
 
-  if (!user) {
+  if (!localUser) {
     return (
       <div className="h-screen flex flex-col gap-5 justify-center items-center">
         <h2 className="text-2xl font-bold text-red-600">Access Denied</h2>

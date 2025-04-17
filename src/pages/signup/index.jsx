@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "@/globalcss";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import axios from "axios";
-import { useSelector } from 'react-redux';
 
 const index = () => {
+
   const [users, setUsers] = useState({
     firstname: "",
     lastname: "",
@@ -17,8 +17,17 @@ const index = () => {
     password: "",
   });
 
+  const [localUser, setLocalUser] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setLocalUser(JSON.parse(userData));
+    }
+  }, []);
+
   const getUserData = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setUsers((prev) => ({
       ...prev,
       [name]: value,
@@ -28,7 +37,10 @@ const index = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup", users);
+      const res = await axios.post(
+        "https://67ffac3db72e9cfaf7257b92.mockapi.io/signup",
+        users
+      );
       console.log("Signup successful:", res.data);
 
       setUsers({
@@ -44,14 +56,13 @@ const index = () => {
     }
   };
 
-  const { user } = useSelector(state => state.auth);
-  if (user) {
+  if (localUser) {
     return (
-      <div className='flex flex-col justify-center items-center h-screen w-full'>
-        <h2>Your are already loged in</h2>
-        <p>if you want to create new account ask admin or logout first</p>
+      <div className="flex flex-col justify-center items-center h-screen w-full">
+        <h2>You are already logged in</h2>
+        <p>If you want to create a new account, ask admin or logout first.</p>
       </div>
-    )
+    );
   }
   return (
     <Layout>

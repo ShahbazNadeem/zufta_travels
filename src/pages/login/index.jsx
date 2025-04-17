@@ -29,21 +29,27 @@ const index = () => {
             console.log("fail", result.payload);
         }
     }
-
-    const { user, isLoading } = useSelector(state => state.auth);
+    // Check localStorage on mount
     useEffect(() => {
-        if (!isLoading && user) {
-            router.push('/');
+        const storedUser = localStorage.getItem("user");
+        if (storedUser) {
+            router.push('/');  // Redirect if already logged in via localStorage
         }
-    }, [user, isLoading]);
-
-    if (isLoading) {
-        return (
-            <div className="flex justify-center items-center h-screen">
-                <p>Loading...</p>
-            </div>
-        );
-    }
+    }, []);
+    // useEffect(() => {
+    //     if (!isLoading && user) {
+        //         router.push('/');
+        //     }
+        // }, [user, isLoading]);
+        
+    //     const { user, isLoading } = useSelector(state => state.auth);
+    // if (isLoading) {
+    //     return (
+    //         <div className="flex justify-center items-center h-screen">
+    //             <p>Loading...</p>
+    //         </div>
+    //     );
+    // }
 
     return (
         <Layout>
