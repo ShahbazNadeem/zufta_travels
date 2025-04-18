@@ -11,16 +11,14 @@ const DashboardTopBar = () => {
                 <h3>Welcome, Amanda</h3>
                 <p>Tue, 07 June 2022</p>
             </div>
-            <div className='flex gap-5'>
+            <div className='flex items-center gap-5'>
                 <Link href="/dashboard/setting" className='bg-[#FFFFFF] rounded-lg textColor p-3 cursor-pointer'>
                     <FaRegBell size={25} />
                 </Link>
-                <div className='w-[50px] h-[50px]'>
-                    <figure classname=''>
+                    <figure className='w-[50px] h-auto rounded-full overflow-hidden'>
                         {/* <FaUser size={25} /> */}
-                        <Image src={dashboardUserImg} classname='w-full h-auto rounded-lg' />
+                        <Image src={dashboardUserImg} classname=' w-full h-auto' />
                     </figure>
-                </div>
             </div>
         </div>
     )

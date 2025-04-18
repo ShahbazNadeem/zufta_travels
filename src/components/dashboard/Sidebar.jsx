@@ -38,7 +38,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
+    <div className="flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
 
       {/* Logo */}
       <div className="flex flex-col items-center py-4">
