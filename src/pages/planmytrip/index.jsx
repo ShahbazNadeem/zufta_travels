@@ -18,30 +18,59 @@ import naran from "@/images/naran.jpeg";
 import AccordianWithSelection from "@/components/AccordianWithSelection";
 import Head from "next/head";
 import { FaCalendarAlt } from "react-icons/fa"
+import axios from "axios";
 
 const index = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [formdata, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    phone: "",
+    nation: '',
+    tour: '',
+    persons: '',
+    days: '',
+    rooms: '',
+    date: '',
+    destination: '',
+    planning: ''
+
+});
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+
+};
   const images = [img, Frame68, naran];
-  const handleForm = (e) => {
-    e.preventDefault();
-    console.log(selectedTour);
+  const handleForm = async (e) => {
+    e.preventDefault()
+    console.log(formdata, 'res')
+    try{
+      const response = await axios.post('https://680228a681c7e9fbcc449508.mockapi.io/planmytrip',formdata)
+      console.log(response.data, 'res');
+    } catch (error) {
+      console.error('Error posting data:', error);
+    }
   };
   return (
     <Layout>
       <Head>
         <title>Plan My Trip</title>
       </Head>
-
       <section>
         <div className="wrapper-P1">
           <Banner title="Plan My Trip" />
         </div>
       </section>
-
       <section>
         <div className="wrapper-P2 mt-10 lg:mt-20 max-w-[1440px] mx-auto">
           <div className="container">
-            <div className="flex flex-col gap-10 md:gap-0 md:flex-row mx-5 md:mx-0">
+            <div className="flex flex-col gap-10 md:gap-0 md:flex-row mx-5">
               <div className="basis-1/2 flex justify-center items-center">
                 <figure className="w-[50%] md:w-[90%] h-auto">
                   <Image
@@ -64,8 +93,10 @@ const index = () => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="firstName"
-                        name="firstName"
+                        id="firstname"
+                        name="firstname"
+                        value={formdata.firstname}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -80,8 +111,10 @@ const index = () => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="lastName"
-                        name="lastName"
+                        id="lastname"
+                        name="lastname"
+                        value={formdata.lastname}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -101,6 +134,8 @@ const index = () => {
                         placeholder=" "
                         id="email"
                         name="email"
+                        value={formdata.email}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -115,8 +150,10 @@ const index = () => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="phoneNumber"
-                        name="phoneNumber"
+                        id="phone"
+                        name="phone"
+                        value={formdata.phone}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -134,8 +171,10 @@ const index = () => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="nationality"
-                        name="nationality"
+                        id="nation"
+                        name="nation"
+                        value={formdata.nation}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -146,7 +185,7 @@ const index = () => {
                       </label>
                     </div>
                     <div className="basis-1/2">
-                      <select className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]">
+                      <select id="tour" name="tour"  value={formdata.tour} onChange={handleChange} className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]">
                         <option value="">Select type of tour</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
@@ -161,8 +200,10 @@ const index = () => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="numberOfParticipants"
-                        name="numberOfParticipants"
+                        id="persons"
+                        name="persons"
+                        value={formdata.persons}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -177,8 +218,10 @@ const index = () => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="numberOfDays"
-                        name="numberOfDays"
+                        id="days"
+                        name="days"
+                        value={formdata.days}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -196,8 +239,10 @@ const index = () => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="numberOfRooms"
-                        name="numberOfRooms"
+                        id="rooms"
+                        name="rooms"
+                        value={formdata.rooms}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -209,7 +254,10 @@ const index = () => {
                     </div>
                     <div class="relative basis-1/2">
                       <input
+                       value={formdata.date}
+                       onChange={handleChange}
                         type="date"
+                        name="date"
                         // value={new Date().toISOString().split('T')[0]}
                         className="rounded-lg w-full py-3 pl-10 border-2 border-gray-300 focus:outline-none"
                       />
@@ -223,8 +271,10 @@ const index = () => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="preferredDestination"
-                        name="preferredDestination"
+                        id="destination"
+                        name="destination"
+                        value={formdata.destination}
+                        onChange={handleChange}
                         required
                       />
                       <label
@@ -239,12 +289,14 @@ const index = () => {
                   <textarea
                     class="block px-2.5 pb-2.5 pt-4 w-full h-[150px] text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48] placeholder-[#1A2B48]"
                     placeholder="Tell us more about what you’re planning*"
-                    id="plan"
-                    name="plan"
+                    id="planning"
+                    name="planning"
+                    value={formdata.planning}
+                    onChange={handleChange}
                     required
                   ></textarea>
 
-                  <button className="font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]">
+                  <button type="submit" className="font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]">
                     Send a request
                   </button>
                 </form>
