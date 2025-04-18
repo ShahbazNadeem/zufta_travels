@@ -5,6 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import axios from "axios";
+import Cookies from 'js-cookie';
 
 const index = () => {
 
@@ -20,7 +21,7 @@ const index = () => {
   const [localUser, setLocalUser] = useState(null);
 
   useEffect(() => {
-    const userData = localStorage.getItem("user");
+    const userData = Cookies.get('user');
     if (userData) {
       setLocalUser(JSON.parse(userData));
     }

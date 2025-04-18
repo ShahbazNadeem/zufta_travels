@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import Cookies from 'js-cookie';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [localUser, setLocalUser] = useState(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+    const storedUser = Cookies.get('user');
     if (storedUser) {
       setLocalUser(JSON.parse(storedUser));
     }
