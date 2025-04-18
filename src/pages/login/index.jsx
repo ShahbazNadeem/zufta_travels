@@ -8,6 +8,7 @@ import Layout from '@/components/layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { loginUser } from "@/redux/authSlice/AuthSlice";
+import Cookies from 'js-cookie';
 
 const index = () => {
     const router = useRouter();
@@ -21,35 +22,26 @@ const index = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const result = await dispatch(loginUser(users));
-        console.log(result);
         if (loginUser.fulfilled.match(result)) {
-            localStorage.setItem("user", JSON.stringify(result.payload));  // Save here
+            const expiryTime = new Date() 
+            expiryTime.setTime(expiryTime.getTime()+(2*60*1000));
+            Cookies.set('user', JSON.stringify(result.payload), {
+                // expires: expiryTime,
+                expires: 7,
+                path: '/'
+            });
+
             router.push('/');
         } else {
             console.log("fail", result.payload);
         }
     }
-    // Check localStorage on mount
     useEffect(() => {
-        const storedUser = localStorage.getItem("user");
-        if (storedUser) {
-            router.push('/');  // Redirect if already logged in via localStorage
+        const user = Cookies.get('user');
+        if (user) {
+            router.push('/');
         }
     }, []);
-    // useEffect(() => {
-    //     if (!isLoading && user) {
-        //         router.push('/');
-        //     }
-        // }, [user, isLoading]);
-        
-    //     const { user, isLoading } = useSelector(state => state.auth);
-    // if (isLoading) {
-    //     return (
-    //         <div className="flex justify-center items-center h-screen">
-    //             <p>Loading...</p>
-    //         </div>
-    //     );
-    // }
 
     return (
         <Layout>

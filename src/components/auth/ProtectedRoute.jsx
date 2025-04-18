@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from "react";
 // import { useSelector } from 'react-redux';
 import Link from 'next/link';
+import Cookies from 'js-cookie';
 
 const ProtectedRoute = ({ children }) => {
   // const { user } = useSelector(state => state.auth);
   const [localUser, setLocalUser] = useState(null);
 
   useEffect(() => {
-      const userData = localStorage.getItem("user");
+      const userData = Cookies.get('user');
       if (userData) {
         setLocalUser(JSON.parse(userData));
       }

@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
+import Cookies from 'js-cookie';
 // Async Thunk for login
 export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, password }, { rejectWithValue }) => {
     try {
@@ -17,7 +18,8 @@ export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, pass
             role: user.role
         };
 
-        localStorage.setItem("user", JSON.stringify(userData));
+        // localStorage.setItem("user", JSON.stringify(userData));
+        // Cookies.set('user', JSON.stringify(result.payload), { expires: 7 });
         return userData;
 
     } catch (error) {
@@ -25,14 +27,14 @@ export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, pass
     }
 
 });
-const getUserFromLocalStorage = () => {
-    if (typeof window !== "undefined") {
-        const user = localStorage.getItem("user");
-        console.log(typeof window, 'alwww')
-        return user ? JSON.parse(user) : null;
-    }
-    return null;
-};
+// const getUserFromLocalStorage = () => {
+//     if (typeof window !== "undefined") {
+//         const user = localStorage.getItem("user");
+//         console.log(typeof window, 'alwww')
+//         return user ? JSON.parse(user) : null;
+//     }
+//     return null;
+// };
 
 // Initial state
 const initialState = {
@@ -47,7 +49,8 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         logout: (state) => {
-            localStorage.removeItem("user");
+            // localStorage.removeItem("user");
+            Cookies.remove('user');
             state.user = null;
             state.error = null;
         },
