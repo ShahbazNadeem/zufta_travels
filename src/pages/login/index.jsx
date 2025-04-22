@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const index = () => {
+  const { data: session } = useSession();
   const router = useRouter();
   const { loading, error } = useSelector((state) => state.auth);
   const [users, setUsers] = useState({
@@ -24,19 +25,19 @@ const index = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await signIn("credentials", {
-        redirect: false,
-        email: users.email,
-        password: users.password,
-      });
+      redirect: false,
+      email: users.email,
+      password: users.password,
+    });
 
-      if (res.ok) {
-        console.log("okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
-        router.push("/");
-        console.log('login successful')
-      } else {
-        console.log("failllllllllllllllllllllllllllllll")
-        console.error("Login failed", res.error);
-      }
+    if (res.ok) {
+    //   sessionStorage.setItem("user", session.user);
+      console.log("okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+      router.push("/");
+    } else {
+      console.log("failllllllllllllllllllllllllllllll");
+      console.error("Login failed", res.error);
+    }
     // const result = await dispatch(loginUser(users));
     // if (loginUser.fulfilled.match(result)) {
     //   const expiryTime = new Date();
@@ -52,15 +53,15 @@ const index = () => {
     //   console.log("fail", result.payload);
     // }
   };
-//   useEffect(() => {
-//     const user = Cookies.get("user");
-//     if (user) {
-//       router.push("/");
-//     }
-//   }, []);
+  //   useEffect(() => {
+  //     const user = Cookies.get("user");
+  //     if (user) {
+  //       router.push("/");
+  //     }
+  //   }, []);
 
-  const { data: session } = useSession();
   if (session) {
+    // router.push("/");
     return (
       <>
         Signed in as {session.user.email} <br />

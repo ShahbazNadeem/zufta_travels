@@ -19,6 +19,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { logout } from "@/redux/authSlice/AuthSlice";
 import { useRouter } from 'next/router';
+import { signOut } from "next-auth/react";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
@@ -72,7 +73,7 @@ export default function Sidebar() {
       {/* Logout */}
       <div className="p-4 text-gray-600 flex items-center space-x-4 cursor-pointer hover:font-bold">
         <FaSignOutAlt className="text-xl" />
-        <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap" onClick={handleLogout}>
+        <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap" onClick={() => signOut()}>
           Logout
         </span>
       </div>

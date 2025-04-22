@@ -8,50 +8,52 @@ export const authOptions = {
       name: "Credentials",
       credentials: {
         email: { label: "Email", type: "text" },
-        password: { label: "Password", type: "password" }
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         try {
-          const response = await axios.get("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup");
+          const response = await axios.get(
+            "https://67ffac3db72e9cfaf7257b92.mockapi.io/signup"
+          );
           const users = response.data;
           const user = users.find(
-            (u) => u.email === credentials.email && u.password === credentials.password
+            (u) =>
+              u.email === credentials.email &&
+              u.password === credentials.password
           );
 
           if (user) {
             const { password, ...userWithoutPass } = user;
             return userWithoutPass;
           } else {
-            return null;  // Invalid credentials
+            return null; // Invalid credentials
           }
         } catch (error) {
           console.error("Error while checking credentials:", error);
           return null;
         }
-      }
-    })
+      },
+    }),
   ],
   pages: {
     signIn: "/login",
   },
   session: {
-    strategy: "jwt"
+    strategy: "jwt",
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
         token.user = user;
-        console.log(token, user, 'deta')
       }
       return token;
     },
     async session({ session, token }) {
       if (token.user) {
         session.user = token.user;
-        console.log(session,token,"dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       }
       return session;
-    }
+    },
   },
   secret: process.env.NEXT_PUBLIC_AUTH_SECRET,
 };

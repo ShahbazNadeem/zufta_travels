@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 // Async Thunk for login
 export const loginUser = createAsyncThunk("auth/loginUser", async ({ email, password }, { rejectWithValue }) => {
     try {
@@ -50,7 +50,7 @@ const authSlice = createSlice({
     reducers: {
         logout: (state) => {
             // localStorage.removeItem("user");
-            Cookies.remove('user');
+            // Cookies.remove('user');
             state.user = null;
             state.error = null;
         },
