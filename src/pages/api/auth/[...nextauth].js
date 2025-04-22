@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import axios from "axios";
 
 export const authOptions = {
   providers: [
@@ -10,28 +11,28 @@ export const authOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        // Example mock user (you'd usually query your DB here)
-        const user = {
-          id: "1",
-          name: "John Smith",
-          email: "jsmith@example.com",
-          password: "123456" // In real apps, NEVER store plain text passwords!
-        };
+        try {
+          const response = await axios.get("https://67ffac3db72e9cfaf7257b92.mockapi.io/signup");
+          const users = response.data;
+          const user = users.find(
+            (u) => u.email === credentials.email && u.password === credentials.password
+          );
 
-        if (
-          credentials.username === user.email &&
-          credentials.password === user.password
-        ) {
-          const { password, ...userWithoutPass } = user;
-          return userWithoutPass; // Return user data without password
+          if (user) {
+            const { password, ...userWithoutPass } = user;
+            return userWithoutPass;
+          } else {
+            return null;  // Invalid credentials
+          }
+        } catch (error) {
+          console.error("Error while checking credentials:", error);
+          return null;
         }
-
-        return null;
       }
     })
   ],
   pages: {
-    signIn: "/login", // Optional: custom login page
+    signIn: "/login",
   },
   session: {
     strategy: "jwt"
@@ -40,12 +41,14 @@ export const authOptions = {
     async jwt({ token, user }) {
       if (user) {
         token.user = user;
+        console.log(token, user, 'deta')
       }
       return token;
     },
     async session({ session, token }) {
       if (token.user) {
         session.user = token.user;
+        console.log(session,token,"dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       }
       return session;
     }

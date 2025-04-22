@@ -7,15 +7,10 @@ import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { loginUser } from "@/redux/authSlice/AuthSlice";
-import Cookies from "js-cookie";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const index = () => {
-  const apiUrl = process.env.NEXT_PUBLIC_AUTH_SECRET;
-  console.log(apiUrl,'alwww');
   const router = useRouter();
-  const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
   const [users, setUsers] = useState({
     email: "",
@@ -30,14 +25,16 @@ const index = () => {
     e.preventDefault();
     const res = await signIn("credentials", {
         redirect: false,
-        username: users.email, // NOTE: your credentials are using `username`, not `email`
+        email: users.email,
         password: users.password,
       });
 
       if (res.ok) {
+        console.log("okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
         router.push("/");
         console.log('login successful')
       } else {
+        console.log("failllllllllllllllllllllllllllllll")
         console.error("Login failed", res.error);
       }
     // const result = await dispatch(loginUser(users));
