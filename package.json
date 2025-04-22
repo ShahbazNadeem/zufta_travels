@@ -15,6 +15,7 @@
     "framer-motion": "^12.5.0",
     "js-cookie": "^3.0.5",
     "next": "15.2.3",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-datepicker": "^8.2.1",
