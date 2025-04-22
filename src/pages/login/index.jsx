@@ -12,6 +12,8 @@ import Cookies from "js-cookie";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const index = () => {
+  const apiUrl = process.env.NEXT_PUBLIC_AUTH_SECRET;
+  console.log(apiUrl,'alwww');
   const router = useRouter();
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
