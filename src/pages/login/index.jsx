@@ -61,6 +61,7 @@ const index = () => {
   //   }, []);
 
   if (session) {
+    sessionStorage.setItem("user",JSON.stringify(session.user));
     // router.push("/");
     return (
       <>

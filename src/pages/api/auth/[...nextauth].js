@@ -23,7 +23,7 @@ export const authOptions = {
           );
 
           if (user) {
-            const { password, ...userWithoutPass } = user;
+              const { password, ...userWithoutPass } = user;
             return userWithoutPass;
           } else {
             return null; // Invalid credentials
