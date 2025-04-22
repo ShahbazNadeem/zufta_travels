@@ -25,11 +25,11 @@ export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const menuItems = [
+    { icon1: <RiAdminFill />, icon2: <RiAdminLine />, label: "Admin", link: "/dashboard/admin" },
     { icon1: <MdDashboard />, icon2: <LuLayoutDashboard />, label: "Dashboard", link: "/dashboard" },
     { icon1: <FaHeart />, icon2: <IoMdHeartEmpty />, label: "Wishlist", link: "/dashboard/wishlist" },
     { icon1: <FaClock />, icon2: <IoMdTime />, label: "Booking History", link: "/dashboard/history" },
     { icon1: <FaCog />, icon2: <IoSettingsOutline />, label: "Settings", link: "/dashboard/setting" },
-    { icon1: <RiAdminFill />, icon2: <RiAdminLine />, label: "admin", link: "/dashboard/admin" },
   ];
 
   const handleLogout = () => {
@@ -38,7 +38,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
+    <div className="flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
 
       {/* Logo */}
       <div className="flex flex-col items-center py-4">
