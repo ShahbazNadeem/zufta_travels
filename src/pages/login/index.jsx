@@ -166,8 +166,6 @@ const index = () => {
           </div>
         </div>
       </section>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
     </Layout>
   );
 };
