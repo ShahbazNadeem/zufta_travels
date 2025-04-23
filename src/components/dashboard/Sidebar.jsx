@@ -73,7 +73,13 @@ export default function Sidebar() {
       {/* Logout */}
       <div className="p-4 text-gray-600 flex items-center space-x-4 cursor-pointer hover:font-bold">
         <FaSignOutAlt className="text-xl" />
-        <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap" onClick={() => signOut()}>
+        <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 whitespace-nowrap" onClick={() => {
+          signOut();
+          sessionStorage.removeItem("user");
+          window.dispatchEvent(new Event("userLogout"));
+          // router.push('/login');
+        }
+        }>
           Logout
         </span>
       </div>

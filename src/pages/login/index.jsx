@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const index = () => {
-  const { data: session } = useSession();
+
   const router = useRouter();
   const { loading, error } = useSelector((state) => state.auth);
   const [users, setUsers] = useState({
@@ -31,43 +31,29 @@ const index = () => {
     });
 
     if (res.ok) {
-    //   sessionStorage.setItem("user", session.user);
       console.log("okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
       router.push("/");
     } else {
       console.log("failllllllllllllllllllllllllllllll");
       console.error("Login failed", res.error);
     }
-    // const result = await dispatch(loginUser(users));
-    // if (loginUser.fulfilled.match(result)) {
-    //   const expiryTime = new Date();
-    //   expiryTime.setTime(expiryTime.getTime() + 2 * 60 * 1000);
-    //   Cookies.set("user", JSON.stringify(result.payload), {
-    //     // expires: expiryTime,
-    //     expires: 7,
-    //     path: "/",
-    //   });
-
-    //   router.push("/");
-    // } else {
-    //   console.log("fail", result.payload);
-    // }
   };
-  //   useEffect(() => {
-  //     const user = Cookies.get("user");
-  //     if (user) {
-  //       router.push("/");
-  //     }
-  //   }, []);
-
+  
+  const { data: session } = useSession();
   if (session) {
-    sessionStorage.setItem("user",JSON.stringify(session.user));
+    sessionStorage.setItem("user", JSON.stringify(session.user));
     // router.push("/");
     return (
-      <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
+      <div className="flex flex-col justify-center items-center h-screen w-full">
+        <h2>Already Signed in as {session.user.email} </h2>
+        <button onClick={async () => {
+            await signOut();
+            sessionStorage.removeItem("user");
+          }}
+        >
+          Sign out
+        </button>
+      </div>
     );
   }
 

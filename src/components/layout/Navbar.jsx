@@ -5,18 +5,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-// import Cookies from 'js-cookie';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [localUser, setLocalUser] = useState(null);
 
-  // useEffect(() => {
-  //   const storedUser = Cookies.get('user');
-  //   if (storedUser) {
-  //     setLocalUser(JSON.parse(storedUser));
-  //   }
-  // }, []);
+  useEffect(() => {
+    const loadUser = () => {
+      const storedUser = sessionStorage.getItem('user');
+      if (storedUser) {
+        setLocalUser(JSON.parse(storedUser));
+      } else {
+        setLocalUser(null);
+      }
+    };
+  
+    loadUser(); // Initial check
+  
+    window.addEventListener("userLogout", loadUser); // 👂 Listen for logout event
+  
+    return () => window.removeEventListener("userLogout", loadUser);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
