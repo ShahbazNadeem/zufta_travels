@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 
 const index = () => {
   const { data: session } = useSession();
-  console.log(session, 'allwww')
+
 
   return (
     <ProtectedRoute ProtectedRoute >
@@ -24,8 +24,8 @@ const index = () => {
                     <div className='flex items-center gap-5'>
                       <div className='rounded-xl w-[100px] h-[100px]'><fiqure><Image src={dashboardUserImg} className='w-full h-auto rounded-full' /></fiqure></div>
                       <div className='flex flex-col gap-3'>
-                        <span className='font-marcellus text-[20px]'></span>
-                        <span className='text-gray-400'></span>
+                        <span className='font-marcellus text-[20px]'>{session?.user.firstname} {session?.user.lastname}</span>
+                        <span className='text-gray-400'>{session?.user.email}</span>
                       </div>
                     </div>
 
