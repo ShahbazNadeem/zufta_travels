@@ -22,7 +22,7 @@ const Navbar = () => {
   
     loadUser(); // Initial check
   
-    window.addEventListener("userLogout", loadUser); // 👂 Listen for logout event
+    window.addEventListener("userLogout", loadUser);
   
     return () => window.removeEventListener("userLogout", loadUser);
   }, []);

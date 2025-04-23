@@ -1,7 +1,6 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useState } from "react";
 import logo from "@/images/zufta-logo.png";
 import Link from "next/link";
 import { MdDashboard } from "react-icons/md";
@@ -16,13 +15,10 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { RiAdminFill, RiAdminLine } from "react-icons/ri";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
-import { logout } from "@/redux/authSlice/AuthSlice";
 import { useRouter } from 'next/router';
 import { signOut } from "next-auth/react";
 
 export default function Sidebar() {
-  const dispatch = useDispatch();
   const pathname = usePathname();
   const router = useRouter();
   const menuItems = [
@@ -32,12 +28,6 @@ export default function Sidebar() {
     { icon1: <FaClock />, icon2: <IoMdTime />, label: "Booking History", link: "/dashboard/history" },
     { icon1: <FaCog />, icon2: <IoSettingsOutline />, label: "Settings", link: "/dashboard/setting" },
   ];
-
-  const handleLogout = () => {
-    dispatch(logout());
-    router.push('/login');
-  };
-
   return (
     <div className="flex flex-col justify-between pt-12 bg-white transition-all duration-300 group hover:w-48 w-18 md:w-20 overflow-hidden">
 

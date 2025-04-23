@@ -31,10 +31,8 @@ const index = () => {
     });
 
     if (res.ok) {
-      console.log("okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
       router.push("/");
     } else {
-      console.log("failllllllllllllllllllllllllllllll");
       console.error("Login failed", res.error);
     }
   };
