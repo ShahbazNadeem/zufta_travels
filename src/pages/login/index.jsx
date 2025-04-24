@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
-import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const index = () => {
 
   const router = useRouter();
-  const { loading, error } = useSelector((state) => state.auth);
+  const [ error, setError] = useState("")
+  const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState({
     email: "",
     password: "",
@@ -23,6 +23,7 @@ const index = () => {
     setUsers({ ...users, [name]: type === "checkbox" ? checked : value });
   };
   const handleSubmit = async (e) => {
+    setLoading(true)
     e.preventDefault();
     const res = await signIn("credentials", {
       redirect: false,
@@ -31,28 +32,31 @@ const index = () => {
     });
 
     if (res.ok) {
+      setLoading(false)
       router.push("/");
     } else {
       console.error("Login failed", res.error);
+      setError(res.error);
+      setLoading(false)
     }
   };
-  
+
   const { data: session } = useSession();
   if (session) {
     sessionStorage.setItem("user", JSON.stringify(session.user));
-    // router.push("/");
-    return (
-      <div className="flex flex-col justify-center items-center h-screen w-full">
-        <h2>Already Signed in as {session.user.email} </h2>
-        <button onClick={async () => {
-            await signOut();
-            sessionStorage.removeItem("user");
-          }}
-        >
-          Sign out
-        </button>
-      </div>
-    );
+    router.push("/");
+    // return (
+    //   <div className="flex flex-col justify-center items-center h-screen w-full">
+    //     <h2>Already Signed in as {session.user.email} </h2>
+    //     <button onClick={async () => {
+    //       await signOut();
+    //       sessionStorage.removeItem("user");
+    //     }}
+    //     >
+    //       Sign out
+    //     </button>
+    //   </div>
+    // );
   }
 
   return (
@@ -66,7 +70,7 @@ const index = () => {
             <div className="w-auto h-auto rounded-[20px] border border-gray-300 p-[19px_18px] xl:p-[20px_28px] backdrop-blur-md flex flex-col gap-4">
               <div className="flex justify-center">
                 <figure>
-                  <Image src={zuftalogo} />
+                  <Image src={zuftalogo} alt="zuftalogo"/>
                 </figure>
               </div>
               <div className="text-[20px] md:text-[24px] font-marcellus text-center">
@@ -92,7 +96,7 @@ const index = () => {
                     required
                   />
                   <label
-                    for="Email"
+                    for="email"
                     class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
                     Email or Username
@@ -109,7 +113,7 @@ const index = () => {
                     required
                   />
                   <label
-                    for="Password"
+                    for="password"
                     class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
                     Password
