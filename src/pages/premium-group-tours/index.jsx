@@ -11,8 +11,8 @@ import { fetchPremiumTours } from '@/redux/tours/toursSlice';
 
 const Index = () => {
   const dispatch = useDispatch();
-  const { premiumTours, status, error } = useSelector((state) => state.tours);
-  console.log(premiumTours)
+  const { tours, status, error } = useSelector((state) => state.tours);
+  console.log(tours)
   console.log(status)
   console.log(error)
 
@@ -52,7 +52,7 @@ const Index = () => {
               {/* Loading, Error, or TourCards UI */}
               {status === 'loading' && <p className="px-5">Loading tours...</p>}
               {status === 'failed' && <p className="px-5 text-red-500">Error: {error}</p>}
-              {status === 'succeeded' && <TourCards data={premiumTours} />}
+              {status === 'succeeded' && <TourCards data={tours} />}
             </div>
           </div>
         </div>
