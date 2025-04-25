@@ -36,7 +36,7 @@ const index = () => {
       router.push("/");
     } else {
       console.error("Login failed", res.error);
-      setError(res.error);
+      setError("Invalid credentials");
       setLoading(false)
     }
   };

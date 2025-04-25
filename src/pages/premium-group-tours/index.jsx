@@ -13,8 +13,6 @@ const Index = () => {
   const dispatch = useDispatch();
   const { tours, status, error } = useSelector((state) => state.tours);
   console.log(tours)
-  console.log(status)
-  console.log(error)
 
   useEffect(() => {
     dispatch(fetchPremiumTours());
