@@ -3,20 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
-import axios from "axios"; 
 
 const TourCards = ({ data = [] }) => {
   const [visibleCount, setVisibleCount] = useState(9);
   const [liked, setLiked] = useState({}); // Track liked state per card
 
-  const postToWishlist = async (items) => {
-    try {
-      const response = await axios.post("http://localhost:5000/wishlist", items);
-      console.log("Added to wishlist:", response.data);
-    } catch (error) {
-      console.error("Error adding to wishlist:", error);
-    }
-  };
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + 6);
   };
@@ -25,11 +16,7 @@ const TourCards = ({ data = [] }) => {
     setLiked((prev) => ({
       ...prev,
       [index]: !prev[index],
-    }));
-    console.log(items, 'items')
-    if (liked) {
-      postToWishlist(items);
-    }
+    }));    
   };
 
   if (!Array.isArray(data) || data.length === 0) {
@@ -41,7 +28,7 @@ const TourCards = ({ data = [] }) => {
       <div className="flex flex-wrap justify-center w-full">
         {data.slice(0, visibleCount).map((items, index) => (
           <Link
-            href={`/${items.link}`}
+            href={`/tour-detail/id/${items.id}`}
             className={`relative m-1 h-[250px] md:h-[300px] lg:h-[440px] ${
               index === 0 ? "w-[91%] lg:w-[98%]" : "w-[45%] lg:w-[24%]"
             }`}
@@ -74,8 +61,8 @@ const TourCards = ({ data = [] }) => {
                   {items.name}
                 </span>
                 <div className="flex flex-wrap gap-1 md:gap-2 text-white text-[13px] md:text-[16px] w-full">
-                  <span>{items.duration}</span>
-                  <span>From Rs{items.price}</span>
+                  <span>{items.duration} Days</span>
+                  <span>Starting from Rs{items.price}</span>
                 </div>
               </div>
             </div>

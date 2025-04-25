@@ -15,6 +15,8 @@ import AccordianWithSelection from '@/components/AccordianWithSelection';
 import Layout from '@/components/layout/Layout';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+import axios from "axios";
+import tourimg from "@/images/tourdetail/Star1.png"
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -24,8 +26,33 @@ import bannerimg1 from "@/images/aboutus/aboutbanner.jpeg";
 import './slug.css'
 
 const CatchAllDetailPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+  const { query: { slug = [] } } = useRouter();
+  const id = slug[2] ?? null;
+  console.error("url id", id);
+  const [tourData, setTourData] = useState("");
+
+  useEffect(() => {
+    fetchTourDetails();
+  }, [id]);
+  const fetchTourDetails = async () => {
+    try {
+      // debugger
+      const response = await axios.get(`https://192.168.100.177:45455/api/Tours/TourDetailsById?id=${id}`);
+      setTourData(response.data);
+      //     name": "Fairy Meadows Tour #12",
+      // "mapApi": "",
+      // "description": "",
+      // "departure": "Lahore",
+      // "included": "transport",
+      // "notIncluded": "Food",
+      // "faqImageUrl": null,
+      // "images": [],
+      // "actionPlans": [],
+      console.error('apis getting data', tourData);
+    } catch (error) {
+      console.error('Failed to fetch tour details:', error);
+    }
+  };
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const images = [img, Frame68, naran];
@@ -90,11 +117,11 @@ const CatchAllDetailPage = () => {
                 clickable: true,
               }}
               loop={true}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                speed={1000}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              speed={1000}
               modules={[EffectFade, Navigation, Pagination, Autoplay]}
               className="mySwiper"
             >
@@ -131,7 +158,7 @@ const CatchAllDetailPage = () => {
             <div className="container">
               <div>
                 <div className="mt-10 md:mt-10 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0">
-                  <h2 className='text-center md:text-left'>Tour Name Appear Here</h2>
+                  <h2 className='text-center md:text-left'>{tourData?.name || 'Tour Name Appear Here'}</h2>
                   <div className="flex items-center justify-between gap-8">
                     <span className="flex items-center gap-3">
                       <IoIosStar className="textColor2 text-lg md:text-xl lg:text-2xl" />
@@ -182,23 +209,42 @@ const CatchAllDetailPage = () => {
                 </div>
 
                 <div className="flex items-center justify-between flex-wrap gap-5 pt-10 lg:max-w-[70%] xl:max-w-[60%]">
-                  {tourDetails.map((items, index) => {
-                    return (
-                      <div className="flex items-center gap-3" key={index}>
-                        <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
-                          <Image
-                            src={items.img}
-                            alt={items.title}
-                            className="w-full h-auto"
-                          />
-                        </figure>
-                        <div>
-                          <h5 className="font-bold">{items.title}</h5>
-                          <p className="max-w-[350px]">{items.data}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  <div className="flex items-center gap-3">
+                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                      <Image src={tourimg} alt='img' className="w-full h-auto" />
+                    </figure>
+                    <div>
+                      <h5 className="font-bold">Destination</h5>
+                      <p className="max-w-[350px]">{tourData?.name}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                      <Image src={tourimg} alt='img' className="w-full h-auto" />
+                    </figure>
+                    <div>
+                      <h5 className="font-bold">Departure</h5>
+                      <p className="max-w-[350px]">{tourData?.departure}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                      <Image src={tourimg} alt='img' className="w-full h-auto" />
+                    </figure>
+                    <div>
+                      <h5 className="font-bold">Included</h5>
+                      <p className="max-w-[350px]">{tourData?.included}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <figure className="w-[15px] md:w-[15px] lg:w-[20px] ">
+                      <Image src={tourimg} alt='img' className="w-full h-auto" />
+                    </figure>
+                    <div>
+                      <h5 className="font-bold">Not Included</h5>
+                      <p className="max-w-[350px]">{tourData?.notIncluded}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -325,7 +371,7 @@ const CatchAllDetailPage = () => {
                 {/* Accordion Section */}
                 <div className="md:basis-1/2 md:px-5 lg:px-10 mt-10 lg:mt-0 flex justify-center items-start">
                   <AccordianWithSelection
-                    data={accordianData}
+                    data={tourData?.faqs}
                     onSelect={(index) => setSelectedIndex(index ?? 0)}
                   />
                 </div>
