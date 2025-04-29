@@ -14,7 +14,7 @@ const Accordian = ({ data, onSelect }) => {
 
   return (
     <div className="w-full">
-      {data.map((item, index) => (
+      {data?.map((item, index) => (
         <div key={index} className="border-b border-gray-300">
           <div onClick={() => toggleAccordion(index)}
             className="cursor-pointer w-full flex justify-between items-center px-4 pt-2 text-left ">
