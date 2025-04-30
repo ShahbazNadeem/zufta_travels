@@ -39,6 +39,7 @@ const CatchAllDetailPage = () => {
       // debugger
       const response = await axios.get(`https://192.168.100.177:45455/api/Tours/TourDetailsById?id=${id}`);
       setTourData(response.data);
+      console.log(response.data, 'hello')
       //     name": "Fairy Meadows Tour #12",
       // "mapApi": "",
       // "description": "",
@@ -79,7 +80,6 @@ const CatchAllDetailPage = () => {
       rootMargin: '0px',
       threshold: 0.6,
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -97,6 +97,8 @@ const CatchAllDetailPage = () => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
+
+
   }, []);
 
 

@@ -12,11 +12,13 @@ import { fetchPremiumTours } from '@/redux/tours/toursSlice';
 const Index = () => {
   const dispatch = useDispatch();
   const { tours, status, error } = useSelector((state) => state.tours);
-  console.log(tours)
-
+console.log(tours, 'tours')
   useEffect(() => {
-    dispatch(fetchPremiumTours());
-  }, [dispatch]);
+    if (tours.length === 0 && status === 'idle') {
+      dispatch(fetchPremiumTours());
+    }
+  }, [dispatch, tours, status]);
+
 
   return (
     <Layout>

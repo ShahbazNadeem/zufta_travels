@@ -6,7 +6,7 @@ import './components.css'
 
 const NewsAndTips = () => {
     return (
-        <div>
+        <div className='px-2'>
             <div className="flex flex-col sm:flex-row justify-between gap-5">
                 <div className="flex flex-col gap-3 sm:gap-8 text-center sm:text-left">
                     <h2 className=''>News, Tips & Guides</h2>
