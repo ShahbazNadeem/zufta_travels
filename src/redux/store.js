@@ -4,11 +4,13 @@ import storage from "redux-persist/lib/storage"; // localStorage for web
 
 import authReducer from "./authSlice/AuthSlice";
 import toursReducer from "./tours/toursSlice";
+import blogsReducer from "./blogs/blogSlice";
 
 // Combine all your reducers
 const rootReducer = combineReducers({
   auth: authReducer,
   tours: toursReducer,
+  blogs: blogsReducer,
 });
 
 // Configuration for persistence

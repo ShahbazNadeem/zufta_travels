@@ -12,7 +12,7 @@ import { fetchPremiumTours } from '@/redux/tours/toursSlice';
 const Index = () => {
   const dispatch = useDispatch();
   const { tours, status, error } = useSelector((state) => state.tours);
-console.log(tours, 'tours')
+  console.log(tours, 'tours')
   useEffect(() => {
     if (tours.length === 0 && status === 'idle') {
       dispatch(fetchPremiumTours());
@@ -42,9 +42,9 @@ console.log(tours, 'tours')
                   <div className="ml-5 h-[2px] bg-gray-300 w-4/5"></div>
                 </div>
                 <p>
-                  Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? 
-                  Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem 
-                  At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut 
+                  Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt?
+                  Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem
+                  At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut
                   provident aliquam.
                 </p>
               </div>

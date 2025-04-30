@@ -49,6 +49,9 @@ export const fetchAirTours = createAsyncThunk(
 
 // Initial state
 const initialState = {
+    premiumTours: [],
+    privateTours: [],
+    airTours: [],
     tours: [],
     status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
     error: null,
@@ -68,7 +71,7 @@ const toursSlice = createSlice({
             })
             .addCase(fetchPremiumTours.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.tours = action.payload;
+                state.premiumTours = action.payload;
             })
             .addCase(fetchPremiumTours.rejected, (state, action) => {
                 state.status = 'failed';

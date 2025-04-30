@@ -27,16 +27,24 @@ const index = () => {
     lastname: '',
     email: '',
     phone: "",
-    nation: '',
-    tour: '',
-    persons: '',
-    days: '',
-    rooms: '',
+    nationality: '',
+    tourType: '',
+    numberOfParticipants: '',
+    numberOfDays: '',
+    numberOfRooms: '',
     FromFromFromDate: '',
     destination: '',
-    planning: ''
-
+    message: ''
 });
+const prepareFormData = () => {
+  return {
+    ...formdata,
+    tourType: parseInt(formdata.tourType) || null,
+    numberOfParticipants: parseInt(formdata.numberOfParticipants) || null,
+    numberOfDays: parseInt(formdata.numberOfDays) || null,
+    numberOfRooms: parseInt(formdata.numberOfRooms) || null,
+  };
+};
 const handleChange = (e) => {
   const { name, value } = e.target;
 
@@ -50,8 +58,9 @@ const handleChange = (e) => {
   const handleForm = async (e) => {
     e.preventDefault()
     console.log(formdata, 'res')
+    const dataToSend = prepareFormData();
     try{
-      const response = await axios.post('https://192.168.100.177:45455/api/Tours/Contact',formdata)
+      const response = await axios.post('https://192.168.100.177:45455/api/Tours/Contact',dataToSend)
       console.log(response.data, 'res');
     } catch (error) {
       console.error('Error posting data:', error);
@@ -171,9 +180,9 @@ const handleChange = (e) => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="nation"
-                        name="nation"
-                        value={formdata.nation}
+                        id="nationality"
+                        name="nationality"
+                        value={formdata.nationality}
                         onChange={handleChange}
                         // required
                       />
@@ -185,11 +194,11 @@ const handleChange = (e) => {
                       </label>
                     </div>
                     <div className="basis-1/2">
-                      <select id="tour" name="tour"  value={formdata.tour} onChange={handleChange} className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]">
+                      <select id="tourType" name="tourType"  value={formdata.tourType} onChange={handleChange} className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]">
                         <option value="">Select type of tour</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                       </select>
                     </div>
                   </div>
@@ -200,9 +209,9 @@ const handleChange = (e) => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="persons"
-                        name="persons"
-                        value={formdata.persons}
+                        id="numberOfParticipants"
+                        name="numberOfParticipants"
+                        value={formdata.numberOfParticipants}
                         onChange={handleChange}
                         // required
                       />
@@ -218,9 +227,9 @@ const handleChange = (e) => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="days"
-                        name="days"
-                        value={formdata.days}
+                        id="numberOfDays"
+                        name="numberOfDays"
+                        value={formdata.numberOfDays}
                         onChange={handleChange}
                         // required
                       />
@@ -239,9 +248,9 @@ const handleChange = (e) => {
                         type="number"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="rooms"
-                        name="rooms"
-                        value={formdata.rooms}
+                        id="numberOfRooms"
+                        name="numberOfRooms"
+                        value={formdata.numberOfRooms}
                         onChange={handleChange}
                         // required
                       />
@@ -289,9 +298,9 @@ const handleChange = (e) => {
                   <textarea
                     class="block px-2.5 pb-2.5 pt-4 w-full h-[150px] text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer focus:border-[#1A2B48] placeholder-[#1A2B48]"
                     placeholder="Tell us more about what you’re planning*"
-                    id="planning"
-                    name="planning"
-                    value={formdata.planning}
+                    id="message"
+                    name="message"
+                    value={formdata.message}
                     onChange={handleChange}
                     // required
                   ></textarea>

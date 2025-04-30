@@ -13,8 +13,23 @@ import './blog.css'
 import { blogSlides } from "@/jsonData/Data";
 import Head from "next/head";
 import Link from "next/link";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBlogs } from '@/redux/blogs/blogSlice';
+import { useEffect } from "react";
 
 const index = () => {
+  const dispatch = useDispatch();
+  const { blogs, status, error } = useSelector((state) => state.blogs);
+  console.log(blogs,"blogs")
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchBlogs());
+    }
+  }, [status, dispatch]);
+
+  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'failed') return <div>Error: {error}</div>;
 
   return (
     <Layout>
@@ -65,10 +80,10 @@ const index = () => {
                   }}
                   className="w-full max-w-[1400px] h-[400px] pt-40">
 
-                  {blogSlides.map((slide, index) => (
+                  {blogs.map((slide, index) => (
                     <SwiperSlide key={index} className="relative overflow-hidden w-full">
 
-                      <Image src={slide.image} alt={slide.title} layout="fill" className="object-cover" />
+                      <Image src={slide.imageUrl} alt={slide.title} layout="fill" className="object-cover" />
                       <div className="absolute inset-0 bg-opacity-30 flex flex-col justify-end text-white">
                         <div className="p-5 flex flex-col justify-between gap-48">
                           <div >
@@ -79,9 +94,9 @@ const index = () => {
                           <div className="flex flex-col gap-3 md:gap-6">
                             <h3 className='text-white'>{slide.title}</h3>
                             <span className='flex flex-wrap gap-3 justify-between text-[13px] md:text-[14px] lg:text-[16px]'>
-                              <span className='flex gap-2 items-center text-white'><SlCalender />{slide.date}</span>
+                              <span className='flex gap-2 items-center text-white'><SlCalender />{slide.creationDateTime}</span>
                               <span className='flex gap-2 items-center text-white'><FaRegClock />{slide.duration}</span>
-                              <Link href={slide.link}>
+                              <Link href={`/blog/${slide.id}`}>
                                 <span className="rounded-[50px] border border-white text-white px-3 py-2">
                                   Keep Reading
                                 </span>
