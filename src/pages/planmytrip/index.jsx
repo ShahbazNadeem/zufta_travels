@@ -106,7 +106,7 @@ const handleChange = (e) => {
                         name="FirstName"
                         value={formdata.FirstName}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="FirstName"
@@ -124,7 +124,7 @@ const handleChange = (e) => {
                         name="lastname"
                         value={formdata.lastname}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="lastName"
@@ -145,7 +145,7 @@ const handleChange = (e) => {
                         name="email"
                         value={formdata.email}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="email"
@@ -163,7 +163,7 @@ const handleChange = (e) => {
                         name="phone"
                         value={formdata.phone}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="phoneNumber"
@@ -184,7 +184,7 @@ const handleChange = (e) => {
                         name="nationality"
                         value={formdata.nationality}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="nationality"
@@ -213,7 +213,7 @@ const handleChange = (e) => {
                         name="numberOfParticipants"
                         value={formdata.numberOfParticipants}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="numberOfParticipants"
@@ -231,7 +231,7 @@ const handleChange = (e) => {
                         name="numberOfDays"
                         value={formdata.numberOfDays}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="numberOfDays"
@@ -252,7 +252,7 @@ const handleChange = (e) => {
                         name="numberOfRooms"
                         value={formdata.numberOfRooms}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="numberOfRooms"
@@ -284,7 +284,7 @@ const handleChange = (e) => {
                         name="destination"
                         value={formdata.destination}
                         onChange={handleChange}
-                        // required
+                        required
                       />
                       <label
                         for="preferredDestination"
@@ -302,7 +302,7 @@ const handleChange = (e) => {
                     name="message"
                     value={formdata.message}
                     onChange={handleChange}
-                    // required
+                    required
                   ></textarea>
 
                   <button type="submit" className="font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]">
