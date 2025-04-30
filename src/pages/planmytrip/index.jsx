@@ -23,7 +23,7 @@ import axios from "axios";
 const index = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [formdata, setFormData] = useState({
-    firstname: '',
+    FirstName: '',
     lastname: '',
     email: '',
     phone: "",
@@ -32,7 +32,7 @@ const index = () => {
     persons: '',
     days: '',
     rooms: '',
-    date: '',
+    FromFromFromDate: '',
     destination: '',
     planning: ''
 
@@ -51,14 +51,14 @@ const handleChange = (e) => {
     e.preventDefault()
     console.log(formdata, 'res')
     try{
-      const response = await axios.post('https://680228a681c7e9fbcc449508.mockapi.io/planmytrip',formdata)
+      const response = await axios.post('https://192.168.100.177:45455/api/Tours/Contact',formdata)
       console.log(response.data, 'res');
     } catch (error) {
       console.error('Error posting data:', error);
     }
   };
   return (
-    <Layout>
+    <Layout>  
       <Head>
         <title>Plan My Trip</title>
       </Head>
@@ -93,14 +93,14 @@ const handleChange = (e) => {
                         type="text"
                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent rounded-lg border-2 border-gray-300 appearance-none focus:outline-none focus:ring-0  peer focus:border-[#1A2B48]"
                         placeholder=" "
-                        id="firstname"
-                        name="firstname"
-                        value={formdata.firstname}
+                        id="FirstName"
+                        name="FirstName"
+                        value={formdata.FirstName}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
-                        for="firstName"
+                        for="FirstName"
                         class="absolute peer-focus:bg-[#F8F8F8] text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:textColor2 textColor2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                       >
                         First Name *
@@ -115,7 +115,7 @@ const handleChange = (e) => {
                         name="lastname"
                         value={formdata.lastname}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="lastName"
@@ -136,7 +136,7 @@ const handleChange = (e) => {
                         name="email"
                         value={formdata.email}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="email"
@@ -154,7 +154,7 @@ const handleChange = (e) => {
                         name="phone"
                         value={formdata.phone}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="phoneNumber"
@@ -175,7 +175,7 @@ const handleChange = (e) => {
                         name="nation"
                         value={formdata.nation}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="nationality"
@@ -204,7 +204,7 @@ const handleChange = (e) => {
                         name="persons"
                         value={formdata.persons}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="numberOfParticipants"
@@ -222,7 +222,7 @@ const handleChange = (e) => {
                         name="days"
                         value={formdata.days}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="numberOfDays"
@@ -243,7 +243,7 @@ const handleChange = (e) => {
                         name="rooms"
                         value={formdata.rooms}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="numberOfRooms"
@@ -254,11 +254,11 @@ const handleChange = (e) => {
                     </div>
                     <div class="relative basis-1/2">
                       <input
-                       value={formdata.date}
+                       value={formdata.FromDate}
                        onChange={handleChange}
                         type="date"
-                        name="date"
-                        // value={new Date().toISOString().split('T')[0]}
+                        name="FromDate"
+                        // value={new FromDate().toISOString().split('T')[0]}
                         className="rounded-lg w-full py-3 pl-10 border-2 border-gray-300 focus:outline-none"
                       />
                       <FaCalendarAlt className="absolute left-3 top-4 text-gray-500" />
@@ -275,7 +275,7 @@ const handleChange = (e) => {
                         name="destination"
                         value={formdata.destination}
                         onChange={handleChange}
-                        required
+                        // required
                       />
                       <label
                         for="preferredDestination"
@@ -293,7 +293,7 @@ const handleChange = (e) => {
                     name="planning"
                     value={formdata.planning}
                     onChange={handleChange}
-                    required
+                    // required
                   ></textarea>
 
                   <button type="submit" className="font-marcellus text-[16px] text-white w-full h-[46px] rounded-[30px] flex justify-center items-center px-[120px] py-[13px]">
