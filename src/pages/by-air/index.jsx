@@ -44,7 +44,7 @@ const index = () => {
                 <p>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam.</p>
               </div>
 
-              <TourCards data={tours} />
+              <TourCards data={byAirTourPickup} />
             </div>
 
           </div>
