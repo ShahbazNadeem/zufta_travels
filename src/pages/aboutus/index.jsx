@@ -17,6 +17,7 @@ import { sliderData1 } from '../../jsonData/Data'
 import NewsAndTips from '@/components/NewsAndTips'
 import Video from '@/components/Video'
 import Head from 'next/head'
+import { newsandtips } from '../../jsonData/Data'
 
 const index = () => {
   return (
@@ -203,7 +204,7 @@ const index = () => {
         <div className="wrapper-A6 my-10 md:my-20">
           <div className="container">
             <div className='max-w-[1440px] mx-auto'>
-              <NewsAndTips />
+              <NewsAndTips newsandtips={newsandtips} />
             </div>
           </div>
         </div>

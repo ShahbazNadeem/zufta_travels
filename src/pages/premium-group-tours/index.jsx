@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import Banner from '@/components/Banner';
 import NewsAndTips from '@/components/NewsAndTips';
+import { newsandtips } from "@/jsonData/Data";
 import TourCards from "@/components/TourCards";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPremiumTours } from '@/redux/tours/toursSlice';
@@ -62,7 +63,7 @@ const Index = () => {
         <div className="wrapper-BA3 pt-10 md:pt-20 bg-white">
           <div className="container">
             <div className="max-w-[1440px] mx-auto">
-              <NewsAndTips />
+              <NewsAndTips newsandtips={newsandtips} />
             </div>
           </div>
         </div>

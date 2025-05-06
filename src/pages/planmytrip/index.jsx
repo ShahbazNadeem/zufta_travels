@@ -11,6 +11,7 @@ import payment5 from "@/images/aboutus/payment5.png";
 import adventureImg from "@/images/planMyTrip/adventureImg.png";
 import "./planmytrip.css";
 import NewsAndTips from "@/components/NewsAndTips";
+import { newsandtips } from "@/jsonData/Data";
 import { accordianData } from "@/jsonData/Data";
 import img from "@/images/planMyTrip/img.png";
 import Frame68 from "@/images/Frame68.png";
@@ -474,7 +475,7 @@ const handleChange = (e) => {
         <div className="wrapper-P5 my-10 lg:my-20">
           <div className="container">
             <div className="max-w-[1440px] mx-auto">
-              <NewsAndTips />
+              <NewsAndTips newsandtips={newsandtips} />
             </div>
           </div>
         </div>

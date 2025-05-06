@@ -4,7 +4,6 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import Banner from '@/components/Banner'
-import NewsAndTips from '@/components/NewsAndTips'
 import { byAirTourPickup } from '@/jsonData/Data'
 import TourCards from "@/components/TourCards";
 import { FiChevronDown } from "react-icons/fi";

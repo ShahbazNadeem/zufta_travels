@@ -12,6 +12,10 @@ import Vector4 from "@/images/home/Vector4.png";
 import Vector5 from "@/images/home/Vector5.png";
 import img from "@/images/home/designYurTrip.jpeg";
 import tourimg from "@/images/tourdetail/Star1.png";
+import { time } from "framer-motion";
+import news1 from "@/images/aboutus/news1.png"
+import news2 from "@/images/aboutus/news2.png"
+import news3 from "@/images/aboutus/news3.png"
 
 export const sliderData1 = [
   {
@@ -674,3 +678,30 @@ export const dashboardhistory = [
     img: naran,
   },
 ];
+
+export const newsandtips=[
+  {
+    id: 1,
+    title: 'Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey',
+    date: '18 Sep 2024',
+    time: '6 mins',
+    category: 'Culture',
+    img: news1,
+  },
+  {
+    id: 2,
+    title: 'Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey',
+    date: '18 Sep 2024',
+    time: '6 mins',
+    category: 'Culture',
+    img: news2,
+  },
+  {
+    id: 3,
+    title: 'Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey',
+    date: '18 Sep 2024',
+    time: '6 mins',
+    category: 'Culture',
+    img: news3,
+  },
+]

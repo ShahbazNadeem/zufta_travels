@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import Banner from '@/components/Banner'
-import NewsAndTips from '@/components/NewsAndTips'
+import NewsAndTips from '@/components/NewsAndTips';
+import { newsandtips } from "@/jsonData/Data";
 import { privatetourPickup } from '@/jsonData/Data'
 import TourCards from "@/components/TourCards";
 import { useDispatch, useSelector } from 'react-redux';
@@ -56,7 +57,7 @@ const index = () => {
         <div className="wrapper-BA3 pt-10 md:pt-20 bg-white">
           <div className="container">
             <div className="max-w-[1440px] mx-auto">
-              <NewsAndTips />
+              <NewsAndTips newsandtips={newsandtips} />
             </div>
           </div>
         </div>

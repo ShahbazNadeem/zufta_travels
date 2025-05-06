@@ -14,6 +14,7 @@ import hunza from "@/images/hunza.jpeg";
 import arrow from "@/images/arrow.png";
 import Slider from "@/components/swippers/Slider";
 import NewsAndTips from "@/components/NewsAndTips";
+import { newsandtips } from "@/jsonData/Data";
 import CardsSwipper from "@/components/swippers/CardsSwipper";
 import Head from "next/head";
 import { FaCalendarAlt, FaUserAlt } from "react-icons/fa";
@@ -623,7 +624,7 @@ const Index = () => {
       <section>
         <div className="wrapper-H9 pt-20 bg-white max-w-[1440px] mx-auto px-5">
           <div className="container">
-            <NewsAndTips />
+            <NewsAndTips newsandtips={newsandtips} />
           </div>
         </div>
       </section>
