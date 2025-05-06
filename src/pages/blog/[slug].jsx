@@ -11,6 +11,7 @@ import { FaRegClock } from "react-icons/fa6";
 import Link from 'next/link'
 import './blog.css'
 import NewsAndTips from "@/components/NewsAndTips";
+import { newsandtips } from "@/jsonData/Data";
 import tourimg from "@/images/tourdetail/Star1.png";
 
 export default function BlogPost() {
@@ -133,7 +134,7 @@ export default function BlogPost() {
             <section>
                 <div className="wrapper-H9 md:pt-20 pt-10 bg-white max-w-[1440px] mx-auto px-5">
                     <div className="container">
-                        <NewsAndTips />
+                        <NewsAndTips newsandtips={newsandtips} />
                     </div>
                 </div>
             </section>
