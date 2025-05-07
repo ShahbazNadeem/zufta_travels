@@ -22,6 +22,8 @@ import { FiChevronDown } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import axios from "axios";
+import Link from "next/link";
+import { useRouter } from "next/router";
 const Index = () => {
   const itemRefs = useRef([]);
   const [inViewStates, setInViewStates] = useState([]);
@@ -61,6 +63,8 @@ const Index = () => {
   const [depart, setDepart] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [passengerClass, setPassengerClass] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const router = useRouter();
   const handleSearch = async () => {
     let payload = {};
 
@@ -72,6 +76,8 @@ const Index = () => {
         fromDate,
         toDate,
       };
+      setSearchText(payload);
+      console.log(searchText, "search text");
     } else if (activeTab === 1) {
       // Hotels
       payload = {
@@ -91,18 +97,12 @@ const Index = () => {
         passengerClass,
       };
     }
+    // Convert payload to query string
+    const queryParams = new URLSearchParams(payload).toString();
+    console.log(queryParams, "heloooooooooo");
 
-    try {
-      const response = await axios.post(
-        "https://67ffac3db72e9cfaf7257b92.mockapi.io/searchform",
-        {
-          payload,
-        }
-      );
-      console.log("Search results:", response);
-    } catch (error) {
-      console.error("Search failed:", error);
-    }
+    // Redirect to search page with query params
+    router.push(`/search?${queryParams}`);
   };
 
   return (
@@ -126,7 +126,7 @@ const Index = () => {
                 <span className="text-white flex items-center gap-3">
                   Explore More{" "}
                   <figure>
-                    <Image src={arrow} />
+                    <Image src={arrow} alt="image" />
                   </figure>
                 </span>
               </div>
@@ -207,13 +207,13 @@ const Index = () => {
                               <FaUserAlt />
                               need some help?
                             </span>
-                              <button
-                                className="flex items-center gap-2"
-                                onClick={handleSearch}
-                              >
-                                <CiSearch size={24} />
-                                search
-                              </button>
+                            <button
+                              className="flex items-center gap-2"
+                              onClick={handleSearch}
+                            >
+                              <CiSearch size={24} />
+                              search
+                            </button>
                           </div>
                         </div>
                       )}

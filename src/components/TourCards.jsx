@@ -28,7 +28,7 @@ const TourCards = ({ data = [] }) => {
       <div className="flex flex-wrap justify-center w-full">
         {data.slice(0, visibleCount).map((items, index) => (
           <Link
-            href={`/tour/${items.title}/id?${items.id}`}
+            href={`/tour/${items.title}/id/${items.id}`}
             className={`relative m-1 h-[250px] md:h-[300px] lg:h-[440px] ${
               index === 0 ? "w-[91%] lg:w-[98%]" : "w-[45%] lg:w-[24%]"
             }`}
