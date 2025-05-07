@@ -22,7 +22,7 @@ const index = () => {
   const { blogs, status, error } = useSelector((state) => state.blogs);
   console.log(blogs,"blogs")
 
-  useEffect(() => {
+  useEffect(() => { 
     if (status === 'idle') {
       dispatch(fetchBlogs());
     }
